@@ -1,0 +1,505 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Очистка float | Уроки | WebReference</title>
+<meta charset="utf-8" />
+<meta name="description" content="При правильном использовании float превращается в мощный инструмент вёрстки, применяемый для выравнивания и упорядочивания элементов. Однако чтобы держать этот инструмент под контролем, необходим противовес, без которого огромный потенциал float сужается до пары узких задач. Речь идёт об отмене обтекания с помощью разных методов. Перечислим несколько наиболее популярных." />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_GmPV_e3YNAzxsGyZNJb8l3jyzuLiXRRwUYoy5enMRkM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_GVzsx3i5gB9XX-pcCFiUhjSdLDNqrVFPcpNGZlUocPA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_TRgZiIWJG1Kscmnc2ThzsQLBI4y7E3_GdynGIqED184.css" media="screen" />
+</head>
+<body>
+<div class="off-canvas-wrap" data-offcanvas><div class="inner-wrap"><header><div class="row"><div class="small-12 large-4 columns logo"><a href="../../index.html">WebReference<span>.</span>ru</a></div><nav class="small-10 large-7 columns topmenu"><div class="region region-menu"><div id="system-main-menu" class="block"><div class="block_content"><ul class="menu"><li class="first leaf"><a href="../../ref.html" title="">Справочники</a></li><li class="leaf"><a href="../../layout.html" title="">Вёрстка</a></li><li class="leaf"><a href="../../dev.html" title="">Веб-технологии</a></li><li class="leaf"><a href="../../mobile.html" title="">Мобильные приложения</a></li><li class="last leaf"><a href="../../course.html">Курсы</a></li></ul></div></div></div></nav><div class="small-2 large-1 columns search"><div id="search-button" tabindex="1"></div><form action="https://webref.ru/search/" id="cse-search-box"><input type="search" placeholder="Поиск по сайту" name="s" autocomplete="off" id="cse-search-input"><input type="hidden" name="cx" value="partner-pub-0708135098984815:9970767379"><input type="hidden" name="cof" value="FORID:10"><input type="hidden" name="ie" value="UTF-8"></form></div></div></header><main><div class="title"><div class="row"><div class="small-12 columns"><h1>Очистка float</h1></div></div></div><div class="breadcrumb"><div class="row"><div class="small-12 columns"><div class="region region-crumbs"><div id="easy_breadcrumb-easy_breadcrumb" class="block"><div class="block_content"><div itemscope class="easy-breadcrumb" itemtype="http://data-vocabulary.org/Breadcrumb"> <span itemprop="title"><a href="../../index.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Главная</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span itemprop="title"><a href="../../course.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-1">Учебные курсы</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span itemprop="title"><a href="../float.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-2">float в теории и на практике</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">Очистка float</span></div></div></div></div></div></div></div><div class="row"><div class="medium-12 large-9 columns main-section">
+<script id="dsq-count-scr" src="https://webref.disqus.com/count.js" async></script>
+<p class="num_comments"><a href="clearfix.html#disqus_thread">Комментарии</a></p><div class="region region-content"><div id="system-main" class="block"><ul class="tabs" data-tabs data-deep-link="true" data-update-history="true" id="lesson-tabs" role="tablist"><li class="tabs-title is-active"><a href="clearfix.html#content" aria-selected="true" role="tab" aria-controls="lesson-content">Описание</a></li><li class="tabs-title"><a href="clearfix.html#task" role="tab" aria-controls="lesson-task">Задания</a></li><li class="tabs-title"><a href="clearfix.html#practice" role="tab" aria-controls="lesson-practice">Практика</a></li><li class="tabs-title"><a href="clearfix.html#individual" role="tab" aria-controls="lesson-practice">Самостоятельная</a></li></ul><div class="tabs-content" data-tabs-content="lesson-tabs" id="lesson"><div id="example-form"></div><section class="tabs-panel is-active" id="content" role="tabpanel"><p>При правильном использовании <span class="attribute">float</span> превращается в мощный инструмент вёрстки, применяемый для выравнивания и упорядочивания элементов. Однако чтобы держать этот инструмент под контролем, необходим противовес, без которого огромный потенциал <span class="attribute">float</span> сужается до пары узких задач. Речь идёт об отмене обтекания с помощью разных методов. Перечислим несколько наиболее популярных.</p><h2>Ширина элементов</h2><p>Если обтекаемые элементы будет занимать всю доступную ширину, то остальные элементы, следующие за ними, будут начинаться с новой строки. Для этого суммарная ширина элементов должна равняться 100%. В примере&nbsp;1 показано создание стрелок на одной строке.</p><p class="exampleTitle">Пример 1. Использование width</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Стрелки&lt;/title&gt;
+  &lt;style&gt;
+   .arrow {
+    font-size: 2em; /* Размер стрелок */
+    background: #e7e7e0; /* Цвет фона */
+   }
+   .prev, .next {
+    color: #d51920; /* Цвет стрелок */
+    width: 50%; /* Ширина блоков */
+   }
+   .prev { float: left; }
+   .next { 
+    float: right;
+    text-align: right; /* Выравнивание по правому краю */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;div class=&quot;arrow&quot;&gt;
+   &lt;div class=&quot;prev&quot;&gt;←&lt;/div&gt;
+   &lt;div class=&quot;next&quot;&gt;→&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Текст&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Каждый блок со стрелкой теперь занимает ширину 50% и в сумме они дают 100% ширины, поэтому абзац, идущий после <span class="class">arrow</span>, начинается с новой строки.</p><p>Данный метод применяется редко, поскольку не всегда можно явно указать ширину элементов, к тому же метод не решает проблему с высотой блока и его фоном (рис.&nbsp;1).</p><p class="fig"><img src="../../assets/images/float/clear1.png" alt="Нет фоновой заливки"></p><p class="figsign">Рис. 1. Нет фоновой заливки</p><h2>Использование overflow</h2><p>Свойство <a href="../../css/overflow.html">overflow</a> управляет отображением содержимого блока, если оно целиком не помещается и выходит за область заданных размеров. Значение <span class="value">auto</span>, в частности, добавляет полосы прокрутки при необходимости, а <span class="value">hidden</span> отображает только область внутри элемента, остальное скрывает. Кроме этого, использование <span class="attribute">overflow</span> со значением <span class="value">auto</span>, <span class="value">scroll</span> или <span class="value">hidden</span> отменяет действие <span class="attribute">float</span> (пример&nbsp;2).</p><p class="exampleTitle">Пример 2. Применение overflow</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Стрелки&lt;/title&gt;
+  &lt;style&gt;
+   .arrow {
+    font-size: 2em; /* Размер стрелок */
+    background: #e7e7e0; /* Цвет фона */
+    color: #d51920; /* Цвет стрелок */
+    overflow: hidden; /* Отменяем обтекание */
+   }
+   .prev { float: left; }
+   .next { float: right; }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;div class=&quot;arrow&quot;&gt;
+   &lt;div class=&quot;prev&quot;&gt;←&lt;/div&gt;
+   &lt;div class=&quot;next&quot;&gt;→&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Текст&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат после применения свойства <span class="attribute">overflow</span> сразу меняется (рис. 2).</p><p class="fig"><img src="../../assets/images/float/clear2.png" alt="Влияние свойства overflow на фон"></p><p class="figsign">Рис. 2. Влияние свойства overflow на фон</p><p><span class="attribute">overflow</span> — одно из самых популярных свойств, работающее в связке со свойством <span class="attribute">float</span>. Но иногда возникают ситуации, когда применение этого метода недопустимо. Это происходит в тех случаях, когда элемент выходит за пределы блока, при этом он будет «обрезан». В примере&nbsp;3 картинка сдвигается влево от своего исходного положения.</p><p class="exampleTitle">Пример 3. Обрезание области элемента</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Сдвигаем картинку&lt;/title&gt;
+  &lt;style&gt;
+   div {
+    border: 1px solid #000; /* Рамка */
+    padding: 10px; /* Поля вокруг текста */
+    overflow: hidden; /* Отменяем обтекание */
+   }
+   .fig { 
+    float: left;
+    position: relative; /* Относительное позиционирование */
+    left: -70px; /* Сдвигаем влево */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;div&gt;
+   &lt;p&gt;&lt;img src=&quot;image/winnie.png&quot; class=&quot;fig&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+   &lt;p&gt;Винни-Пух в гостях у Кролика&lt;/p&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат примера показан на рис. 3.</p><p class="fig"><img src="../../assets/images/float/clear3.png" alt="Обрезание картинки"></p><p class="figsign">Рис. 3. Обрезание картинки</p><h2>Свойство clear</h2><p>Для отмены действия <span class="attribute">float</span> от вышестоящего элемента применяется свойство <a href="../../css/clear.html">clear</a> со следующими значениями:</p><ul><li><span class="value">left</span> — отменяет действие значения <span class="value">left</span> у <span class="attribute">float</span>;</li><li><span class="value">right</span> — отменяет действие значения <span class="value">right</span> у <span class="attribute">float</span>;</li><li><span class="value">both</span> — одновременно отменяет действие значений <span class="value">left</span> и <span class="value">right</span> у <span class="attribute">float</span>. Это значение рекомендуется устанавливать, когда требуется отменить обтекание элемента, но неизвестно точно с какой стороны.</li></ul><p>Чтобы отменить действие обтекания, свойство <span class="attribute">clear</span> надо добавлять к элементу, идущему после элемента с <span class="attribute">float</span>. Обычно вводят универсальный класс, к примеру, <span class="class">clearfix</span> и вставляют пустой <span class="tag">&lt;div&gt;</span> с этим классом (пример&nbsp;4).</p><p class="exampleTitle">Пример 4. Использование clear</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;clear&lt;/title&gt;
+  &lt;style&gt;
+   section {
+    border: 1px solid #000; /* Рамка */
+    padding: 10px; /* Поля вокруг текста */
+   }
+   .fig { 
+    float: left;
+    margin-right: 10px;
+   }
+   .clearfix { clear: both; }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;section&gt;
+   &lt;p&gt;&lt;img src=&quot;image/winnie.png&quot; class=&quot;fig&quot;&gt;&lt;/p&gt;
+   &lt;p&gt;Винни-Пух в гостях у Кролика&lt;/p&gt;
+   &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+  &lt;/section&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере для класса <span class="class">clearfix</span> установлено свойство <span class="attribute">clear</span> со значением <span class="value">both</span>.</p><p>Использование <span class="attribute">clear</span> является одним из самых популярных в вёрстке в силу простоты и универсальности. Но иногда возникают комбинации, в которых использование <span class="attribute">clear</span> даёт сбой. Это происходит, когда в коде встречается одновременно несколько разных обтекаемых элементов. Так, в примере&nbsp;5 с помощью <span class="attribute">float</span> создаются две колонки, а в правой колонке <span class="attribute">float</span> упорядочивает фотографии.</p><p class="exampleTitle">Пример 5. Использование clear</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;clear&lt;/title&gt;
+  &lt;style&gt;
+   .col1, .col2, footer { padding: 10px; }
+   .col1 { float: left; width: 100px; background: #E8D9A9; }
+   .col2 { margin-left: 120px; background: #ECC0A4; }
+   .photo { border: 1px solid #333; text-align: center; 
+            background: #fff; float: left; padding: 10px; }
+   .clearfix { clear: both; }
+   footer { background: #9A5044; color: #fff; clear: left; } 
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;col1&quot;&gt;&lt;h3&gt;Меню&lt;/h3&gt;&lt;p&gt;Лучшие фотографии&lt;/p&gt;
+   &lt;p&gt;По годам&lt;/p&gt;&lt;p&gt;По рейтингу&lt;/p&gt;&lt;p&gt;По комментариям&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;col2&quot;&gt;
+   &lt;figure class=&quot;photo&quot;&gt;
+    &lt;img src=&quot;image/thumb1.jpg&quot;&gt;
+    &lt;figcaption&gt;Софийский собор&lt;/figcaption&gt;
+   &lt;/figure&gt;
+   &lt;figure class=&quot;photo&quot;&gt;
+    &lt;img src=&quot;image/thumb2.jpg&quot;&gt;
+    &lt;figcaption&gt;Польский костёл&lt;/figcaption&gt;
+   &lt;/figure&gt;
+   &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+   &lt;p&gt;Новая строка&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;footer&gt;Подвал&lt;/footer&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат примера показан на рис. 4. Свойство <span class="attribute">clear</span> действует не только на класс <span class="class">photo</span>, но и на класс <span class="class">col1</span>, т.&nbsp;е. на все элементы выше, у которых установлено <span class="attribute">float</span>. Поэтому «Новая строка» начинается не сразу же после фотографий, а после завершения левой колонки.</p><p class="fig"><img src="../../assets/images/float/clear4.png" alt="Ошибка с отображением строки"></p><p class="figsign">Рис. 4. Ошибка с отображением строки</p><p>В подобных ситуациях помогает комбинация разных методов. Так, фотографии можно добавить в контейнер с <span class="attribute">overflow</span> и удалить <span class="class">clearfix</span>. Колонка приобретёт следующий вид.</p>
+<pre class="no-result"><code data-language="html">&lt;div class=&quot;col2&quot;&gt;
+  &lt;section style=&quot;overflow: hidden&quot;&gt;
+    &lt;figure class=&quot;photo&quot;&gt;
+      &lt;img src=&quot;image/thumb1.jpg&quot;&gt;
+      &lt;figcaption&gt;Софийский собор&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;photo&quot;&gt;
+      &lt;img src=&quot;image/thumb2.jpg&quot;&gt;
+      &lt;figcaption&gt;Польский костёл&lt;/figcaption&gt;
+    &lt;/figure&gt;
+  &lt;/section&gt;
+  &lt;p&gt;Новая строка&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<h2>Псевдоэлемент ::after</h2><p>Частое включение пустого элемента <span class="tag">&lt;div&gt;</span> со свойством <span class="attribute">clear</span> захламляет код, особенно при активном использовании свойства <span class="attribute">float</span>. Логично перенести всё в стили, избавившись от лишних элементов. Для этого воспользуемся псевдоэлементом <a href="../../css/after.html">::after</a>, который в комбинации со свойством <a href="../../css/content.html">content</a> добавляет пустой текст после содержимого элемента. К такому тексту можно применить стилевые свойства, в частности <span class="attribute">clear</span>.</p>
+<pre class="no-result"><code data-language="css">.clearfix::after { 
+  content: &quot;&quot;; /* Генерируем пустой элемент */
+  clear: both; /* Отменяем обтекание*/
+  display: block; /* Блочный элемент */
+}</code></pre>
+<p>Вместо значения <span class="value">block</span> у <span class="attribute">display</span> иногда вставляют значение <span class="value">table</span>, но смысл это не меняет, так же как и набор других возможных свойств. Их задача&nbsp;— создать невидимый блок, который будет отменять действие <span class="attribute">float</span> у вышестоящих элементов.</p><p>Поскольку текст, генерируемый через псевдоэлемент <span class="attribute">::after</span>, располагается после содержимого элемента, он с лёгкостью заменяет конструкцию <span class="var">&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;</span>. Там, где она требуется достаточно только добавить класс <span class="class">clearfix</span>, как показано в примере&nbsp;6.</p><p class="exampleTitle">Пример 6. Псевдоэлемент ::after</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;clear&lt;/title&gt;
+  &lt;style&gt;
+   section {
+    border: 1px solid #000; /* Рамка */
+    padding: 10px; /* Поля вокруг текста */
+   }
+   .fig { 
+    float: left;
+    margin-right: 10px;
+   }
+   .clearfix::after { 
+    content: '';
+    clear: both; 
+    display: block;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;section class=&quot;clearfix&quot;&gt;
+   &lt;p&gt;&lt;img src=&quot;image/winnie.png&quot; class=&quot;fig&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+   &lt;p&gt;Винни-Пух в гостях у Кролика&lt;/p&gt;
+  &lt;/section&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Удобство приведённого метода заключается в использовании класса <span class="class">clearfix</span>, который при необходимости добавляется к любому элементу.</p><p><a href="clearfix.html#lesson-tabs" class="button radius" onclick="jQuery('#lesson-tabs').foundation('selectTab', 'task')">Перейти к заданиям</a></p><div id="views-similar-block" class="block"><h2 class="block_title">См. также</h2><div class="block_content"><div class="view view-similar view-id-similar view-display-id-block view-dom-id-6c83a3b03ac71d0a34337d306d6b09b9"><div class="view-content"><div class="similar"><ul><li class=""> <a href="../../css/clear.html">clear</a></li><li class=""> <a href="../positioning/float.html">float в CSS</a></li><li class=""> <a href="../../css/overflow.html">overflow</a></li><li class=""> <a href="../position/relative-absolute.html">relative и absolute</a></li><li class=""> <a href="../box-model/height-width-overflow.html">Высота и ширина в CSS</a></li><li class=""> <a href="../position/sticky.html">Липкое позиционирование</a></li><li class=""> <a href="../../layout/advanced-html-css/detailed-css-positioning.html">Подробнее о позиционировании</a></li><li class=""> <a href="use.html">Примеры использования float</a></li><li class=""> <a href="../../css/after.html">Псевдоэлемент ::after</a></li><li class=""> <a href="../css-tutorial/pseudo-element.html">Псевдоэлементы</a></li></ul></div></div></div></div></div></section><section class="tabs-panel" id="task" role="tabpanel" aria-hidden><div id="views-task-block" class="block"><div class="block_content"><div class="view view-task view-id-task view-display-id-block view-dom-id-fbebfcaec46e2ddbc2f316d315b8dd48"><div class="view-content"><ul class="tabs" data-tabs id="task-tabs"><li class="tabs-title is-active"><a href="clearfix.html#t1" aria-selected="true">1</a></li><li class="tabs-title"><a href="clearfix.html#t2">2</a></li><li class="tabs-title"><a href="clearfix.html#t3">3</a></li></ul><div class="tabs-content" data-tabs-content="task-tabs"><section id="t1" class="tabs-panel task-content is-active"><div class="h5p-content" data-content-id="7932"></div></section><section class="tabs-panel task-content" id="t2"><div class="h5p-content" data-content-id="7933"></div></section><section class="tabs-panel task-content" id="t3"><div class="h5p-content" data-content-id="7934"></div></section></div></div></div></div></div></section><section class="tabs-panel" id="practice" role="tabpanel" aria-hidden><div id="views-practice-block" class="block"><div class="block_content"><div class="view view-practice view-id-practice view-display-id-block view-dom-id-95f8e263eb27a2f69be314687df24b8b"><div class="view-content"><ul class="tabs" data-tabs id="practice-tabs"><li class="tabs-title is-active"><a href="clearfix.html#p1" aria-selected="true">1</a></li><li class="tabs-title"><a href="clearfix.html#p2">2</a></li></ul><div class="tabs-content" data-tabs-content="practice-tabs"><section id="p1" class="tabs-panel practice-content is-active" data-practice-number="1"><ul><li>К классу <span class="class">block</span> добавьте свойство <span class="attribute">overflow</span> со значением <span class="value">hidden</span>.</li><li>К классу <span class="class">block</span> добавьте свойство <span class="attribute">background-color</span> со значением #f7f2da.</li><li>К классу <span class="class">block</span> добавьте сплошную рамку толщиной один пиксель и цветом #f04e23.</li></ul><div class="callout success practice_correct" data-closable><h3>Правильно!</h3><p>Вы правильно выполнили задачу.</p><button class="close-button" aria-label="Закрыть" type="button" data-close><span aria-hidden="true">&times;</span></button></div><div class="callout alert practice_wrong" data-closable><h3>Ошибка!</h3><p>Задача решена неправильно.</p><button class="close-button" aria-label="Закрыть" type="button" data-close><span aria-hidden="true">&times;</span></button></div><div class="row collapse"><div class="small-12 large-6 columns"><div class="practice_toolbar"><button class="practice_run button small"><i class="icon-play"></i> Выполнить</button></div><div class="practice"><textarea class="practice_html" data-lang="html"><!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>float</title>
+  <style>
+   .block {
+    
+   }
+   h2 { 
+    float: left;
+    background: #f04e23;
+    color: #fff;
+    margin: 0;
+    padding: 5px 10px;
+   }
+  </style>
+ </head>
+ <body> 
+  <div class="block">
+   <h2>Винни-Пух</h2>
+  </div>
+ </body>
+</html></textarea>
+<textarea disabled class="practice_result"><!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>float</title>
+  <style>
+   .block {
+    overflow: hidden;
+    background-color: #f7f2da;
+    border: 1px solid #f04e23;
+   }
+   h2 { 
+    float: left;
+    background: #f04e23;
+    color: #fff;
+    margin: 0;
+    padding: 5px 10px;
+   }
+  </style>
+ </head>
+ <body> 
+  <div class="block">
+   <h2>Винни-Пух</h2>
+  </div>
+ </body>
+</html></textarea>
+</div></div><div class="small-12 large-6 columns"><div class="practice_toolbar text-right"><button class="practice_answer button small success"><i class="icon-help"></i> Показать ответ</button></div><div class="practice_browser"></div></div></div></section><section class="tabs-panel practice-content" id="p2" data-practice-number="2"><ul><li>Для селектора <span class="tag">main</span> добавьте свойство <span class="attribute">overflow</span> со значением <span class="value">hidden</span>.</li><li>К группе <span class="class">col1</span> и <span class="class">col2</span> добавьте свойство <span class="attribute">float</span> со значением <span class="value">left</span>.</li><li>К группе <span class="class">col1</span> и <span class="class">col2</span> добавьте свойство <span class="attribute">min-height</span> со значением <span class="value">100px</span>.</li></ul><div class="callout success practice_correct" data-closable><h3>Правильно!</h3><p>Вы правильно выполнили задачу.</p><button class="close-button" aria-label="Закрыть" type="button" data-close><span aria-hidden="true">&times;</span></button></div><div class="callout alert practice_wrong" data-closable><h3>Ошибка!</h3><p>Задача решена неправильно.</p><button class="close-button" aria-label="Закрыть" type="button" data-close><span aria-hidden="true">&times;</span></button></div><div class="row collapse"><div class="small-12 large-6 columns"><div class="practice_toolbar"><button class="practice_run button small"><i class="icon-play"></i> Выполнить</button></div><div class="practice"><textarea class="practice_html" data-lang="html"><!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>float</title>
+  <style>
+   main {
+    
+   }
+   .col1, .col2 {
+    
+   }
+   .col1 {
+    width: 30%;
+    background-color: #c8eaf5;
+   }
+   .col2 {
+    width: 70%;
+    background-color: #ffead0;
+   }
+   footer {
+    background-color: #e4efc7;
+    padding: 10px;
+   }
+  </style>
+ </head>
+ <body>
+  <main>
+  <section class="col1">Левая колонка</section>
+  <section class="col2">Правая колонка</section>
+  </main>
+  <footer>Подвал</footer>
+ </body>
+</html></textarea>
+<textarea disabled class="practice_result"><!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>float</title>
+  <style>
+   main {
+    overflow: hidden;
+   }
+   .col1, .col2 {
+    float: left;
+    min-height: 100px;
+   }
+   .col1 {
+    width: 30%;
+    background-color: #c8eaf5;
+   }
+   .col2 {
+    width: 70%;
+    background-color: #ffead0;
+   }
+   footer {
+    background-color: #e4efc7;
+    padding: 10px;
+   }
+  </style>
+ </head>
+ <body>
+  <main>
+  <section class="col1">Левая колонка</section>
+  <section class="col2">Правая колонка</section>
+  </main>
+  <footer>Подвал</footer>
+ </body>
+</html></textarea>
+</div></div><div class="small-12 large-6 columns"><div class="practice_toolbar text-right"><button class="practice_answer button small success"><i class="icon-help"></i> Показать ответ</button></div><div class="practice_browser"></div></div></div></section></div></div></div></div></div></section><section class="tabs-panel" id="individual" role="tabpanel" aria-hidden><div id="views-individual-block" class="block"><div class="block_content"><div class="view view-individual view-id-individual view-display-id-block view-dom-id-a9e9bd10a360da11d776a47b038b6e48"><div class="view-content"><ul class="tabs" data-tabs id="individual-tabs"><li class="tabs-title is-active"><a href="clearfix.html#i1" aria-selected="true">1</a></li><li class="tabs-title"><a href="clearfix.html#i2">2</a></li></ul><div class="tabs-content" data-tabs-content="individual-tabs"><section id="i1" class="tabs-panel task-content is-active"><h2 class="node-title"><a href="https://webref.ru/practice/2022">Очистка float 1</a></h2><p>Создайте веб-страницу, как показано на рис. 1.</p><p class="fig"><img src="../../assets/images/float/clear-individual2.png" alt=""></p><p class="figsign">Рис. 1.</p><div class="field field-name-field-individual-file field-type-file field-label-above"><h2 class="block_title" id="field_individual_file">Файлы</h2><div class="field-items"><div class="field-item even"><span class="file"><img class="file-icon" alt="Image icon" title="image/jpeg" src="https://webref.ru/modules/file/icons/image-x-generic.png" /> <a href="https://webref.ru/assets/files/shay-howe.jpg" type="image/jpeg; length=8028">shay-howe.jpg</a></span></div></div></div><div class="individual-result"><button type="button" class="button show-result">Показать ответ</button></div><div class="field field-name-field-individual-result field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Информация об авторе&lt;/title&gt;
+  &lt;style&gt;
+   .author {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    background: #f5f6f8;
+    color: #333;
+    border: 1px solid #e9eaec;
+    border-radius: 3px;
+    padding: 20px;
+    text-align: right;
+    overflow: hidden;
+   }
+   .author img {
+    float: right;
+    border: 2px solid #848994;
+    border-radius: 50%;
+   }
+   .author h2 {
+    font-weight: normal;
+   }
+   .author p {
+    font-size: 0.9em;
+   }
+   .author h2, .author p {
+    margin: 5px 180px 0 0;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;section class=&quot;author&quot;&gt;
+   &lt;img src=&quot;image/shay-howe.jpg&quot; alt=&quot;Шэй Хоу&quot; width=&quot;150&quot; height=&quot;150&quot;&gt;
+   &lt;h2&gt;Шэй Хоу&lt;/h2&gt;
+   &lt;p&gt;Специализируется на дизайне и разработке интерфейсов, 
+    о чём регулярно пишет и говорит. В настоящее время является 
+    руководителем подразделения Belly. Один из организаторов 
+    таких мероприятий как Chicago Camps, Refresh Chicago и UX 
+    Happy Hour.&lt;/p&gt;
+  &lt;/section&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div></div></section><section class="tabs-panel task-content" id="i2"><h2 class="node-title"><a href="https://webref.ru/practice/2024">Очистка float 2</a></h2><p>Создайте веб-страницу, как показано на рис. 1. Для обозначения рубля используйте символ ₽.</p><p class="fig"><img src="../../assets/images/float/clear-individual.png" alt="" width="735" height="400"></p><p class="figsign">Рис. 1.</p><div class="individual-result"><button type="button" class="button show-result">Показать ответ</button></div><div class="field field-name-field-individual-result field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Заказ&lt;/title&gt;
+  &lt;style&gt;
+   section {
+    border: 1px solid #e9eaec;
+    border-radius: 4px;
+    padding: 20px; 
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   h2, h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #3b4550;
+    margin: 0;
+   }
+   h2 {
+    font-size: 18px;
+    border-bottom: 1px solid #e9eaec;
+    padding-bottom: 10px; 
+   }
+   h3 { font-size: 14px; }
+   .row {
+    overflow: hidden;
+    border-bottom: 1px solid #e9eaec;
+    padding: 10px 0;
+    color: #848994;
+    font-size: 13px;
+   }
+   .row:last-child {
+    border: none;
+    padding-bottom: 0;
+   }
+   .product { float: left; }
+   .price, .total { float: right; }
+   .total { color: #50a2de; font-size: 18px; }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;section&gt;
+   &lt;h2&gt;Ваш заказ&lt;/h2&gt;
+   &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;product&quot;&gt;&lt;h3&gt;Продукт&lt;/h3&gt;&lt;/div&gt;
+    &lt;div class=&quot;price&quot;&gt;&lt;h3&gt;Цена&lt;/h3&gt;&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;product&quot;&gt;Футболка&lt;/div&gt;
+    &lt;div class=&quot;price&quot;&gt;599 ₽&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;product&quot;&gt;Шорты&lt;/div&gt;
+    &lt;div class=&quot;price&quot;&gt;299 ₽&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;product&quot;&gt;&lt;h3&gt;Итого&lt;/h3&gt;&lt;/div&gt;
+    &lt;div class=&quot;total&quot;&gt;898 ₽&lt;/div&gt;
+   &lt;/div&gt;
+  &lt;/section&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div></div></section></div></div></div></div></div></section></div><section class="row credit"><div class="columns small-6 credit-author"><i class="icon-user"></i> Автор: Влад Мержевич</div><div class="columns small-6 credit-changed"><i class="icon-calendar"></i> Последнее изменение: 21.08.2017</div><div class="columns small-12 credit-editor"><i class="icon-users"></i> Редакторы: Влад Мержевич</div></section><div id="block-9" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+ad = document.getElementById('block-9');
+if (ad.getBoundingClientRect().width) {
+adWidth = ad.getBoundingClientRect().width;
+} else {
+adWidth = ad.offsetWidth;
+}
+google_ad_client = "ca-pub-0708135098984815";
+if (adWidth >= 728) { google_ad_size = ["728", "90"]; google_ad_slot = "1258944978"; }
+else { google_ad_size = ["300", "250"]; google_ad_slot = "8016056172"; }
+document.write (
+'<ins class="adsbygoogle" style="display:inline-block;width:'
++ google_ad_size[0] + 'px;height:'
++ google_ad_size[1] + 'px" data-ad-client="'
++ google_ad_client + '" data-ad-slot="'
++ google_ad_slot + '"></ins>'
+);
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div><div id="block-18" class="block"><h2 class="block_title">Рекомендуем</h2><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6422661373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div><div id="block-10" class="block"><div class="block_content"><div id="disqus_thread"></div>
+<script>
+var disqus_shortname = "webref";
+(function() {
+var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+(document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+})();
+</script>
+</div></div></div></div></div><aside class="large-3 columns right-off-canvas-menu"><div class="region region-sidebar-toc"><div id="views-course-toc" class="block"><h2 class="block_title">Содержание</h2><div class="block_content"><div class="view view-course view-id-course view-display-id-toc view-dom-id-12ede3e0c01b2e664a0cd64bfd37c04b"><div class="view-content"><ul class="menu"><li class=""> <a href="description.html">Описание float</a></li><li class=""> <a href="float-effect.html">Влияние float</a></li><li class=""> <a href="clearfix.html" class="active">Очистка float</a></li><li class=""> <a href="use.html">Примеры использования float</a></li><li class=""> <a href="quiz.html">Проверка знаний</a></li></ul></div></div></div></div><div id="block-12" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:240px;height:400px" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6456026170"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div></aside></div></main><a class="exit-off-canvas"></a></div></div><div class="footer"><div class="adv_footer"><div class="row"><div class="medium-12 columns hide-for-medium-down"><div class="region region-adv-footer"><div id="block-15" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+ad = document.getElementById('block-15');
+if (ad.getBoundingClientRect().width) {
+adWidth = ad.getBoundingClientRect().width;
+} else {
+adWidth = ad.offsetWidth;
+}
+google_ad_client = "ca-pub-0708135098984815";
+if (adWidth >= 728) { google_ad_size = ["728", "90"]; google_ad_slot = "1258944978"; }
+else { google_ad_size = ["300", "250"]; google_ad_slot = "8016056172"; }
+document.write (
+'<ins class="adsbygoogle" style="display:inline-block;width:'
++ google_ad_size[0] + 'px;height:'
++ google_ad_size[1] + 'px" data-ad-client="'
++ google_ad_client + '" data-ad-slot="'
++ google_ad_slot + '"></ins>'
+);
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div></div></div></div><div class="copyright"><div class="row"><div class="small-2 columns"><p><a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow"><img alt="Лицензия Creative Commons" src="../../sites/all/themes/ori/img/cc.png" width="88" height="31"></a></p></div><div class="small-10 columns"><p>Все материалы сайта доступны по <a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow">лицензии Creative Commons «Attribution-NonCommercial» («Атрибуция — Некоммерческое использование») 4.0 Всемирная</a>, если не указано иное.</p></div></div></div><footer><div class="row"><div class="medium-12 large-4 columns"><h4>О сайте</h4><p>На сайте находятся справочники по различным веб-технологиям, а также руководства по вёрстке веб-страниц и разработке мобильных приложений.</p><p class="about-last">Главный редактор: Влад Мержевич</p></div><div class="small-6 large-2 columns"><h4>Связи</h4><ul id="community"><li><i class="icon-rss"></i> <a href="https://feeds.feedburner.com/webref" rel="nofollow">RSS</a></li><li><i class="icon-jsfiddle"></i> <a href="https://jsfiddle.net/user/webref/fiddles/" rel="nofollow">JSFiddle</a></li><li><i class="icon-github"></i> <a href="https://github.com/webref" rel="nofollow">GitHub</a></li><li><i class="icon-doc-text"></i> <a href="https://drive.google.com/folderview?id=0B4u62HGG7TOnTVJ4aFlFa1Jpb2M" rel="nofollow">Google Диск</a></li></ul></div><div class="small-6 large-3 columns"><h4>Разделы сайта</h4><ul id="footer-menu" class="links"><li><i class="icon-book"></i> <a href="../../ref.html">Справочники</a></li><li><i class="icon-layout"></i> <a href="../../layout.html">Вёрстка</a></li><li><i class="icon-gear"></i> <a href="../../dev.html">Веб-технологии</a></li><li><i class="icon-mobile"></i> <a href="../../mobile.html">Мобильные приложения</a></li><li><i class="icon-bookmark"></i> <a href="../../course.html">Учебные курсы</a></li></ul></div><div class="small-12 medium-12 large-3 columns"><h4>Популярные материалы</h4><div class="region region-popular"><div id="views-popular-popular" class="block"><div class="block_content"><div class="view view-popular view-id-popular view-display-id-popular view-dom-id-8d0f89a61c09b42461592572c1554368"><div class="view-content"><ul><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/learn-html-css.html">Уроки по HTML и CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/howtocodeinhtml.html">Как верстать на HTML5 и CSS3</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/html5-css3.html">HTML5 и CSS3 на примерах</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/css3.svg.png" src="../../assets/images/thumb/css3.svg" width="16" height="16" alt="" /> <a href="../../layout/magic-of-css.html">Магия CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/jquery.svg.png" src="../../assets/images/thumb/jquery.svg" width="16" height="16" alt="" /> <a href="../../dev/jqfundamentals.html">Основы jQuery</a></li></ul></div></div></div></div></div></div></div><div class="row"><div class="small-12 columns counter">
+<script src="../../sites/all/themes/ori/js/li.js"></script>
+</div></div><a href="clearfix.html#top"><div class="row"><div class="small-12 columns ontop">Наверх</div></div></a></footer></div><script type="text/javascript" src="../../assets/js/js_p2Pm92U0xNKrBps4v5uAeOIq9sGMPp8zPpZGieWq8eo.js"></script>
+<script type="text/javascript" src="../../assets/js/js_H7q2xORKmR9AN8Qx5spKEIBp7R_wG2apAswJoCUZY7I.js"></script>
+<script type="text/javascript" src="../../assets/js/js_cAGx8TZfpje9IR7N0CabMqErxejyIj9dJVFTGgkSqfQ.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+H5PIntegration = {"baseUrl":"https:\/\/webref.ru","url":"\/assets\/h5p","postUserStatistics":false,"ajax":{"setFinished":"\/h5p-ajax\/set-finished.json?token=09f3e25a4d191","contentUserData":"\/h5p-ajax\/content-user-data\/:contentId\/:dataType\/:subContentId?token=9177521f2bf9a"},"saveFreq":false,"l10n":{"H5P":{"fullscreen":"Fullscreen","disableFullscreen":"Disable fullscreen","download":"\u0421\u043a\u0430\u0447\u0430\u0442\u044c","copyrights":"Rights of use","embed":"Embed","size":"\u0420\u0430\u0437\u043c\u0435\u0440","showAdvanced":"Show advanced","hideAdvanced":"Hide advanced","advancedHelp":"Include this script on your website if you want dynamic sizing of the embedded content:","copyrightInformation":"Rights of use","close":"\u0417\u0430\u043a\u0440\u044b\u0442\u044c","title":"\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a","author":"\u0410\u0432\u0442\u043e\u0440","year":"Year","source":"Source","license":"License","thumbnail":"Thumbnail","noCopyrights":"No copyright information available for this content.","downloadDescription":"Download this content as a H5P file.","copyrightsDescription":"View copyright information for this content.","embedDescription":"View the embed code for this content.","h5pDescription":"Visit H5P.org to check out more cool content.","contentChanged":"This content has changed since you last used it.","startingOver":"You'll be starting over.","by":"by","showMore":"Show more","showLess":"Show less","subLevel":"Sublevel","confirmDialogHeader":"Confirm action","confirmDialogBody":"Please confirm that you wish to proceed. This action is not reversible.","cancelLabel":"\u041e\u0442\u043c\u0435\u043d\u0438\u0442\u044c","confirmLabel":"\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044c","licenseU":"Undisclosed","licenseCCBY":"Attribution","licenseCCBYSA":"Attribution-ShareAlike","licenseCCBYND":"Attribution-NoDerivs","licenseCCBYNC":"Attribution-NonCommercial","licenseCCBYNCSA":"Attribution-NonCommercial-ShareAlike","licenseCCBYNCND":"Attribution-NonCommercial-NoDerivs","licenseCC40":"4.0 International","licenseCC30":"3.0 Unported","licenseCC25":"2.5 Generic","licenseCC20":"2.0 Generic","licenseCC10":"1.0 Generic","licenseGPL":"General Public License","licenseV3":"Version 3","licenseV2":"Version 2","licenseV1":"Version 1","licensePD":"Public Domain","licenseCC010":"CC0 1.0 Universal (CC0 1.0) Public Domain Dedication","licensePDM":"Public Domain Mark","licenseC":"Copyright"}},"hubIsEnabled":true,"siteUrl":"https:\/\/webref.ru\/","contents":{"cid-7932":{"library":"H5P.SingleChoiceSet 1.8","jsonContent":"{\"choices\":[{\"subContentId\":\"68431afb-a1a1-4847-a28f-ea7ac00ce69d\",\"question\":\"<p>\\u0423 \\u043a\\u0430\\u043a\\u0438\\u0445 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u043e\\u0432 \\u043f\\u0440\\u043e\\u0438\\u0441\\u0445\\u043e\\u0434\\u0438\\u0442 \\u043e\\u0447\\u0438\\u0441\\u0442\\u043a\\u0430 float \\u0441 \\u043f\\u043e\\u043c\\u043e\\u0449\\u044c\\u044e clear?<\\\/p>\\n\",\"answers\":[\"<p>\\u0412\\u044b\\u0448\\u0435\\u0441\\u0442\\u043e\\u044f\\u0449\\u0438\\u0445.<\\\/p>\\n\",\"<p>\\u041d\\u0438\\u0436\\u0435\\u0441\\u0442\\u043e\\u044f\\u0449\\u0438\\u0445.<\\\/p>\\n\",\"<p>\\u0420\\u043e\\u0434\\u0438\\u0442\\u0435\\u043b\\u044c\\u0441\\u043a\\u043e\\u0433\\u043e \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430.<\\\/p>\\n\",\"<p>\\u0414\\u043e\\u0447\\u0435\\u0440\\u043d\\u0438\\u0445 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u043e\\u0432.<\\\/p>\\n\"]},{\"subContentId\":\"5db3f931-b33d-43eb-9453-3331fe8e71ff\",\"question\":\"<p>\\u0427\\u0442\\u043e \\u0432 \\u0434\\u0430\\u043d\\u043d\\u043e\\u043c \\u0441\\u043b\\u0443\\u0447\\u0430\\u0435 \\u0432\\u044b\\u043f\\u043e\\u043b\\u043d\\u044f\\u0435\\u0442 \\u043a\\u043b\\u0430\\u0441\\u0441 clearfix?<\\\/p>\\n\\n<p>.clearfix { clear: left; }<\\\/p>\\n\",\"answers\":[\"<p>\\u041e\\u0442\\u043c\\u0435\\u043d\\u044f\\u0435\\u0442 \\u0434\\u0435\\u0439\\u0441\\u0442\\u0432\\u0438\\u0435 left \\u0443 float.<\\\/p>\\n\",\"<p>\\u041e\\u0442\\u043c\\u0435\\u043d\\u044f\\u0435\\u0442 \\u0434\\u0435\\u0439\\u0441\\u0442\\u0432\\u0438\\u0435 right \\u0443 float.<\\\/p>\\n\",\"<p>\\u041e\\u0442\\u043c\\u0435\\u043d\\u044f\\u0435\\u0442 \\u0434\\u0435\\u0439\\u0441\\u0442\\u0432\\u0438\\u0435 left \\u0438 right \\u0443 float.<\\\/p>\\n\",\"<p>\\u041e\\u0442\\u043c\\u0435\\u043d\\u044f\\u0435\\u0442 \\u0434\\u0435\\u0439\\u0441\\u0442\\u0432\\u0438\\u0435 both \\u0443 float.<\\\/p>\\n\"]},{\"subContentId\":\"80ccf700-ae86-4f67-aa25-76b62821514a\",\"question\":\"<p>\\u0427\\u0442\\u043e \\u0432 \\u0434\\u0430\\u043d\\u043d\\u043e\\u043c \\u0441\\u043b\\u0443\\u0447\\u0430\\u0435 \\u0432\\u044b\\u043f\\u043e\\u043b\\u043d\\u044f\\u0435\\u0442 \\u043a\\u043b\\u0430\\u0441\\u0441 clearfix?<\\\/p>\\n\\n<p>.clearfix { clear: both; }<\\\/p>\\n\",\"answers\":[\"<p>\\u041e\\u0442\\u043c\\u0435\\u043d\\u044f\\u0435\\u0442 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 left \\u0438 right \\u0443 float.<\\\/p>\\n\",\"<p>\\u041e\\u0442\\u043c\\u0435\\u043d\\u044f\\u0435\\u0442 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 left \\u0443 float.<\\\/p>\\n\",\"<p>\\u041e\\u0442\\u043c\\u0435\\u043d\\u044f\\u0435\\u0442 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 right \\u0443 float.<\\\/p>\\n\",\"<p>\\u041e\\u0442\\u043c\\u0435\\u043d\\u044f\\u0435\\u0442 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 both \\u0443 float.<\\\/p>\\n\"]},{\"subContentId\":\"3d6305ba-95dd-4114-a0ff-d3c6a1679143\",\"question\":\"<p>\\u0415\\u0441\\u0442\\u044c \\u0441\\u043b\\u0435\\u0434\\u0443\\u044e\\u0449\\u0438\\u0439 \\u043a\\u043e\\u0434 HTML.<\\\/p>\\n\\n<p>&lt;section&gt;<br>\\n&nbsp;&lt;div class=\\\"c1\\\" style=\\\"float: left\\\"&gt;\\u2026&lt;\\\/div&gt;<br>\\n&nbsp;&lt;div class=\\\"c2\\\"&gt;\\u2026&lt;\\\/div&gt;<br>\\n&lt;\\\/section&gt;<br>\\n&lt;p&gt;\\u2026&lt;\\\/p&gt;<\\\/p>\\n\\n<p>\\u041a \\u043a\\u0430\\u043a\\u043e\\u043c\\u0443 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0443 \\u0441\\u043b\\u0435\\u0434\\u0443\\u0435\\u0442 \\u0434\\u043e\\u0431\\u0430\\u0432\\u0438\\u0442\\u044c overflow: hidden, \\u0447\\u0442\\u043e\\u0431\\u044b \\u043e\\u0442\\u043c\\u0435\\u043d\\u0438\\u0442\\u044c \\u0434\\u0435\\u0439\\u0441\\u0442\\u0432\\u0438\\u0435 float \\u043f\\u043e\\u0441\\u043b\\u0435 &lt;section&gt;?<\\\/p>\\n\",\"answers\":[\"<p>&lt;section&gt;<\\\/p>\\n\",\"<p>&lt;p&gt;<\\\/p>\\n\",\"<p>&lt;div class=\\\"c1\\\"&gt;<\\\/p>\\n\",\"<p>&lt;div class=\\\"c2\\\"&gt;<\\\/p>\\n\"]},{\"subContentId\":\"dd08e00c-69e4-4c4e-ae41-d040ea0a26c8\",\"question\":\"<p>\\u041a\\u0443\\u0434\\u0430 \\u0432\\u044b\\u0432\\u043e\\u0434\\u0438\\u0442\\u0441\\u044f \\u0442\\u0435\\u043a\\u0441\\u0442 \\u043f\\u0440\\u0438 \\u0441\\u043e\\u0447\\u0435\\u0442\\u0430\\u043d\\u0438\\u0438 \\u043f\\u0441\\u0435\\u0432\\u0434\\u043e\\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430 ::after \\u0438 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u0430 content?<\\\/p>\\n\",\"answers\":[\"<p>\\u041f\\u043e\\u0441\\u043b\\u0435 \\u0441\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u043c\\u043e\\u0433\\u043e \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430.<\\\/p>\\n\",\"<p>\\u0414\\u043e \\u0441\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u043c\\u043e\\u0433\\u043e \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430.<\\\/p>\\n\",\"<p>\\u041f\\u043e\\u0441\\u043b\\u0435 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430.<\\\/p>\\n\",\"<p>\\u0414\\u043e \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430.<\\\/p>\\n\"]}],\"behaviour\":{\"timeoutCorrect\":2000,\"timeoutWrong\":3000,\"soundEffectsEnabled\":false,\"enableRetry\":true,\"enableSolutionsButton\":true,\"passPercentage\":100},\"l10n\":{\"resultSlideTitle\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e :numcorrect \\u0438\\u0437 :maxscore\",\"showSolutionButtonLabel\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"retryButtonLabel\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"solutionViewTitle\":\"\\u0420\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"correctText\":\"Correct!\",\"incorrectText\":\"Incorrect!\",\"muteButtonLabel\":\"Mute feedback sound\",\"closeButtonLabel\":\"Close\",\"slideOfTotal\":\"Slide :num of :total\"}}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/2031\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"2031","url":"https:\/\/webref.ru\/task\/2031","title":"\u041e\u0447\u0438\u0441\u0442\u043a\u0430 float 1","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}},"cid-7933":{"library":"H5P.MultiChoice 1.9","jsonContent":"{\"answers\":[{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>hidden<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>auto<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>scroll<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>visible<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>display<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>flex<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>clear<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>both<\\\/div>\\n\"}],\"UI\":{\"checkAnswerButton\":\"\\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u0438\\u0442\\u044c\",\"showSolutionButton\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"tryAgainButton\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"tipsLabel\":\"Show tip\",\"scoreBarLabel\":\"Score\",\"tipAvailable\":\"Tip available\",\"feedbackAvailable\":\"Feedback available\",\"readFeedback\":\"Read feedback\",\"wrongAnswer\":\"Wrong answer\",\"correctAnswer\":\"Correct answer\",\"feedback\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e @score \\u0438\\u0437 @total\",\"shouldCheck\":\"Should have been checked\",\"shouldNotCheck\":\"Should not have been checked\",\"noInput\":\"Please answer before viewing the solution\"},\"behaviour\":{\"enableRetry\":true,\"enableSolutionsButton\":true,\"type\":\"auto\",\"singlePoint\":false,\"randomAnswers\":true,\"showSolutionsRequiresInput\":true,\"disableImageZooming\":false,\"confirmCheckDialog\":false,\"confirmRetryDialog\":false,\"autoCheck\":false,\"passPercentage\":100},\"confirmCheck\":{\"header\":\"Finish ?\",\"body\":\"Are you sure you wish to finish ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Finish\"},\"confirmRetry\":{\"header\":\"Retry ?\",\"body\":\"Are you sure you wish to retry ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Confirm\"},\"question\":\"<p>\\u041a\\u0430\\u043a\\u0438\\u0435 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u044f overflow \\u043e\\u0447\\u0438\\u0449\\u0430\\u044e\\u0442 float?<\\\/p>\\n\"}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/2032\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"2032","url":"https:\/\/webref.ru\/task\/2032","title":"\u041e\u0447\u0438\u0441\u0442\u043a\u0430 float 2","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}},"cid-7934":{"library":"H5P.MultiChoice 1.9","jsonContent":"{\"answers\":[{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>content: ''<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>display: block<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>clear: both<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>display: none<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>float: clear<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>height: 1em<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>box-sizing: content-box<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>line-height: 1<\\\/div>\\n\"}],\"UI\":{\"checkAnswerButton\":\"\\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u0438\\u0442\\u044c\",\"showSolutionButton\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"tryAgainButton\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"tipsLabel\":\"Show tip\",\"scoreBarLabel\":\"Score\",\"tipAvailable\":\"Tip available\",\"feedbackAvailable\":\"Feedback available\",\"readFeedback\":\"Read feedback\",\"wrongAnswer\":\"Wrong answer\",\"correctAnswer\":\"Correct answer\",\"feedback\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e @score \\u0438\\u0437 @total\",\"shouldCheck\":\"Should have been checked\",\"shouldNotCheck\":\"Should not have been checked\",\"noInput\":\"Please answer before viewing the solution\"},\"behaviour\":{\"enableRetry\":true,\"enableSolutionsButton\":true,\"type\":\"auto\",\"singlePoint\":false,\"randomAnswers\":true,\"showSolutionsRequiresInput\":true,\"disableImageZooming\":false,\"confirmCheckDialog\":false,\"confirmRetryDialog\":false,\"autoCheck\":false,\"passPercentage\":100},\"confirmCheck\":{\"header\":\"Finish ?\",\"body\":\"Are you sure you wish to finish ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Finish\"},\"confirmRetry\":{\"header\":\"Retry ?\",\"body\":\"Are you sure you wish to retry ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Confirm\"},\"question\":\"<p>\\u041a\\u0430\\u043a\\u0438\\u0435 \\u0441\\u0442\\u0438\\u043b\\u0435\\u0432\\u044b\\u0435 \\u043f\\u0440\\u0430\\u0432\\u0438\\u043b\\u0430 \\u043d\\u0443\\u0436\\u043d\\u043e \\u0434\\u043e\\u0431\\u0430\\u0432\\u0438\\u0442\\u044c \\u043a .clearfix::after \\u0434\\u043b\\u044f \\u043e\\u0447\\u0438\\u0441\\u0442\\u043a\\u0438 float?<\\\/p>\\n\"}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/2033\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"2033","url":"https:\/\/webref.ru\/task\/2033","title":"\u041e\u0447\u0438\u0441\u0442\u043a\u0430 float 3","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}}},"loadedJs":"\/assets\/h5p\/libraries\/H5P.MultiChoice-1.9\/js\/multichoice.js?ver=1.9.2","loadedCss":["\/assets\/h5p\/libraries\/Tether-1.0\/styles\/tether.min.css?ver=1.0.2","\/assets\/h5p\/libraries\/Drop-1.0\/css\/drop-theme-arrows-bounce.min.css?ver=1.0.2","\/assets\/h5p\/libraries\/FontAwesome-4.5\/h5p-font-awesome.min.css?ver=4.5.4","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-help-dialog.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-message-dialog.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-progress-circle.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-simple-rounded-button.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-speech-bubble.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-tip.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-slider.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-score-bar.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-progressbar.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-ui.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.Question-1.2\/styles\/question.css?ver=1.2.2","\/assets\/h5p\/libraries\/H5P.SingleChoiceSet-1.8\/styles\/single-choice-set.css?ver=1.8.4","\/assets\/h5p\/libraries\/H5P.MultiChoice-1.9\/css\/multichoice.css?ver=1.9.2"]};
+//--><!]]>
+</script>
+<script type="text/javascript" src="../../assets/js/js_V2GNOshuLPzy1pw-N0E22cul4mNDg2mFEMr1chJ4aBw.js"></script>
+</body>
+</html>

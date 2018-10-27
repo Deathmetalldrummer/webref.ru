@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Базовый синтаксис CSS | Уроки | WebReference</title>
+<meta charset="utf-8" />
+<meta name="description" content="Стилевые правила записываются в собственном формате, отличном от HTML. Основным понятием выступает селектор — это шаблон, который используется для выбора одного или нескольких элементов HTML и применения к ним параметров форматирования. Общий способ записи имеет следующий вид." />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_GmPV_e3YNAzxsGyZNJb8l3jyzuLiXRRwUYoy5enMRkM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_05L7rVyKSR6LG8jIbfMBirjSYYl5DKoSZt3nYlTqTUI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_TRgZiIWJG1Kscmnc2ThzsQLBI4y7E3_GdynGIqED184.css" media="screen" />
+</head>
+<body>
+<div class="off-canvas-wrap" data-offcanvas><div class="inner-wrap"><header><div class="row"><div class="small-12 large-4 columns logo"><a href="../../index.html">WebReference<span>.</span>ru</a></div><nav class="small-10 large-7 columns topmenu"><div class="region region-menu"><div id="system-main-menu" class="block"><div class="block_content"><ul class="menu"><li class="first leaf"><a href="../../ref.html" title="">Справочники</a></li><li class="leaf"><a href="../../layout.html" title="">Вёрстка</a></li><li class="leaf"><a href="../../dev.html" title="">Веб-технологии</a></li><li class="leaf"><a href="../../mobile.html" title="">Мобильные приложения</a></li><li class="last leaf"><a href="../../course.html">Курсы</a></li></ul></div></div></div></nav><div class="small-2 large-1 columns search"><div id="search-button" tabindex="1"></div><form action="https://webref.ru/search/" id="cse-search-box"><input type="search" placeholder="Поиск по сайту" name="s" autocomplete="off" id="cse-search-input"><input type="hidden" name="cx" value="partner-pub-0708135098984815:9970767379"><input type="hidden" name="cof" value="FORID:10"><input type="hidden" name="ie" value="UTF-8"></form></div></div></header><main><div class="title"><div class="row"><div class="small-12 columns"><h1>Базовый синтаксис CSS</h1></div></div></div><div class="breadcrumb"><div class="row"><div class="small-12 columns"><div class="region region-crumbs"><div id="easy_breadcrumb-easy_breadcrumb" class="block"><div class="block_content"><div itemscope class="easy-breadcrumb" itemtype="http://data-vocabulary.org/Breadcrumb"> <span itemprop="title"><a href="../../index.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Главная</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span itemprop="title"><a href="../../course.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-1">Учебные курсы</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span class="easy-breadcrumb_segment easy-breadcrumb_segment-2" itemprop="title">Css tutorial</span> <span class="easy-breadcrumb_segment-separator">/</span> <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">Базовый синтаксис CSS</span></div></div></div></div></div></div></div><div class="row"><div class="medium-12 large-9 columns main-section">
+<script id="dsq-count-scr" src="https://webref.disqus.com/count.js" async></script>
+<p class="num_comments"><a href="syntax.html#disqus_thread">Комментарии</a></p><div class="region region-content"><div id="system-main" class="block"><ul class="tabs" data-tabs data-deep-link="true" data-update-history="true" id="lesson-tabs" role="tablist"><li class="tabs-title is-active"><a href="syntax.html#content" aria-selected="true" role="tab" aria-controls="lesson-content">Описание</a></li><li class="tabs-title"><a href="syntax.html#task" role="tab" aria-controls="lesson-task">Задания</a></li><li class="tabs-title"><a href="syntax.html#practice" role="tab" aria-controls="lesson-practice">Практика</a></li></ul><div class="tabs-content" data-tabs-content="lesson-tabs" id="lesson"><div id="example-form"></div><section class="tabs-panel is-active" id="content" role="tabpanel"><p>Стилевые правила записываются в собственном формате, отличном от HTML. Основным понятием выступает селектор — это шаблон, который используется для выбора одного или нескольких элементов HTML и применения к ним параметров форматирования. Общий способ записи имеет следующий вид.</p><p class="fig"><img src="../../assets/images/css-tutorial/syntax.png" alt="Синтаксис CSS"></p><p>Вначале указывается имя селектора, например, <span class="tag">div</span>, это означает, что все стилевые параметры будут применяться ко всем элементам <span class="tag">&lt;div&gt;</span> в HTML-документе. Затем пишутся фигурные скобки, внутри которых идёт стилевое свойство, а его значение указывается после двоеточия. Стилевые свойства разделяются между собой точкой с запятой, в конце этот символ можно опустить.</p><p>CSS не чувствителен к регистру, переносу строк, пробелам и символам табуляции, поэтому форма записи зависит от желания разработчика. Так, в примере&nbsp;1 показаны две разновидности оформления селекторов и их правил.</p><p class="exampleTitle">Пример 1. Использование стилей</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Заголовки&lt;/title&gt;
+  &lt;style&gt; 
+   h1 {color:#a6780a;font-weight:normal;}
+   h2 { 
+    color: olive;
+    border-bottom: 2px solid black; 
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;h1&gt;Заголовок 1&lt;/h1&gt;
+  &lt;h2&gt;Заголовок 2&lt;/h2&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере свойства селектора <span class="tag">h1</span> записаны в одну строку без пробелов, а для селектора <span class="tag">h2</span> каждое свойство располагается на отдельной строке. Во втором случае проще отыскивать нужные свойства и править их по необходимости, но при этом незначительно возрастает объём данных за счёт активного использования пробелов и переносов строк. Обычно при разработке сайта используют наиболее удобную и наглядную форму записи, а уже перед публикацией сайта из стилевого файла для сокращения его объёма удаляются все пробелы и переносы строк.</p><h2>Правила применения стилей</h2><p>Далее приведены некоторые правила, которые необходимо знать при описании стиля.</p><h3>Форма записи</h3><p>Для селектора допускается добавлять каждое стилевое свойство и его значение по отдельности, как это показано в примере&nbsp;2.</p><p class="exampleTitle">Пример 2. Расширенная форма записи</p>
+<pre class="no-result"><code data-language="css">td { background: olive; }
+td { color: white; }
+td { border: 1px solid black; }</code></pre>
+<p>Однако такая запись не очень удобна. Приходится повторять несколько раз один и тот же селектор, да и легко запутаться в их количестве. Поэтому практичнее писать все свойства для каждого селектора вместе. Указанный набор записей в таком случае получит следующий вид (пример&nbsp;3).</p><p class="exampleTitle">Пример 3. Компактная форма записи</p>
+<pre class="no-result"><code data-language="css">td {
+  background: olive; /* Оливковый цвет фона */
+  color: white; /* Белый цвет текста */
+  border: 1px solid black; /* Чёрная рамка */
+}</code></pre>
+<p>Эта форма записи более наглядная и удобная в использовании.</p><h3>Имеет приоритет значение, указанное в коде ниже</h3><p>Если для селектора вначале задаётся свойство с одним значением, а затем то же свойство, но уже с другим значением, то применяться будет то значение, которое в коде CSS установлено ниже (пример&nbsp;4).</p><p class="exampleTitle">Пример 4. Разные значения у одного свойства</p>
+<pre class="no-result"><code data-language="css">p { color: green; /* Зелёный цвет текста */ }
+p { color: red; /* Красный цвет текста */ }</code></pre>
+<p>В данном примере для селектора p цвет текста вначале установлен зелёным, а затем красным. Поскольку значение <span class="value">red</span> расположено ниже, то оно в итоге и будет применяться к тексту.</p><p>На деле такой записи лучше вообще избегать и удалять повторяющиеся значения. Но подобное может произойти случайно, к примеру, в случае подключения разных стилевых файлов, в которых содержатся одинаковые селекторы.</p><h3>Значения</h3><p>У каждого свойства может быть только соответствующее его целям значение. Например, для <span class="attribute">color</span>, который устанавливает цвет текста, в качестве значений недопустимо использовать числа.</p><h3>Комментарии</h3><p>Комментарии нужны, чтобы делать пояснения по поводу использования того или иного стилевого свойства, выделять разделы или писать свои заметки. Комментарии позволяют легко вспоминать логику и структуру селекторов, а также повышают разборчивость кода. Комментарии обычно применяют в отладочных или учебных целях, а при публикации сайта их стирают.</p><p>Чтобы пометить, что текст является комментарием, применяют следующую конструкцию /* ... */ (пример&nbsp;5).</p><p class="exampleTitle">Пример 5. Комментарии в CSS-файле</p>
+<pre class="no-result"><code data-language="css">/* 
+  Стиль для сайта webref.ru
+  Сделан для ознакомительных целей
+*/
+  
+div {
+  width: 200px; /* Ширина блока в пикселях */
+  background: #f0f0f0; /* Серый цвет фона */
+  border: 1px solid olive; /* Оливковая рамка */ 
+}</code></pre>
+<p>Как следует из данного примера, комментарии можно добавлять в любое место CSS-документа, а также писать текст комментария в несколько строк. Вложенные комментарии, когда один комментарий располагается внутри другого, недопустимы.</p><p><a href="syntax.html#lesson-tabs" class="button radius" onclick="jQuery('#lesson-tabs').foundation('selectTab', 'task')">Перейти к заданиям</a></p></section><section class="tabs-panel" id="task" role="tabpanel" aria-hidden><div id="views-task-block" class="block"><div class="block_content"><div class="view view-task view-id-task view-display-id-block view-dom-id-566327edafd1889b730d4e6b4c139a07"><div class="view-content"><ul class="tabs" data-tabs id="task-tabs"><li class="tabs-title is-active"><a href="syntax.html#t1" aria-selected="true">1</a></li><li class="tabs-title"><a href="syntax.html#t2">2</a></li><li class="tabs-title"><a href="syntax.html#t3">3</a></li></ul><div class="tabs-content" data-tabs-content="task-tabs"><section id="t1" class="tabs-panel task-content is-active"><div class="h5p-content" data-content-id="7871"></div></section><section class="tabs-panel task-content" id="t2"><div class="h5p-content" data-content-id="7872"></div></section><section class="tabs-panel task-content" id="t3"><div class="h5p-content" data-content-id="7873"></div></section></div></div></div></div></div></section><section class="tabs-panel" id="practice" role="tabpanel" aria-hidden><div id="views-practice-block" class="block"><div class="block_content"><div class="view view-practice view-id-practice view-display-id-block view-dom-id-5af99aad8c12c1c71bd91e900c2cc81f"><div class="view-content"><ul class="tabs" data-tabs id="practice-tabs"><li class="tabs-title is-active"><a href="syntax.html#p1" aria-selected="true">1</a></li><li class="tabs-title"><a href="syntax.html#p2">2</a></li></ul><div class="tabs-content" data-tabs-content="practice-tabs"><section id="p1" class="tabs-panel practice-content is-active" data-practice-number="1"><p>Добавьте стиль для селектора <span class="tag">h1</span>, чтобы фон заголовка был оливкового цвета, текст белый, а значение <span class="attribute">padding</span> равнялось 10px.<div class="callout success practice_correct" data-closable><h3>Правильно!</h3><p>Вы правильно выполнили задачу.</p><button class="close-button" aria-label="Закрыть" type="button" data-close><span aria-hidden="true">&times;</span></button></div><div class="callout alert practice_wrong" data-closable><h3>Ошибка!</h3><p>Задача решена неправильно.</p><button class="close-button" aria-label="Закрыть" type="button" data-close><span aria-hidden="true">&times;</span></button></div><div class="row collapse"><div class="small-12 large-6 columns"><div class="practice_toolbar"><button class="practice_run button small"><i class="icon-play"></i> Выполнить</button></div><div class="practice"><textarea class="practice_html" data-lang="html"><!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Заголовок</title>
+  <style>
+
+  </style>
+ </head>
+ <body> 
+  <h1>Заголовок</h1>
+ </body>
+</html></textarea>
+<textarea disabled class="practice_result"><!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Заголовок</title>
+  <style>
+   h1 {
+    background: olive;
+    color: white;
+    padding: 10px;
+   }
+  </style>
+ </head>
+ <body> 
+  <h1>Заголовок</h1>
+ </body>
+</html></textarea>
+</div></div><div class="small-12 large-6 columns"><div class="practice_toolbar text-right"><button class="practice_answer button small success"><i class="icon-help"></i> Показать ответ</button></div><div class="practice_browser"></div></div></div></section><section class="tabs-panel practice-content" id="p2" data-practice-number="2"><p>Добавьте стиль для селектора <span class="tag">div</span>, чтобы рамка вокруг была оливкового цвета, а значение <span class="attribute">padding</span> равнялось 10px.<div class="callout success practice_correct" data-closable><h3>Правильно!</h3><p>Вы правильно выполнили задачу.</p><button class="close-button" aria-label="Закрыть" type="button" data-close><span aria-hidden="true">&times;</span></button></div><div class="callout alert practice_wrong" data-closable><h3>Ошибка!</h3><p>Задача решена неправильно.</p><button class="close-button" aria-label="Закрыть" type="button" data-close><span aria-hidden="true">&times;</span></button></div><div class="row collapse"><div class="small-12 large-6 columns"><div class="practice_toolbar"><button class="practice_run button small"><i class="icon-play"></i> Выполнить</button></div><div class="practice"><textarea class="practice_html" data-lang="html"><!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Рамка</title>
+  <style>
+
+  </style>
+ </head>
+ <body> 
+  <div>Он щи хлебал, слабел хищно</div>
+ </body>
+</html></textarea>
+<textarea disabled class="practice_result"><!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Рамка</title>
+  <style>
+   div {
+    border: 1px solid olive;
+    padding: 10px;
+   }
+  </style>
+ </head>
+ <body> 
+  <div>Он щи хлебал, слабел хищно</div>
+ </body>
+</html></textarea>
+</div></div><div class="small-12 large-6 columns"><div class="practice_toolbar text-right"><button class="practice_answer button small success"><i class="icon-help"></i> Показать ответ</button></div><div class="practice_browser"></div></div></div></section></div></div></div></div></div></section></div><section class="row credit"><div class="columns small-6 credit-author"><i class="icon-user"></i> Автор: Влад Мержевич</div><div class="columns small-6 credit-changed"><i class="icon-calendar"></i> Последнее изменение: 13.08.2017</div><div class="columns small-12 credit-editor"><i class="icon-users"></i> Редакторы: Влад Мержевич</div></section><div id="block-9" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+ad = document.getElementById('block-9');
+if (ad.getBoundingClientRect().width) {
+adWidth = ad.getBoundingClientRect().width;
+} else {
+adWidth = ad.offsetWidth;
+}
+google_ad_client = "ca-pub-0708135098984815";
+if (adWidth >= 728) { google_ad_size = ["728", "90"]; google_ad_slot = "1258944978"; }
+else { google_ad_size = ["300", "250"]; google_ad_slot = "8016056172"; }
+document.write (
+'<ins class="adsbygoogle" style="display:inline-block;width:'
++ google_ad_size[0] + 'px;height:'
++ google_ad_size[1] + 'px" data-ad-client="'
++ google_ad_client + '" data-ad-slot="'
++ google_ad_slot + '"></ins>'
+);
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div><div id="block-18" class="block"><h2 class="block_title">Рекомендуем</h2><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6422661373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div><div id="block-10" class="block"><div class="block_content"><div id="disqus_thread"></div>
+<script>
+var disqus_shortname = "webref";
+(function() {
+var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+(document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+})();
+</script>
+</div></div></div></div></div><aside class="large-3 columns right-off-canvas-menu"><div class="region region-sidebar-toc"><div id="views-course-toc" class="block"><h2 class="block_title">Содержание</h2><div class="block_content"><div class="view view-course view-id-course view-display-id-toc view-dom-id-e1917f915b9e6a41a80065c7ad2aa4b1"><div class="view-content"><ul class="menu"><li class=""> <a href="introduction.html">Введение в CSS</a></li><li class=""> <a href="style.html">Добавление стилей на веб-страницу</a></li><li class=""> <a href="syntax.html" class="active">Базовый синтаксис CSS</a></li><li class=""> <a href="selector.html">Базовые селекторы</a></li><li class=""> <a href="attr.html">Селекторы атрибутов</a></li><li class=""> <a href="selector-combine.html">Комбинации селекторов</a></li><li class=""> <a href="pseudo-element.html">Псевдоэлементы</a></li></ul></div></div></div></div><div id="block-12" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:240px;height:400px" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6456026170"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div></aside></div></main><a class="exit-off-canvas"></a></div></div><div class="footer"><div class="adv_footer"><div class="row"><div class="medium-12 columns hide-for-medium-down"><div class="region region-adv-footer"><div id="block-15" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+ad = document.getElementById('block-15');
+if (ad.getBoundingClientRect().width) {
+adWidth = ad.getBoundingClientRect().width;
+} else {
+adWidth = ad.offsetWidth;
+}
+google_ad_client = "ca-pub-0708135098984815";
+if (adWidth >= 728) { google_ad_size = ["728", "90"]; google_ad_slot = "1258944978"; }
+else { google_ad_size = ["300", "250"]; google_ad_slot = "8016056172"; }
+document.write (
+'<ins class="adsbygoogle" style="display:inline-block;width:'
++ google_ad_size[0] + 'px;height:'
++ google_ad_size[1] + 'px" data-ad-client="'
++ google_ad_client + '" data-ad-slot="'
++ google_ad_slot + '"></ins>'
+);
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div></div></div></div><div class="copyright"><div class="row"><div class="small-2 columns"><p><a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow"><img alt="Лицензия Creative Commons" src="../../sites/all/themes/ori/img/cc.png" width="88" height="31"></a></p></div><div class="small-10 columns"><p>Все материалы сайта доступны по <a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow">лицензии Creative Commons «Attribution-NonCommercial» («Атрибуция — Некоммерческое использование») 4.0 Всемирная</a>, если не указано иное.</p></div></div></div><footer><div class="row"><div class="medium-12 large-4 columns"><h4>О сайте</h4><p>На сайте находятся справочники по различным веб-технологиям, а также руководства по вёрстке веб-страниц и разработке мобильных приложений.</p><p class="about-last">Главный редактор: Влад Мержевич</p></div><div class="small-6 large-2 columns"><h4>Связи</h4><ul id="community"><li><i class="icon-rss"></i> <a href="https://feeds.feedburner.com/webref" rel="nofollow">RSS</a></li><li><i class="icon-jsfiddle"></i> <a href="https://jsfiddle.net/user/webref/fiddles/" rel="nofollow">JSFiddle</a></li><li><i class="icon-github"></i> <a href="https://github.com/webref" rel="nofollow">GitHub</a></li><li><i class="icon-doc-text"></i> <a href="https://drive.google.com/folderview?id=0B4u62HGG7TOnTVJ4aFlFa1Jpb2M" rel="nofollow">Google Диск</a></li></ul></div><div class="small-6 large-3 columns"><h4>Разделы сайта</h4><ul id="footer-menu" class="links"><li><i class="icon-book"></i> <a href="../../ref.html">Справочники</a></li><li><i class="icon-layout"></i> <a href="../../layout.html">Вёрстка</a></li><li><i class="icon-gear"></i> <a href="../../dev.html">Веб-технологии</a></li><li><i class="icon-mobile"></i> <a href="../../mobile.html">Мобильные приложения</a></li><li><i class="icon-bookmark"></i> <a href="../../course.html">Учебные курсы</a></li></ul></div><div class="small-12 medium-12 large-3 columns"><h4>Популярные материалы</h4><div class="region region-popular"><div id="views-popular-popular" class="block"><div class="block_content"><div class="view view-popular view-id-popular view-display-id-popular view-dom-id-c4d6301d5e75902713e48db5f7ebff2b"><div class="view-content"><ul><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/learn-html-css.html">Уроки по HTML и CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/howtocodeinhtml.html">Как верстать на HTML5 и CSS3</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/html5-css3.html">HTML5 и CSS3 на примерах</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/css3.svg.png" src="../../assets/images/thumb/css3.svg" width="16" height="16" alt="" /> <a href="../../layout/magic-of-css.html">Магия CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/jquery.svg.png" src="../../assets/images/thumb/jquery.svg" width="16" height="16" alt="" /> <a href="../../dev/jqfundamentals.html">Основы jQuery</a></li></ul></div></div></div></div></div></div></div><div class="row"><div class="small-12 columns counter">
+<script src="../../sites/all/themes/ori/js/li.js"></script>
+</div></div><a href="syntax.html#top"><div class="row"><div class="small-12 columns ontop">Наверх</div></div></a></footer></div><script type="text/javascript" src="../../assets/js/js_p2Pm92U0xNKrBps4v5uAeOIq9sGMPp8zPpZGieWq8eo.js"></script>
+<script type="text/javascript" src="../../assets/js/js_H7q2xORKmR9AN8Qx5spKEIBp7R_wG2apAswJoCUZY7I.js"></script>
+<script type="text/javascript" src="../../assets/js/js_lKOjAN0cpVlgDTKxNp0QT2fozPMsaFrt6cATlb0HM80.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+H5PIntegration = {"baseUrl":"https:\/\/webref.ru","url":"\/assets\/h5p","postUserStatistics":false,"ajax":{"setFinished":"\/h5p-ajax\/set-finished.json?token=d04516dd9a1f3","contentUserData":"\/h5p-ajax\/content-user-data\/:contentId\/:dataType\/:subContentId?token=515a8ad063bac"},"saveFreq":false,"l10n":{"H5P":{"fullscreen":"Fullscreen","disableFullscreen":"Disable fullscreen","download":"\u0421\u043a\u0430\u0447\u0430\u0442\u044c","copyrights":"Rights of use","embed":"Embed","size":"\u0420\u0430\u0437\u043c\u0435\u0440","showAdvanced":"Show advanced","hideAdvanced":"Hide advanced","advancedHelp":"Include this script on your website if you want dynamic sizing of the embedded content:","copyrightInformation":"Rights of use","close":"\u0417\u0430\u043a\u0440\u044b\u0442\u044c","title":"\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a","author":"\u0410\u0432\u0442\u043e\u0440","year":"Year","source":"Source","license":"License","thumbnail":"Thumbnail","noCopyrights":"No copyright information available for this content.","downloadDescription":"Download this content as a H5P file.","copyrightsDescription":"View copyright information for this content.","embedDescription":"View the embed code for this content.","h5pDescription":"Visit H5P.org to check out more cool content.","contentChanged":"This content has changed since you last used it.","startingOver":"You'll be starting over.","by":"by","showMore":"Show more","showLess":"Show less","subLevel":"Sublevel","confirmDialogHeader":"Confirm action","confirmDialogBody":"Please confirm that you wish to proceed. This action is not reversible.","cancelLabel":"\u041e\u0442\u043c\u0435\u043d\u0438\u0442\u044c","confirmLabel":"\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044c","licenseU":"Undisclosed","licenseCCBY":"Attribution","licenseCCBYSA":"Attribution-ShareAlike","licenseCCBYND":"Attribution-NoDerivs","licenseCCBYNC":"Attribution-NonCommercial","licenseCCBYNCSA":"Attribution-NonCommercial-ShareAlike","licenseCCBYNCND":"Attribution-NonCommercial-NoDerivs","licenseCC40":"4.0 International","licenseCC30":"3.0 Unported","licenseCC25":"2.5 Generic","licenseCC20":"2.0 Generic","licenseCC10":"1.0 Generic","licenseGPL":"General Public License","licenseV3":"Version 3","licenseV2":"Version 2","licenseV1":"Version 1","licensePD":"Public Domain","licenseCC010":"CC0 1.0 Universal (CC0 1.0) Public Domain Dedication","licensePDM":"Public Domain Mark","licenseC":"Copyright"}},"hubIsEnabled":true,"siteUrl":"https:\/\/webref.ru\/","contents":{"cid-7871":{"library":"H5P.SingleChoiceSet 1.8","jsonContent":"{\"choices\":[{\"subContentId\":\"5f77b6b4-4c67-4f0c-9ef5-c77b6cd930e2\",\"question\":\"<p>\\u0412 \\u043a\\u0430\\u043a\\u043e\\u0439 \\u0441\\u0442\\u0440\\u043e\\u043a\\u0435 \\u0441\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u0442\\u0441\\u044f \\u043a\\u043e\\u0440\\u0440\\u0435\\u043a\\u0442\\u043d\\u044b\\u0439 \\u0441\\u0438\\u043d\\u0442\\u0430\\u043a\\u0441\\u0438\\u0441 CSS?<\\\/p>\\n\",\"answers\":[\"<p>body{color:black;}<\\\/p>\\n\",\"<p>body:color=black;<\\\/p>\\n\",\"<p>{body;color:black;}<\\\/p>\\n\",\"<p>body{color=black;}<\\\/p>\\n\"]},{\"subContentId\":\"2caadceb-9f6f-476f-8229-2c1b999da1c9\",\"question\":\"<p>\\u041a\\u0430\\u043a \\u043f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e \\u0432\\u0441\\u0442\\u0430\\u0432\\u0438\\u0442\\u044c \\u043a\\u043e\\u043c\\u043c\\u0435\\u043d\\u0442\\u0430\\u0440\\u0438\\u0439 \\u0432 CSS-\\u0444\\u0430\\u0439\\u043b?<\\\/p>\\n\",\"answers\":[\"<p>\\\/* \\u043a\\u043e\\u043c\\u043c\\u0435\\u043d\\u0442\\u0430\\u0440\\u0438\\u0439 *\\\/<\\\/p>\\n\",\"<p># \\u043a\\u043e\\u043c\\u043c\\u0435\\u043d\\u0442\\u0430\\u0440\\u0438\\u0439<\\\/p>\\n\",\"<p>\\\/\\\/ \\u043a\\u043e\\u043c\\u043c\\u0435\\u043d\\u0442\\u0430\\u0440\\u0438\\u0439<\\\/p>\\n\",\"<p>&lt;!-- \\u043a\\u043e\\u043c\\u043c\\u0435\\u043d\\u0442\\u0430\\u0440\\u0438\\u0439 --&gt;<\\\/p>\\n\"]},{\"subContentId\":\"4bbfc96f-7a03-4a18-b932-02d4d4d6e3a4\",\"question\":\"<p>\\u0412 \\u043a\\u0430\\u043a\\u043e\\u0439 \\u0441\\u0442\\u0440\\u043e\\u043a\\u0435 \\u043a\\u043e\\u0434\\u0430 CSS \\u0441\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u0442\\u0441\\u044f \\u043e\\u0448\\u0438\\u0431\\u043a\\u0430?<\\\/p>\\n\",\"answers\":[\"<p>p { color: green; color; }<\\\/p>\\n\",\"<p>p { text-align: center; color: #000000 }<\\\/p>\\n\",\"<p>p { color: red; font-size: 11pt; }<\\\/p>\\n\",\"<p>p { color: #fc0; margin: 10px; }<\\\/p>\\n\"]},{\"subContentId\":\"2f170c11-cb2b-4bf7-b07c-8374b1774524\",\"question\":\"<p>\\u041a\\u0430\\u043a\\u0430\\u044f \\u043e\\u0448\\u0438\\u0431\\u043a\\u0430 \\u0441\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u0442\\u0441\\u044f \\u0432 \\u0441\\u043b\\u0435\\u0434\\u0443\\u044e\\u0449\\u0435\\u043c \\u043a\\u043e\\u0434\\u0435?<\\\/p>\\n\\n<p>\\\/* --------------------------------<br>\\ndiv {<br>\\n&nbsp;color: #fc0; \\\/* \\u0426\\u0432\\u0435\\u0442 \\u0442\\u0435\\u043a\\u0441\\u0442\\u0430 *\\\/<br>\\n&nbsp;margin: 10px; \\\/* \\u041e\\u0442\\u0441\\u0442\\u0443\\u043f\\u044b \\u0432\\u043e\\u043a\\u0440\\u0443\\u0433 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430 *\\\/<br>\\n&nbsp;float: left \\\/* \\u041e\\u0431\\u0442\\u0435\\u043a\\u0430\\u043d\\u0438\\u0435 \\u043f\\u043e \\u043f\\u0440\\u0430\\u0432\\u043e\\u043c\\u0443 \\u043a\\u0440\\u0430\\u044e *\\\/<br>\\n}&nbsp;<br>\\n-------------------------------- *\\\/<\\\/p>\\n\",\"answers\":[\"<p>\\u0412\\u043b\\u043e\\u0436\\u0435\\u043d\\u043d\\u044b\\u0435 \\u043a\\u043e\\u043c\\u043c\\u0435\\u043d\\u0442\\u0430\\u0440\\u0438\\u0438.<\\\/p>\\n\",\"<p>\\u041d\\u0435\\u0442 \\u0442\\u043e\\u0447\\u043a\\u0438 \\u0441 \\u0437\\u0430\\u043f\\u044f\\u0442\\u043e\\u0439.<\\\/p>\\n\",\"<p>\\u041d\\u0435\\u0434\\u043e\\u043f\\u0443\\u0441\\u0442\\u0438\\u043c\\u044b\\u0435 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u044f \\u0443 \\u0441\\u0442\\u0438\\u043b\\u0435\\u0432\\u044b\\u0445 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432.<\\\/p>\\n\",\"<p>\\u041b\\u0438\\u0448\\u043d\\u0438\\u0435 \\u043f\\u0435\\u0440\\u0435\\u043d\\u043e\\u0441\\u044b \\u0432 \\u043a\\u043e\\u0434\\u0435.<\\\/p>\\n\"]},{\"subContentId\":\"2256f918-8a40-4ec5-a249-ff767d98ee36\",\"question\":\"<p>\\u041a\\u0430\\u043a\\u043e\\u0439 \\u0446\\u0432\\u0435\\u0442 \\u0431\\u0443\\u0434\\u0435\\u0442 \\u0443 \\u0442\\u0435\\u043a\\u0441\\u0442\\u0430?<\\\/p>\\n\\n<p>p { color: red; }<br>\\nspan { color: blue; }<br>\\np { color: green; }<br>\\nspan { color: orange; }<\\\/p>\\n\\n<p>&lt;p&gt;&lt;span&gt;\\u0422\\u0435\\u043a\\u0441\\u0442&lt;\\\/span&gt;&lt;\\\/p&gt;<\\\/p>\\n\",\"answers\":[\"<p>orange<\\\/p>\\n\",\"<p>red<\\\/p>\\n\",\"<p>blue<\\\/p>\\n\",\"<p>green<\\\/p>\\n\"]}],\"behaviour\":{\"timeoutCorrect\":2000,\"timeoutWrong\":3000,\"soundEffectsEnabled\":false,\"enableRetry\":true,\"enableSolutionsButton\":true,\"passPercentage\":100},\"l10n\":{\"resultSlideTitle\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e :numcorrect \\u0438\\u0437 :maxscore\",\"showSolutionButtonLabel\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"retryButtonLabel\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"solutionViewTitle\":\"\\u0420\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"correctText\":\"Correct!\",\"incorrectText\":\"Incorrect!\",\"muteButtonLabel\":\"Mute feedback sound\",\"closeButtonLabel\":\"Close\",\"slideOfTotal\":\"Slide :num of :total\"}}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1979\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1979","url":"https:\/\/webref.ru\/task\/1979","title":"\u0411\u0430\u0437\u043e\u0432\u044b\u0439 \u0441\u0438\u043d\u0442\u0430\u043a\u0441\u0438\u0441 CSS 1","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}},"cid-7872":{"library":"H5P.MarkTheWords 1.6","jsonContent":"{\"checkAnswerButton\":\"\\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u0438\\u0442\\u044c\",\"tryAgainButton\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"showSolutionButton\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"score\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e @score \\u0438\\u0437 @total\",\"behaviour\":{\"enableRetry\":true,\"enableSolutionsButton\":true},\"correctAnswer\":\"Correct!\",\"incorrectAnswer\":\"Incorrect!\",\"missedAnswer\":\"Missed!\",\"displaySolutionDescription\":\"Task is updated to contain the solution.\",\"taskDescription\":\"<p>\\u0412\\u044b\\u0434\\u0435\\u043b\\u0438\\u0442\\u0435 \\u0432\\u0441\\u0435 \\u0441\\u0435\\u043b\\u0435\\u043a\\u0442\\u043e\\u0440\\u044b \\u0432 \\u0434\\u0430\\u043d\\u043d\\u043e\\u043c \\u043a\\u043e\\u0434\\u0435 CSS.<\\\/p>\\n\",\"textField\":\"<p>*body* {<br>\\n&nbsp; display: flex;<br>\\n&nbsp; height: auto;<br>\\n&nbsp; background: #f7f6f2; }<br>\\n*footer* {<br>\\n&nbsp; background: #a44823;<br>\\n&nbsp; color: #e7a88f;<br>\\n&nbsp; padding: 1rem 0;<br>\\n&nbsp; position: relative; }<br>\\n*.pager* {<br>\\n&nbsp; margin: 1rem 0;<br>\\n&nbsp; padding: 0;<br>\\n&nbsp; list-style: none;<br>\\n&nbsp; text-align: center; }<br>\\n*.center* {<br>\\n&nbsp; text-align: center; }<\\\/p>\\n\"}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1980\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1980","url":"https:\/\/webref.ru\/task\/1980","title":"\u0411\u0430\u0437\u043e\u0432\u044b\u0439 \u0441\u0438\u043d\u0442\u0430\u043a\u0441\u0438\u0441 CSS 2","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}},"cid-7873":{"library":"H5P.MarkTheWords 1.6","jsonContent":"{\"checkAnswerButton\":\"\\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u0438\\u0442\\u044c\",\"tryAgainButton\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"showSolutionButton\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"score\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e @score \\u0438\\u0437 @total\",\"behaviour\":{\"enableRetry\":true,\"enableSolutionsButton\":true},\"correctAnswer\":\"Correct!\",\"incorrectAnswer\":\"Incorrect!\",\"missedAnswer\":\"Missed!\",\"displaySolutionDescription\":\"Task is updated to contain the solution.\",\"taskDescription\":\"<p>\\u0412\\u044b\\u0434\\u0435\\u043b\\u0438\\u0442\\u0435 \\u0432\\u0441\\u0435 \\u0441\\u0442\\u0438\\u043b\\u0435\\u0432\\u044b\\u0435 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u0430 \\u0432 \\u0434\\u0430\\u043d\\u043d\\u043e\\u043c \\u043a\\u043e\\u0434\\u0435 CSS.<\\\/p>\\n\",\"textField\":\"<p>body {<br>\\n&nbsp; *background*: #f7f6f2; }<br>\\nfooter {<br>\\n&nbsp; *background*: #a44823;<br>\\n&nbsp; *color*: #e7a88f; }<br>\\n.pager {<br>\\n&nbsp; *margin*: 1rem 0;<br>\\n&nbsp; *padding*: 0;<br>\\n&nbsp; *list-style*: none;<br>\\n&nbsp; *text-align*: center; }<br>\\n.center {<br>\\n&nbsp; *text-align*: center; }<\\\/p>\\n\"}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1981\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1981","url":"https:\/\/webref.ru\/task\/1981","title":"\u0411\u0430\u0437\u043e\u0432\u044b\u0439 \u0441\u0438\u043d\u0442\u0430\u043a\u0441\u0438\u0441 CSS 3","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}}},"loadedJs":"\/assets\/h5p\/libraries\/H5P.MarkTheWords-1.6\/scripts\/mark-the-words.js?ver=1.6.7","loadedCss":["\/assets\/h5p\/libraries\/Tether-1.0\/styles\/tether.min.css?ver=1.0.2","\/assets\/h5p\/libraries\/Drop-1.0\/css\/drop-theme-arrows-bounce.min.css?ver=1.0.2","\/assets\/h5p\/libraries\/FontAwesome-4.5\/h5p-font-awesome.min.css?ver=4.5.4","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-help-dialog.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-message-dialog.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-progress-circle.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-simple-rounded-button.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-speech-bubble.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-tip.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-slider.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-score-bar.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-progressbar.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-ui.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.Question-1.2\/styles\/question.css?ver=1.2.2","\/assets\/h5p\/libraries\/H5P.SingleChoiceSet-1.8\/styles\/single-choice-set.css?ver=1.8.4","\/assets\/h5p\/libraries\/H5P.MarkTheWords-1.6\/styles\/mark-the-words.css?ver=1.6.7"]};
+//--><!]]>
+</script>
+<script type="text/javascript" src="../../assets/js/js_V2GNOshuLPzy1pw-N0E22cul4mNDg2mFEMr1chJ4aBw.js"></script>
+</body>
+</html>

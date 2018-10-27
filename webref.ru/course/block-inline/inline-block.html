@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Строчно-блочные элементы | Уроки | WebReference</title>
+<meta charset="utf-8" />
+<meta name="description" content="Блочные и строчные элементы отлично дополняют друг друга при вёрстке, занимая каждый свою определённую нишу. Но возникают ситуации, когда характеристик этих элементов явно недостаточно. Галерея фотографий, представленная на рис. 1 состоит из секций, в которые входит изображение с подписью к нему, при этом секции выстраиваются по горизонтали, занимая всю доступную ширину. При уменьшении окна браузера секции переходят на другую строку." />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_GmPV_e3YNAzxsGyZNJb8l3jyzuLiXRRwUYoy5enMRkM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_qz3b8KqAgTsUXJiiyBQ0y6yqMCS-Ib3bOwcvTYCViOo.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_TRgZiIWJG1Kscmnc2ThzsQLBI4y7E3_GdynGIqED184.css" media="screen" />
+</head>
+<body>
+<div class="off-canvas-wrap" data-offcanvas><div class="inner-wrap"><header><div class="row"><div class="small-12 large-4 columns logo"><a href="../../index.html">WebReference<span>.</span>ru</a></div><nav class="small-10 large-7 columns topmenu"><div class="region region-menu"><div id="system-main-menu" class="block"><div class="block_content"><ul class="menu"><li class="first leaf"><a href="../../ref.html" title="">Справочники</a></li><li class="leaf"><a href="../../layout.html" title="">Вёрстка</a></li><li class="leaf"><a href="../../dev.html" title="">Веб-технологии</a></li><li class="leaf"><a href="../../mobile.html" title="">Мобильные приложения</a></li><li class="last leaf"><a href="../../course.html">Курсы</a></li></ul></div></div></div></nav><div class="small-2 large-1 columns search"><div id="search-button" tabindex="1"></div><form action="https://webref.ru/search/" id="cse-search-box"><input type="search" placeholder="Поиск по сайту" name="s" autocomplete="off" id="cse-search-input"><input type="hidden" name="cx" value="partner-pub-0708135098984815:9970767379"><input type="hidden" name="cof" value="FORID:10"><input type="hidden" name="ie" value="UTF-8"></form></div></div></header><main><div class="title"><div class="row"><div class="small-12 columns"><h1>Строчно-блочные элементы</h1></div></div></div><div class="breadcrumb"><div class="row"><div class="small-12 columns"><div class="region region-crumbs"><div id="easy_breadcrumb-easy_breadcrumb" class="block"><div class="block_content"><div itemscope class="easy-breadcrumb" itemtype="http://data-vocabulary.org/Breadcrumb"> <span itemprop="title"><a href="../../index.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Главная</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span itemprop="title"><a href="../../course.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-1">Учебные курсы</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span itemprop="title"><a href="../block-inline.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-2">Блочные и строчные элементы</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">Строчно-блочные элементы</span></div></div></div></div></div></div></div><div class="row"><div class="medium-12 large-9 columns main-section">
+<script id="dsq-count-scr" src="https://webref.disqus.com/count.js" async></script>
+<p class="num_comments"><a href="inline-block.html#disqus_thread">Комментарии</a></p><div class="region region-content"><div id="system-main" class="block"><ul class="tabs" data-tabs data-deep-link="true" data-update-history="true" id="lesson-tabs" role="tablist"><li class="tabs-title is-active"><a href="inline-block.html#content" aria-selected="true" role="tab" aria-controls="lesson-content">Описание</a></li><li class="tabs-title"><a href="inline-block.html#task" role="tab" aria-controls="lesson-task">Задания</a></li><li class="tabs-title"><a href="inline-block.html#individual" role="tab" aria-controls="lesson-practice">Самостоятельная</a></li></ul><div class="tabs-content" data-tabs-content="lesson-tabs" id="lesson"><div id="example-form"></div><section class="tabs-panel is-active" id="content" role="tabpanel"><p>Блочные и строчные элементы отлично дополняют друг друга при вёрстке, занимая каждый свою определённую нишу. Но возникают ситуации, когда характеристик этих элементов явно недостаточно. Галерея фотографий, представленная на рис.&nbsp;1 состоит из секций, в которые входит изображение с подписью к нему, при этом секции выстраиваются по горизонтали, занимая всю доступную ширину. При уменьшении окна браузера секции переходят на другую строку.</p><p class="fig"><img src="../../assets/images/block-inline/inline-block1.png" alt="Галерея фотографий" width="711" height="555"/></p><p class="figsign">Рис. 1. Галерея фотографий</p><p>Если для формирования секций использовать блочный элемент, то он будет каждый раз начинаться с новой строки. Для строчных элементов нельзя задавать размеры всей секции. Одним из решений является применение строчно-блочных элементов, которые сочетают преимущества строчных и блочных элементов.</p><p>Строчно-блочный элемент можно определить, задав ему в стилях свойство <a href="../../css/display.html">display</a> со значением <span class="value">inline-block</span>.</p>
+<pre class="no-result"><code data-language="css">div {
+  display: inline-block;
+}</code></pre>
+<p>Кроме того, в HTML существует ряд элементов, для которых значение <span class="value">inline-block</span> задано по умолчанию: <span class="tag">&lt;button&gt;</span>, <span class="tag">&lt;input&gt;</span>, <span class="tag">&lt;textarea&gt;</span>, <span class="tag">&lt;select&gt;</span>.</p><p>Характеристики этих элементов следующие.</p><ul><li>Высота и ширина элемента вычисляется браузером автоматически, исходя из содержимого блока.</li><li> Размеры содержимого можно устанавливать через свойства <span class="attribute">width</span> и <span class="attribute">height</span>.</li><li> Ширина блока получается сложением значений <span class="attribute">width</span>, <span class="attribute">margin</span>, <span class="attribute">border</span> и <span class="attribute">padding</span>.</li><li> Высота блока получается сложением значений <span class="attribute">height</span>, <span class="attribute">margin</span>, <span class="attribute">border</span> и <span class="attribute">padding</span>.</li><li> Несколько элементов идущих подряд располагаются на одной строке и переносятся на другую строку при необходимости.</li><li> Элементы можно выравнивать по вертикали с помощью свойства <a href="../../css/vertical-align.html">vertical-align</a>.</li><li>Перенос текста считается за пробел.</li></ul><p>Чтобы создать галерею, представленную на рис. 1, в стилях для <span class="tag">figure</span> следует задать значение <span class="attribute">display</span> как <span class="value">inline-block</span>, а внутрь элемента <span class="tag">&lt;figure&gt;</span> добавить изображение и подпись к нему через <span class="tag">&lt;figcaption&gt;</span> (пример&nbsp;1).</p><p class="exampleTitle">Пример 1. Создание галереи</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Галерея&lt;/title&gt;
+  &lt;style&gt;
+   .photo {
+    background: #d9dabb; /* Цвет фона */
+    width: 150px; /* Ширина */
+    margin: 0 10px 10px 0; /* Отступы справа и снизу */
+    padding: 10px 0; /* Поля сверху и снизу */
+    text-align: center; /* Выравнивание по центру */
+    display: inline-block; /* Строчно-блочный элемент */
+    vertical-align: top; /* Выравнивание по верхнему краю */
+   }
+   .photo img {
+    border: 2px solid #8b8e4b; /* Параметры рамки */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;figure class=&quot;photo&quot;&gt;
+   &lt;img src=&quot;image/thumb1.jpg&quot;&gt;
+   &lt;figcaption&gt;Софийский собор&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;figure class=&quot;photo&quot;&gt;
+   &lt;img src=&quot;image/thumb2.jpg&quot;&gt;
+   &lt;figcaption&gt;Польский костёл&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;figure class=&quot;photo&quot;&gt;
+   &lt;img src=&quot;image/thumb3.jpg&quot;&gt;
+   &lt;figcaption&gt;Купеческий клуб&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;figure class=&quot;photo&quot;&gt;
+   &lt;img src=&quot;image/thumb4.jpg&quot;&gt;
+   &lt;figcaption&gt;Памятник Св.&amp;nbsp;Владимиру&lt;/figcaption&gt;
+  &lt;/figure&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Обратите внимание, что высота секций различается, поскольку в стилях высота никак не ограничена, в отличие от ширины. Выравнивание секций можно установить через свойство <span class="attribute">vertical-align</span>, в данном примере выравнивание делается по верхнему краю с помощью значения <span class="value">top</span>.</p><p>Строчно-блочные элементы также применяются для создания макетов веб-страниц. В качестве примера возьмём трёхколоночный макет, ширина колонок задаётся в процентах (пример&nbsp;2).</p><p class="exampleTitle">Пример 2. Макет из трёх колонок</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Макет&lt;/title&gt;
+  &lt;style&gt;
+   section {
+    display: inline-block; /* Строчно-блочный элемент */
+    vertical-align: top; /* Выравнивание по верхнему краю */
+    min-height: 200px; /* Минимальная высота колонок */
+    box-sizing: border-box; /* Алгоритм расчёта ширины */
+    padding: 15px; /* Поля вокруг текста */
+   }
+   .col1 {
+    width: 20%; /* Ширина первой колонки */
+    background: #C8EAF5; /* Цвет фона первой колонки */
+   }
+   .col2 {
+    width: 40%; /* Ширина второй колонки */
+    background: #FEE4CD; /* Цвет фона второй колонки */
+   }
+   .col3 {
+    width: 40%; /* Ширина третьей колонки */
+    background: #E2EDC1; /* Цвет фона третьей колонки */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;main&gt;
+   &lt;section class=&quot;col1&quot;&gt;Колонка 1&lt;/section&gt;
+   &lt;section class=&quot;col2&quot;&gt;Колонка 2&lt;/section&gt;
+   &lt;section class=&quot;col3&quot;&gt;Колонка 3&lt;/section&gt;
+  &lt;/main&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Колонки создаём с помощью элементов <span class="tag">&lt;section&gt;</span> и в стилях для каждой колонки устанавливаем свойство <span class="attribute">display</span> со значением <span class="value">inline-block</span>, а также задаём выравнивание по верхнему краю через <span class="attribute">vertical-align</span>. Поскольку <span class="attribute">padding</span> оказывает влияние на ширину блока, то для упрощения добавляем <a href="../../css/box-sizing.html">box-sizing</a> со значением <span class="value">border-box</span>. После этого свойство <span class="attribute">width</span> определяет уже ширину всего блока, а не его содержимого, как раньше.</p><p>Если посмотреть на результат примера (рис.&nbsp;2), то последняя колонка оказывается где-то внизу и между колонок появился небольшой промежуток.</p><p class="fig"><img src="../../assets/images/block-inline/inline-block2.png" alt="Перенос колонки на другую строку" width="800" height="519"></p><p class="figsign">Рис. 2. Перенос колонки на другую строку</p><p>Это связано с особенностью строчных элементов, что перенос текста в коде воспринимается как пробел. Соответственно, этот пробел и виден между колонок, он же и оказывает влияние на общую ширину макета, что и приводит к переносу последней колонки на новую строку. Ей просто не хватает места.</p><p>Способов борьбы с этой особенностью несколько, они связаны как с редактирование кода HTML, так и воздействием через CSS. В HTML всё сводится к тому, чтобы не стало пробелов между закрывающим и открывающим тегами. Перечислим некоторые популярные методы.</p><p>Перенос атрибутов в <span class="tag">&lt;section&gt;</span> на другую строку.</p>
+<pre class="no-result"><code data-language="html">&lt;section class=&quot;col1&quot;&gt;Колонка 1&lt;/section&gt;&lt;section
+class=&quot;col2&quot;&gt;Колонка 2&lt;/section&gt;&lt;section 
+class=&quot;col3&quot;&gt;Колонка 3&lt;/section&gt;</code></pre>
+<p>В HTML допустимо переносить закрывающую угловую скобку.</p>
+<pre class="no-result"><code data-language="html">&lt;section class=&quot;col1&quot;&gt;Колонка 1&lt;/section
+&gt;&lt;section class=&quot;col2&quot;&gt;Колонка 2&lt;/section
+&gt;&lt;section class=&quot;col3&quot;&gt;Колонка 3&lt;/section&gt;</code></pre>
+<p>Перенос текста внутри <span class="tag">&lt;section&gt;</span>.</p>
+<pre class="no-result"><code data-language="html">&lt;section class=&quot;col1&quot;&gt;Колонка 1&lt;/section&gt;&lt;section class=&quot;col2&quot;&gt;
+Колонка 2&lt;/section&gt;&lt;section class=&quot;col3&quot;&gt;Колонка 3&lt;/section&gt;</code></pre>
+<p>Использование комментариев в HTML.</p>
+<pre class="no-result"><code data-language="html">&lt;section class=&quot;col1&quot;&gt;Колонка 1&lt;/section&gt;&lt;!--
+--&gt;&lt;section class=&quot;col2&quot;&gt;Колонка 2&lt;/section&gt;&lt;!--
+--&gt;&lt;section class=&quot;col3&quot;&gt;Колонка 3&lt;/section&gt;</code></pre>
+<p>Один из изящных способов борьбы с пробелом в HTML&nbsp;— использование комментариев. Это позволяет сохранить структуру кода без дополнительных переносов.</p><p>В CSS тоже есть несколько методов.</p><p>Отрицательный <span class="attribute">margin-right</span> или <span class="attribute">margin-left</span>. Способ не очень универсальный, поскольку величина отступа зависит от размера шрифта и настроек браузера.</p>
+<pre class="no-result"><code data-language="css">section {
+  margin-right: -4px;
+}</code></pre>
+<p>Нулевой размер шрифта. Для родительского элемента <span class="tag">&lt;main&gt;</span> ставим нулевое значение <span class="attribute">font-size</span>, а затем для <span class="tag">&lt;section&gt;</span> возвращаем его в желаемое значение.</p>
+<pre class="no-result"><code data-language="css">main {
+  font-size: 0;
+}
+section { 
+  font-size: 16px; 
+}</code></pre>
+<p>После этих манипуляций с HTML или CSS колонки выстраиваются нужным нам образом (рис.&nbsp;3).</p><p class="fig"><img src="../../assets/images/block-inline/inline-block3.png" alt="Макет из трёх колонок" width="800" height="358"></p><p class="figsign">Рис. 3. Макет из трёх колонок</p><p><a href="inline-block.html#lesson-tabs" class="button radius" onclick="jQuery('#lesson-tabs').foundation('selectTab', 'task')">Перейти к заданиям</a></p><div id="views-similar-block" class="block"><h2 class="block_title">См. также</h2><div class="block_content"><div class="view view-similar view-id-similar view-display-id-block view-dom-id-12ee3c766ed066a1b61fcf1b5453ee16"><div class="view-content"><div class="similar"><ul><li class=""> <a href="../../css/box-sizing.html">box-sizing</a></li><li class=""> <a href="../../css/display.html">display</a></li><li class=""> <a href="../box-model/display.html">display в CSS</a></li><li class=""> <a href="../../css/height.html">height</a></li><li class=""> <a href="../../css/width.html">width</a></li><li class=""> <a href="block.html">Блочные элементы</a></li><li class=""> <a href="../float/description.html">Описание float</a></li><li class=""> <a href="../../layout/learn-html-css/box-model.html">Открываем блочную модель</a></li><li class=""> <a href="../../layout/learn-html-css/positioning-content.html">Позиционирование содержимого</a></li><li class=""> <a href="inline.html">Строчные элементы</a></li></ul></div></div></div></div></div></section><section class="tabs-panel" id="task" role="tabpanel" aria-hidden><div id="views-task-block" class="block"><div class="block_content"><div class="view view-task view-id-task view-display-id-block view-dom-id-f5a1803e7e0a3cb70988b09153cf2f28"><div class="view-content"><ul class="tabs" data-tabs id="task-tabs"><li class="tabs-title is-active"><a href="inline-block.html#t1" aria-selected="true">1</a></li><li class="tabs-title"><a href="inline-block.html#t2">2</a></li><li class="tabs-title"><a href="inline-block.html#t3">3</a></li></ul><div class="tabs-content" data-tabs-content="task-tabs"><section id="t1" class="tabs-panel task-content is-active"><div class="h5p-content" data-content-id="7764"></div></section><section class="tabs-panel task-content" id="t2"><div class="h5p-iframe-wrapper"><iframe id="h5p-iframe-7765" class="h5p-iframe" data-content-id="7765" style="height:1px" src="about:blank" frameBorder="0" scrolling="no"></iframe></div></section><section class="tabs-panel task-content" id="t3"><div class="h5p-content" data-content-id="7766"></div></section></div></div></div></div></div></section><section class="tabs-panel" id="individual" role="tabpanel" aria-hidden><div id="views-individual-block" class="block"><div class="block_content"><div class="view view-individual view-id-individual view-display-id-block view-dom-id-690ffc892e724430a06e90faaf49e55f"><div class="view-content"><ul class="tabs" data-tabs id="individual-tabs"><li class="tabs-title is-active"><a href="inline-block.html#i1" aria-selected="true">1</a></li><li class="tabs-title"><a href="inline-block.html#i2">2</a></li></ul><div class="tabs-content" data-tabs-content="individual-tabs"><section id="i1" class="tabs-panel task-content is-active"><h2 class="node-title"><a href="https://webref.ru/practice/1952">Строчно-блочные элементы</a></h2><p>Создайте веб-страницу, показанную на рис. 1, используя <span class="value">inline-block</span>.</p><p class="fig"><img src="../../assets/images/individual/inline-block.png" alt="" width="704" height="415"></p><p class="figsign">Рис. 1</p><div class="field field-name-field-individual-file field-type-file field-label-above"><h2 class="block_title" id="field_individual_file">Файлы</h2><div class="field-items"><div class="field-item even"><span class="file"><img class="file-icon" alt="Image icon" title="image/jpeg" src="https://webref.ru/modules/file/icons/image-x-generic.png" /> <a href="../../assets/files/girl-guitar.jpg" type="image/jpeg; length=23745">girl-guitar.jpg</a></span></div></div></div><div class="individual-result"><button type="button" class="button show-result">Показать ответ</button></div><div class="field field-name-field-individual-result field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Девушка с гитарой&lt;/title&gt;
+  &lt;style&gt;
+   article {
+    background: #f5f4f1;
+    width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+   }
+   .fig {
+    display: inline-block;
+    padding-right: 10px;
+    text-align: right;
+    border-right: 2px solid #be8f59;
+   }
+   h2 {
+    display: inline-block;
+    width: 138px;
+    margin: 0 0 0 10px;
+    font-weight: normal;
+    vertical-align: top;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;article&gt;
+   &lt;div class=&quot;fig&quot;&gt;
+    &lt;img src=&quot;image/girl-guitar.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;author&quot;&gt;Pixabay&lt;/div&gt;
+   &lt;/div&gt;&lt;h2&gt;Девушка с гитарой&lt;/h2&gt;
+  &lt;/article&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div></div></section><section class="tabs-panel task-content" id="i2"><h2 class="node-title"><a href="https://webref.ru/practice/1959">Строчно-блочные элементы 2</a></h2><p>Создайте веб-страницу, показанную на рис. 1, используя <span class="value">inline-block</span>.</p><p class="fig"><img src="../../assets/images/individual/inline-block-2.png" alt="" width="603" height="209"></p><p class="figsign">Рис. 1</p><div class="individual-result"><button type="button" class="button show-result">Показать ответ</button></div><div class="field field-name-field-individual-result field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Пейджер&lt;/title&gt;
+  &lt;style&gt;
+   .pagination {
+    padding: 0;
+    text-align: center;
+   }
+   .pagination li {
+    display: inline-block;
+    margin: 0 5px;
+   }
+   .pagination a {
+    display: inline-block;
+    text-decoration: none;
+    width: 30px; height: 30px;
+    line-height: 30px;
+    color: #0f2541;
+    border: 1px solid #0f2541;
+    border-radius: 15px;
+    text-align: center;
+   }
+   .pagination a.active {
+    background: #ff6600;
+    color: #fff;
+    border-color: #ff6600;
+   }
+   .pagination a.prev, .pagination a.next {
+    width: 80px;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;ul class=&quot;pagination&quot;&gt;
+   &lt;li class=&quot;prev&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;prev&quot;&gt;←&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;next&quot;&gt;→&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div></div></section></div></div></div></div></div></section></div><section class="row credit"><div class="columns small-6 credit-author"><i class="icon-user"></i> Автор: Влад Мержевич</div><div class="columns small-6 credit-changed"><i class="icon-calendar"></i> Последнее изменение: 13.08.2017</div><div class="columns small-12 credit-editor"><i class="icon-users"></i> Редакторы: Влад Мержевич</div></section><div id="block-9" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+ad = document.getElementById('block-9');
+if (ad.getBoundingClientRect().width) {
+adWidth = ad.getBoundingClientRect().width;
+} else {
+adWidth = ad.offsetWidth;
+}
+google_ad_client = "ca-pub-0708135098984815";
+if (adWidth >= 728) { google_ad_size = ["728", "90"]; google_ad_slot = "1258944978"; }
+else { google_ad_size = ["300", "250"]; google_ad_slot = "8016056172"; }
+document.write (
+'<ins class="adsbygoogle" style="display:inline-block;width:'
++ google_ad_size[0] + 'px;height:'
++ google_ad_size[1] + 'px" data-ad-client="'
++ google_ad_client + '" data-ad-slot="'
++ google_ad_slot + '"></ins>'
+);
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div><div id="block-18" class="block"><h2 class="block_title">Рекомендуем</h2><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6422661373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div><div id="block-10" class="block"><div class="block_content"><div id="disqus_thread"></div>
+<script>
+var disqus_shortname = "webref";
+(function() {
+var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+(document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+})();
+</script>
+</div></div></div></div></div><aside class="large-3 columns right-off-canvas-menu"><div class="region region-sidebar-toc"><div id="views-course-toc" class="block"><h2 class="block_title">Содержание</h2><div class="block_content"><div class="view view-course view-id-course view-display-id-toc view-dom-id-a03327608936f28a99ba0e15ebbf2f04"><div class="view-content"><ul class="menu"><li class=""> <a href="block.html">Блочные элементы</a></li><li class=""> <a href="inline.html">Строчные элементы</a></li><li class=""> <a href="inline-block.html" class="active">Строчно-блочные элементы</a></li><li class=""> <a href="quiz.html">Проверка знаний</a></li></ul></div></div></div></div><div id="block-12" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:240px;height:400px" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6456026170"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div></aside></div></main><a class="exit-off-canvas"></a></div></div><div class="footer"><div class="adv_footer"><div class="row"><div class="medium-12 columns hide-for-medium-down"><div class="region region-adv-footer"><div id="block-15" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+ad = document.getElementById('block-15');
+if (ad.getBoundingClientRect().width) {
+adWidth = ad.getBoundingClientRect().width;
+} else {
+adWidth = ad.offsetWidth;
+}
+google_ad_client = "ca-pub-0708135098984815";
+if (adWidth >= 728) { google_ad_size = ["728", "90"]; google_ad_slot = "1258944978"; }
+else { google_ad_size = ["300", "250"]; google_ad_slot = "8016056172"; }
+document.write (
+'<ins class="adsbygoogle" style="display:inline-block;width:'
++ google_ad_size[0] + 'px;height:'
++ google_ad_size[1] + 'px" data-ad-client="'
++ google_ad_client + '" data-ad-slot="'
++ google_ad_slot + '"></ins>'
+);
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div></div></div></div><div class="copyright"><div class="row"><div class="small-2 columns"><p><a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow"><img alt="Лицензия Creative Commons" src="../../sites/all/themes/ori/img/cc.png" width="88" height="31"></a></p></div><div class="small-10 columns"><p>Все материалы сайта доступны по <a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow">лицензии Creative Commons «Attribution-NonCommercial» («Атрибуция — Некоммерческое использование») 4.0 Всемирная</a>, если не указано иное.</p></div></div></div><footer><div class="row"><div class="medium-12 large-4 columns"><h4>О сайте</h4><p>На сайте находятся справочники по различным веб-технологиям, а также руководства по вёрстке веб-страниц и разработке мобильных приложений.</p><p class="about-last">Главный редактор: Влад Мержевич</p></div><div class="small-6 large-2 columns"><h4>Связи</h4><ul id="community"><li><i class="icon-rss"></i> <a href="https://feeds.feedburner.com/webref" rel="nofollow">RSS</a></li><li><i class="icon-jsfiddle"></i> <a href="https://jsfiddle.net/user/webref/fiddles/" rel="nofollow">JSFiddle</a></li><li><i class="icon-github"></i> <a href="https://github.com/webref" rel="nofollow">GitHub</a></li><li><i class="icon-doc-text"></i> <a href="https://drive.google.com/folderview?id=0B4u62HGG7TOnTVJ4aFlFa1Jpb2M" rel="nofollow">Google Диск</a></li></ul></div><div class="small-6 large-3 columns"><h4>Разделы сайта</h4><ul id="footer-menu" class="links"><li><i class="icon-book"></i> <a href="../../ref.html">Справочники</a></li><li><i class="icon-layout"></i> <a href="../../layout.html">Вёрстка</a></li><li><i class="icon-gear"></i> <a href="../../dev.html">Веб-технологии</a></li><li><i class="icon-mobile"></i> <a href="../../mobile.html">Мобильные приложения</a></li><li><i class="icon-bookmark"></i> <a href="../../course.html">Учебные курсы</a></li></ul></div><div class="small-12 medium-12 large-3 columns"><h4>Популярные материалы</h4><div class="region region-popular"><div id="views-popular-popular" class="block"><div class="block_content"><div class="view view-popular view-id-popular view-display-id-popular view-dom-id-994bbbf95306b9ec7d4384932ecf5d6b"><div class="view-content"><ul><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/learn-html-css.html">Уроки по HTML и CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/howtocodeinhtml.html">Как верстать на HTML5 и CSS3</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/html5-css3.html">HTML5 и CSS3 на примерах</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/css3.svg.png" src="../../assets/images/thumb/css3.svg" width="16" height="16" alt="" /> <a href="../../layout/magic-of-css.html">Магия CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/jquery.svg.png" src="../../assets/images/thumb/jquery.svg" width="16" height="16" alt="" /> <a href="../../dev/jqfundamentals.html">Основы jQuery</a></li></ul></div></div></div></div></div></div></div><div class="row"><div class="small-12 columns counter">
+<script src="../../sites/all/themes/ori/js/li.js"></script>
+</div></div><a href="inline-block.html#top"><div class="row"><div class="small-12 columns ontop">Наверх</div></div></a></footer></div><script type="text/javascript" src="../../assets/js/js_p2Pm92U0xNKrBps4v5uAeOIq9sGMPp8zPpZGieWq8eo.js"></script>
+<script type="text/javascript" src="../../assets/js/js_H7q2xORKmR9AN8Qx5spKEIBp7R_wG2apAswJoCUZY7I.js"></script>
+<script type="text/javascript" src="../../assets/js/js_OGSWosFZL0ssA3WMYptUzwUb1SKElil8MH0DOd6CQIE.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+H5PIntegration = {"baseUrl":"https:\/\/webref.ru","url":"\/assets\/h5p","postUserStatistics":false,"ajax":{"setFinished":"\/h5p-ajax\/set-finished.json?token=cf6dccfc25186","contentUserData":"\/h5p-ajax\/content-user-data\/:contentId\/:dataType\/:subContentId?token=6e13826819c07"},"saveFreq":false,"l10n":{"H5P":{"fullscreen":"Fullscreen","disableFullscreen":"Disable fullscreen","download":"\u0421\u043a\u0430\u0447\u0430\u0442\u044c","copyrights":"Rights of use","embed":"Embed","size":"\u0420\u0430\u0437\u043c\u0435\u0440","showAdvanced":"Show advanced","hideAdvanced":"Hide advanced","advancedHelp":"Include this script on your website if you want dynamic sizing of the embedded content:","copyrightInformation":"Rights of use","close":"\u0417\u0430\u043a\u0440\u044b\u0442\u044c","title":"\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a","author":"\u0410\u0432\u0442\u043e\u0440","year":"Year","source":"Source","license":"License","thumbnail":"Thumbnail","noCopyrights":"No copyright information available for this content.","downloadDescription":"Download this content as a H5P file.","copyrightsDescription":"View copyright information for this content.","embedDescription":"View the embed code for this content.","h5pDescription":"Visit H5P.org to check out more cool content.","contentChanged":"This content has changed since you last used it.","startingOver":"You'll be starting over.","by":"by","showMore":"Show more","showLess":"Show less","subLevel":"Sublevel","confirmDialogHeader":"Confirm action","confirmDialogBody":"Please confirm that you wish to proceed. This action is not reversible.","cancelLabel":"\u041e\u0442\u043c\u0435\u043d\u0438\u0442\u044c","confirmLabel":"\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044c","licenseU":"Undisclosed","licenseCCBY":"Attribution","licenseCCBYSA":"Attribution-ShareAlike","licenseCCBYND":"Attribution-NoDerivs","licenseCCBYNC":"Attribution-NonCommercial","licenseCCBYNCSA":"Attribution-NonCommercial-ShareAlike","licenseCCBYNCND":"Attribution-NonCommercial-NoDerivs","licenseCC40":"4.0 International","licenseCC30":"3.0 Unported","licenseCC25":"2.5 Generic","licenseCC20":"2.0 Generic","licenseCC10":"1.0 Generic","licenseGPL":"General Public License","licenseV3":"Version 3","licenseV2":"Version 2","licenseV1":"Version 1","licensePD":"Public Domain","licenseCC010":"CC0 1.0 Universal (CC0 1.0) Public Domain Dedication","licensePDM":"Public Domain Mark","licenseC":"Copyright"}},"hubIsEnabled":true,"siteUrl":"https:\/\/webref.ru\/","contents":{"cid-7764":{"library":"H5P.SingleChoiceSet 1.8","jsonContent":"{\"choices\":[{\"subContentId\":\"a8b88281-ccab-486e-875a-eb7ef7dca040\",\"question\":\"<p>\\u041a\\u0430\\u043a\\u043e\\u0435 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u0430 display \\u043f\\u0440\\u0435\\u0432\\u0440\\u0430\\u0449\\u0430\\u0435\\u0442 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0432 \\u0441\\u0442\\u0440\\u043e\\u0447\\u043d\\u043e-\\u0431\\u043b\\u043e\\u0447\\u043d\\u044b\\u0439?<\\\/p>\\n\",\"answers\":[\"<p>inline-block<\\\/p>\\n\",\"<p>inline<\\\/p>\\n\",\"<p>block<\\\/p>\\n\",\"<p>block-inline<\\\/p>\\n\"]},{\"subContentId\":\"ed7e9ac7-4cee-4f99-ab7b-8aa37cb45c1d\",\"answers\":[\"<p>\\u0414\\u043b\\u044f \\u0443\\u0441\\u0442\\u0440\\u0430\\u043d\\u0435\\u043d\\u0438\\u044f \\u043f\\u0440\\u043e\\u0431\\u0435\\u043b\\u043e\\u0432 \\u043c\\u0435\\u0436\\u0434\\u0443 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430\\u043c\\u0438.<\\\/p>\\n\",\"<p>\\u0414\\u043b\\u044f \\u0431\\u0443\\u0434\\u0443\\u0449\\u0438\\u0445 \\u043a\\u043e\\u043c\\u043c\\u0435\\u043d\\u0442\\u0430\\u0440\\u0438\\u0435\\u0432.<\\\/p>\\n\",\"<p>\\u0414\\u043b\\u044f \\u0432\\u044b\\u0432\\u043e\\u0434\\u0430 \\u0442\\u0435\\u043a\\u0441\\u0442\\u0430 \\u0432 \\u0441\\u043f\\u0438\\u0441\\u043a\\u0435 \\u0447\\u0435\\u0440\\u0435\\u0437 \\u0441\\u043a\\u0440\\u0438\\u043f\\u0442\\u044b.<\\\/p>\\n\",\"<p>\\u0414\\u043b\\u044f \\u0441\\u043e\\u043a\\u0440\\u0430\\u0449\\u0435\\u043d\\u0438\\u044f \\u043e\\u0431\\u044a\\u0451\\u043c\\u0430 \\u043a\\u043e\\u0434\\u0430.<\\\/p>\\n\"],\"question\":\"<p>\\u0414\\u043b\\u044f \\u0447\\u0435\\u0433\\u043e \\u0432 \\u0441\\u043b\\u0435\\u0434\\u0443\\u044e\\u0449\\u0435\\u043c \\u043a\\u043e\\u0434\\u0435 \\u043f\\u0440\\u0438\\u043c\\u0435\\u043d\\u044f\\u044e\\u0442\\u0441\\u044f \\u043f\\u0443\\u0441\\u0442\\u044b\\u0435 \\u043a\\u043e\\u043c\\u043c\\u0435\\u043d\\u0442\\u0430\\u0440\\u0438\\u0438?<\\\/p>\\n\\n<p>&lt;ul&gt;<br>\\n&nbsp; &lt;li&gt;\\u043e\\u0434\\u0438\\u043d&lt;\\\/li&gt;&lt;!--<br>\\n&nbsp; --&gt;&lt;li&gt;\\u0434\\u0432\\u0430&lt;\\\/li&gt;&lt;!--<br>\\n&nbsp; --&gt;&lt;li&gt;\\u0442\\u0440\\u0438&lt;\\\/li&gt;<br>\\n&lt;\\\/ul&gt;<\\\/p>\\n\"},{\"subContentId\":\"c0744518-9874-4272-acac-49cc546dd31b\",\"question\":\"<p>\\u0414\\u043b\\u044f \\u043a\\u0430\\u043a\\u043e\\u0433\\u043e \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 inline-block \\u0437\\u0430\\u0434\\u0430\\u043d\\u043e \\u043f\\u043e \\u0443\\u043c\\u043e\\u043b\\u0447\\u0430\\u043d\\u0438\\u044e?<\\\/p>\\n\",\"answers\":[\"<p>&lt;button&gt;<\\\/p>\\n\",\"<p>&lt;span&gt;<\\\/p>\\n\",\"<p>&lt;div&gt;<\\\/p>\\n\",\"<p>&lt;p&gt;<\\\/p>\\n\"]},{\"subContentId\":\"32723c4a-179b-4adc-b89f-f7fadc0d36c5\",\"question\":\"<p>\\u041a\\u0430\\u043a \\u0443\\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0442\\u044c \\u043f\\u0440\\u043e\\u0431\\u0435\\u043b \\u043c\\u0435\\u0436\\u0434\\u0443 \\u0441\\u0442\\u0440\\u043e\\u0447\\u043d\\u043e-\\u0431\\u043b\\u043e\\u0447\\u043d\\u044b\\u043c\\u0438 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430\\u043c\\u0438 \\u0441 \\u043f\\u043e\\u043c\\u043e\\u0449\\u044c\\u044e margin?<\\\/p>\\n\",\"answers\":[\"<p>div { margin-right: -4px; }<\\\/p>\\n\",\"<p>div { margin-left: 4px; }<\\\/p>\\n\",\"<p>div { margin-top: -4px; }<\\\/p>\\n\",\"<p>div { margin: 0; }<\\\/p>\\n\"]},{\"subContentId\":\"fab80152-3baf-450d-b0cd-56ae0a5097e2\",\"question\":\"<p>\\u0427\\u0435\\u043c\\u0443 \\u0440\\u0430\\u0432\\u043d\\u0430 \\u0432\\u044b\\u0441\\u043e\\u0442\\u0430 \\u0441\\u0442\\u0440\\u043e\\u0447\\u043d\\u043e-\\u0431\\u043b\\u043e\\u0447\\u043d\\u043e\\u0433\\u043e \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430?<\\\/p>\\n\",\"answers\":[\"<p>height \\u043f\\u043b\\u044e\\u0441 margin, border \\u0438 padding.<\\\/p>\\n\",\"<p>\\u0412\\u044b\\u0441\\u043e\\u0442\\u0430 \\u0441\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u043c\\u043e\\u0433\\u043e \\u043f\\u043b\\u044e\\u0441 border \\u0438 padding.<\\\/p>\\n\",\"<p>\\u0412\\u044b\\u0441\\u043e\\u0442\\u0430 \\u0441\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u043c\\u043e\\u0433\\u043e \\u043f\\u043b\\u044e\\u0441 margin, border \\u0438 padding.<\\\/p>\\n\",\"<p>height \\u043f\\u043b\\u044e\\u0441 border \\u0438 padding.<\\\/p>\\n\"]}],\"behaviour\":{\"timeoutCorrect\":2000,\"timeoutWrong\":3000,\"soundEffectsEnabled\":false,\"enableRetry\":true,\"enableSolutionsButton\":true,\"passPercentage\":100},\"l10n\":{\"resultSlideTitle\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e :numcorrect \\u0438\\u0437 :maxscore\",\"showSolutionButtonLabel\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"retryButtonLabel\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"solutionViewTitle\":\"\\u0420\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"correctText\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e!\",\"incorrectText\":\"\\u041d\\u0435\\u0432\\u0435\\u0440\\u043d\\u043e!\",\"muteButtonLabel\":\"\\u041e\\u0442\\u043a\\u043b\\u044e\\u0447\\u0438\\u0442\\u044c \\u0437\\u0432\\u0443\\u043a\",\"closeButtonLabel\":\"\\u0417\\u0430\\u043a\\u0440\\u044b\\u0442\\u044c\",\"slideOfTotal\":\":num \\u0438\\u0437 :total\"}}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1886\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1886","url":"https:\/\/webref.ru\/task\/1886","title":"\u0421\u0442\u0440\u043e\u0447\u043d\u043e-\u0431\u043b\u043e\u0447\u043d\u044b\u0435 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u044b 1","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}},"cid-7765":{"library":"H5P.DragText 1.4","jsonContent":"{\"taskDescription\":\"<p>\\u0421\\u043e\\u043f\\u043e\\u0441\\u0442\\u0430\\u0432\\u044c\\u0442\\u0435 \\u0442\\u0438\\u043f \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430 \\u0438 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u0430 display.<\\\/p>\\n\",\"checkAnswer\":\"\\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u0438\\u0442\\u044c\",\"tryAgain\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"showSolution\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"score\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e @score \\u0438\\u0437 @total\",\"behaviour\":{\"enableRetry\":true,\"enableSolutionsButton\":true,\"instantFeedback\":false},\"textField\":\"\\u0411\\u043b\\u043e\\u0447\\u043d\\u044b\\u0439 *block*\\n\\u0421\\u0442\\u0440\\u043e\\u0447\\u043d\\u044b\\u0439 *inline*\\n\\u0421\\u0442\\u0440\\u043e\\u0447\\u043d\\u043e-\\u0431\\u043b\\u043e\\u0447\\u043d\\u044b\\u0439 *inline-block*\"}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1887\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1887","url":"https:\/\/webref.ru\/task\/1887","title":"\u0421\u0442\u0440\u043e\u0447\u043d\u043e-\u0431\u043b\u043e\u0447\u043d\u044b\u0435 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u044b 2","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false},"styles":["https:\/\/webref.ru\/assets\/css\/css_UaMlSkMHD4h_eIYp52zeclFd8vg6Kr8zPNsip_fHEOY.css"],"scripts":["https:\/\/webref.ru\/assets\/js\/js_MdKyMDzvq1UcUqSny8PYpJzqrjLJbASsQMG0YJpH4R0.js"]},"cid-7766":{"library":"H5P.Blanks 1.7","jsonContent":"{\"media\":{\"params\":{\"contentName\":\"Image\"},\"library\":\"H5P.Image 1.0\",\"subContentId\":\"d7672edd-b47c-413a-a6f7-6c6455c21a46\"},\"text\":\"<p>\\u0412\\u043f\\u0438\\u0448\\u0438\\u0442\\u0435 \\u043f\\u043e\\u0434\\u0445\\u043e\\u0434\\u044f\\u0449\\u0435\\u0435 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u0430 display.<\\\/p>\\n\",\"score\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e @score \\u0438\\u0437 @total\",\"showSolutions\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"tryAgain\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"checkAnswer\":\"\\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u0438\\u0442\\u044c\",\"notFilledOut\":\"\\u041f\\u043e\\u0436\\u0430\\u043b\\u0443\\u0439\\u0441\\u0442\\u0430, \\u0437\\u0430\\u043f\\u043e\\u043b\\u043d\\u0438\\u0442\\u0435 \\u0432\\u0441\\u0435 \\u043f\\u043e\\u043b\\u044f\",\"answerIsCorrect\":\"&#039;:ans&#039; is correct\",\"answerIsWrong\":\"&#039;:ans&#039; is wrong\",\"answeredCorrectly\":\"Answered correctly\",\"answeredIncorrectly\":\"Answered incorrectly\",\"solutionLabel\":\"Correct answer:\",\"inputLabel\":\"Blank input @num of @total\",\"inputHasTipLabel\":\"Tip available\",\"tipLabel\":\"Tip\",\"behaviour\":{\"enableRetry\":true,\"enableSolutionsButton\":true,\"autoCheck\":false,\"caseSensitive\":false,\"showSolutionsRequiresInput\":true,\"separateLines\":false,\"disableImageZooming\":false,\"confirmCheckDialog\":false,\"confirmRetryDialog\":false},\"confirmCheck\":{\"header\":\"Finish ?\",\"body\":\"Are you sure you wish to finish ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Finish\"},\"confirmRetry\":{\"header\":\"Retry ?\",\"body\":\"Are you sure you wish to retry ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Confirm\"},\"questions\":[\"<p>div {<br>\\n&nbsp; display: *inline-block*;<br>\\n&nbsp; vertical-align: top;<br>\\n&nbsp; width: 200px;<br>\\n&nbsp; height: 200px;<br>\\n&nbsp; padding: 10px;<br>\\n}<\\\/p>\\n\",\"<p>div {<br>\\n&nbsp; display: *block*;<br>\\n&nbsp; width: 250px;<br>\\n&nbsp; height: 250px;<br>\\n&nbsp; float: left;<br>\\n&nbsp; margin-right: 15px;<br>\\n}<\\\/p>\\n\",\"<p>div {<br>\\n&nbsp; display: *inline*;<br>\\n&nbsp; padding: 4px;<br>\\n&nbsp; border-bottom: 1px dotted blue;<br>\\n&nbsp; vertical-align: middle;<br>\\n}<\\\/p>\\n\"]}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1888\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1888","url":"https:\/\/webref.ru\/task\/1888","title":"\u0421\u0442\u0440\u043e\u0447\u043d\u043e-\u0431\u043b\u043e\u0447\u043d\u044b\u0435 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u044b 3","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}}},"loadedJs":"\/assets\/h5p\/libraries\/H5P.Blanks-1.7\/js\/cloze.js?ver=1.7.3","loadedCss":["\/assets\/h5p\/libraries\/Tether-1.0\/styles\/tether.min.css?ver=1.0.2","\/assets\/h5p\/libraries\/Drop-1.0\/css\/drop-theme-arrows-bounce.min.css?ver=1.0.2","\/assets\/h5p\/libraries\/FontAwesome-4.5\/h5p-font-awesome.min.css?ver=4.5.4","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-help-dialog.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-message-dialog.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-progress-circle.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-simple-rounded-button.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-speech-bubble.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-tip.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-slider.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-score-bar.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-progressbar.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-ui.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.Question-1.2\/styles\/question.css?ver=1.2.2","\/assets\/h5p\/libraries\/H5P.SingleChoiceSet-1.8\/styles\/single-choice-set.css?ver=1.8.4","\/assets\/h5p\/libraries\/H5P.Image-1.0\/image.css?ver=1.0.28","\/assets\/h5p\/libraries\/H5P.Blanks-1.7\/css\/blanks.css?ver=1.7.3"],"core":{"scripts":["\/sites\/all\/modules\/h5p\/library\/js\/jquery.js?ovteei","\/sites\/all\/modules\/h5p\/library\/js\/h5p.js?ovteei","\/sites\/all\/modules\/h5p\/library\/js\/h5p-event-dispatcher.js?ovteei","\/sites\/all\/modules\/h5p\/library\/js\/h5p-x-api-event.js?ovteei","\/sites\/all\/modules\/h5p\/library\/js\/h5p-x-api.js?ovteei","\/sites\/all\/modules\/h5p\/library\/js\/h5p-content-type.js?ovteei","\/sites\/all\/modules\/h5p\/library\/js\/h5p-confirmation-dialog.js?ovteei","\/sites\/all\/modules\/h5p\/library\/js\/h5p-action-bar.js?ovteei"],"styles":["\/sites\/all\/modules\/h5p\/library\/styles\/h5p.css?ovteei","\/sites\/all\/modules\/h5p\/library\/styles\/h5p-confirmation-dialog.css?ovteei","\/sites\/all\/modules\/h5p\/library\/styles\/h5p-core-button.css?ovteei"]}};
+//--><!]]>
+</script>
+<script type="text/javascript" src="../../assets/js/js_V2GNOshuLPzy1pw-N0E22cul4mNDg2mFEMr1chJ4aBw.js"></script>
+</body>
+</html>

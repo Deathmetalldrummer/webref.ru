@@ -1,0 +1,31 @@
+User-agent: *
+Host: webref.ru
+
+# Directories
+Disallow: /includes/
+Disallow: /misc/
+Disallow: /modules/
+Disallow: /profiles/
+Disallow: /scripts/
+Disallow: /themes/
+
+# Files
+Disallow: /cron.php
+Disallow: /update.php
+Disallow: /xmlrpc.php
+
+# Paths (clean URLs)
+Disallow: /admin/
+Disallow: /node/add/
+Disallow: /search/
+Disallow: /user/register/
+Disallow: /user/password/
+Disallow: /user/login/
+Disallow: /user/logout/
+
+# Old content
+Disallow: /metki/
+Disallow: /example/
+Disallow: /author/
+Disallow: /help/
+Disallow: /practice/

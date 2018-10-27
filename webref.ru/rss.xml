@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://webref.ru/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WebReference</title>
+    <link>https://webref.ru/</link>
+    <description></description>
+    <language>ru</language>
+     <atom:link href="https://webref.ru/rss.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>float в теории и на практике</title>
+    <link>https://webref.ru/course/float</link>
+    <description>      &lt;p&gt;Стилевое свойство float изначально было внедрено в CSS для создания обтекаемых картинок и текстовых врезок, но со временем расширило сферу своего применения. Веб-разработчикам не хватало инструментов для вёрстки макетов, таблицы же для этих целей оказались громоздки, неудобны и морально устарели. На смену таблицам для вёрстки колонок приспособили &lt;span class=&quot;attribute&quot;&gt;float&lt;/span&gt;, несмотря на то, что это свойство не предназначено для этой роли. Зато оно достаточно универсальное и поддерживается всеми браузерами.&lt;/p&gt;</description>
+     <pubDate>Wed, 16 Aug 2017 01:58:37 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">2013 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>Позиционирование элементов</title>
+    <link>https://webref.ru/course/position</link>
+    <description>      &lt;p&gt;Позиционированием называется положение элемента в системе координат. Различают несколько типов позиционирования: нормальное, относительное, абсолютное, фиксированное и приклеенное. В зависимости от типа, который устанавливается через свойство &lt;a href=&quot;/css/position&quot;&gt;position&lt;/a&gt;, меняется и система координат.&lt;/p&gt;</description>
+     <pubDate>Sat, 22 Jul 2017 12:39:03 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">1897 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>Блочные и строчные элементы</title>
+    <link>https://webref.ru/course/block-inline</link>
+    <description>      &lt;p&gt;В HTML4 практически все элементы относятся к двум типам, различающихся своим поведением и свойствами — это блочные и строчные элементы. Блочные элементы (такие как &lt;span class=&quot;tag&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;, &lt;span class=&quot;tag&quot;&gt;&amp;lt;ol&amp;gt;&lt;/span&gt;, &lt;span class=&quot;tag&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;) начинаются с новой строки и занимают всё доступное им пространство по ширине, независимо от содержимого, строчные (такие как &lt;span class=&quot;tag&quot;&gt;&amp;lt;a&amp;gt;&lt;/span&gt;, &lt;span class=&quot;tag&quot;&gt;&amp;lt;var&amp;gt;&lt;/span&gt;, &lt;span class=&quot;tag&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;) являются частью строки и размеры элементов определяются их содержимым.&lt;/p&gt;</description>
+     <pubDate>Fri, 02 Jun 2017 15:31:18 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">1852 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>Создание сайта на Jekyll</title>
+    <link>https://webref.ru/dev/building-jekyll-site</link>
+    <description>      &lt;p&gt;Jekyll является наиболее популярным генератором статичного сайта. Он берёт исходные файлы и создаёт сайт из статичных страниц, готовых обслуживать пользователей напрямую. Это отличается от того, как работают традиционные CMS, вроде WordPress.&lt;/p&gt;&lt;div class=&quot;field field-name-field-book-thumb field-type-image field-label-hidden&quot;&gt;
+    &lt;div class=&quot;field-items&quot;&gt;
+          &lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/dev/building-jekyll-site&quot;&gt;&lt;img src=&quot;https://webref.ru/assets/styles/category-square/public/images/book/jekyll.png?itok=p4uE5pGZ&quot; width=&quot;300&quot; height=&quot;300&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+      &lt;/div&gt;
+&lt;/div&gt;
+</description>
+     <pubDate>Fri, 30 Sep 2016 12:25:40 +0000</pubDate>
+ <dc:creator>Майк Ньюмеген</dc:creator>
+ <guid isPermaLink="false">1834 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>Самоучитель HTML</title>
+    <link>https://webref.ru/course/html-tutorial</link>
+    <description>      &lt;p&gt;HTML (HyperText Markup Language, язык разметки гипертекста) — это язык разметки, который определяет, какие элементы должны располагаться на веб-странице. Текст, ссылки, изображения, списки, таблицы, видео и др.&amp;nbsp;— всё это является элементами, которые можно отобразить на веб-странице с помощью HTML.&lt;/p&gt;
+&lt;p&gt;  Данный самоучитель предназначен в первую очередь для начинающих, только постигающих азы создания сайтов. Множество примеров, иллюстраций, вопросов для проверки и заданий для самостоятельной работы помогут быстрее изучить HTML.&lt;/p&gt;</description>
+     <pubDate>Sun, 14 Aug 2016 17:00:53 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">1732 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>Атрибут dirname</title>
+    <link>https://webref.ru/html/input/dirname</link>
+    <description>&lt;div class=&quot;field field-name-field-html-descr field-type-text-long field-label-hidden&quot;&gt;
+    &lt;div class=&quot;field-items&quot;&gt;
+          &lt;div class=&quot;field-item even&quot;&gt;На сервер отправляется пара имя/значение, где имя задаётся атрибутом dirname, а значение подставляется браузером. Для текста, идущего слева направо, значение будет ltr, а для текста справа налево значение будет rtl.&lt;/div&gt;
+      &lt;/div&gt;
+&lt;/div&gt;
+</description>
+     <pubDate>Sat, 13 Aug 2016 08:27:50 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">1731 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>Формы в HTML</title>
+    <link>https://webref.ru/course/html5-form</link>
+    <description>      &lt;p&gt;Формы являются одним из важных элементов любого сайта и предназначены для обмена данными между пользователем и сервером. Область применения форм не ограничена отправкой данных на сервер, с помощью клиентских скриптов можно получить доступ к любому элементу формы, изменять его и применять по своему усмотрению.&lt;/p&gt;</description>
+     <pubDate>Mon, 25 Jul 2016 12:18:14 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">1655 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>Фильтр</title>
+    <link>https://webref.ru/css/value/filter</link>
+    <description>      &lt;p&gt;Фильтр — это функция, которая позволяет изменять вид изображения, применяя к нему разные эффекты, вроде контрастности, яркости, преобразования в чёрно-белую картинку и др.&lt;/p&gt;</description>
+     <pubDate>Mon, 25 Jul 2016 04:57:31 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">1653 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>sepia()</title>
+    <link>https://webref.ru/css/value/sepia</link>
+    <description>      &lt;p&gt;Функция &lt;span class=&quot;var&quot;&gt;sepia()&lt;/span&gt; превращает изображение в сепию — так называется чёрно-белое изображение с коричневым оттенком. Сепия придаёт фотографиям старинный вид.&lt;/p&gt;</description>
+     <pubDate>Mon, 25 Jul 2016 04:01:17 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">1652 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>saturate()</title>
+    <link>https://webref.ru/css/value/saturate</link>
+    <description>      &lt;p&gt;Функция &lt;span class=&quot;var&quot;&gt;saturate()&lt;/span&gt; изменяет насыщенность цветов в изображении.&lt;/p&gt;</description>
+     <pubDate>Mon, 25 Jul 2016 03:38:51 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">1651 at https://webref.ru</guid>
+  </item>
+  </channel>
+</rss>

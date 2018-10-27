@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Система комментирования на Firebase | WebReference</title>
+<meta charset="utf-8" />
+<link rel="up" href="../building-jekyll-site.html" />
+<link rel="prev" href="jekyll-cms-with-cloudcannon.html" />
+<meta name="description" content="Этот урок о добавлении некоторой функциональности к сайту на Jekyll, которая кажется невозможной: комментариев. Это потому, что у Jekyll нет бэкенд-компонент для сохранения комментариев. Но нам это и не нужно, поскольку мы сделаем всё на фронтенде с помощью Firebase! Собственные решения обеспечивают больше контроля над дизайном, функциональностью и данными, чем готовые решения, такие как Disqus и плагин комментариев Facebook." />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_GmPV_e3YNAzxsGyZNJb8l3jyzuLiXRRwUYoy5enMRkM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_TRgZiIWJG1Kscmnc2ThzsQLBI4y7E3_GdynGIqED184.css" media="screen" />
+</head>
+<body>
+<div class="off-canvas-wrap" data-offcanvas><div class="inner-wrap"><header><div class="row"><div class="small-12 large-4 columns logo"><a href="../../index.html">WebReference<span>.</span>ru</a></div><nav class="small-10 large-7 columns topmenu"><div class="region region-menu"><div id="system-main-menu" class="block"><div class="block_content"><ul class="menu"><li class="first leaf"><a href="../../ref.html" title="">Справочники</a></li><li class="leaf"><a href="../../layout.html" title="">Вёрстка</a></li><li class="leaf"><a href="../../dev.html" title="">Веб-технологии</a></li><li class="leaf"><a href="../../mobile.html" title="">Мобильные приложения</a></li><li class="last leaf"><a href="../../course.html">Курсы</a></li></ul></div></div></div></nav><div class="small-2 large-1 columns search"><div id="search-button" tabindex="1"></div><form action="https://webref.ru/search/" id="cse-search-box"><input type="search" placeholder="Поиск по сайту" name="s" autocomplete="off" id="cse-search-input"><input type="hidden" name="cx" value="partner-pub-0708135098984815:9970767379"><input type="hidden" name="cof" value="FORID:10"><input type="hidden" name="ie" value="UTF-8"></form></div></div></header><main><div class="title"><div class="row"><div class="small-12 columns"><h1>Система комментирования на Firebase</h1></div></div></div><div class="breadcrumb"><div class="row"><div class="small-12 columns"><div class="region region-crumbs"><div id="easy_breadcrumb-easy_breadcrumb" class="block"><div class="block_content"><div itemscope class="easy-breadcrumb" itemtype="http://data-vocabulary.org/Breadcrumb"> <span itemprop="title"><a href="../../index.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Главная</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span itemprop="title"><a href="../../dev.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-1">Веб-технологии</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span itemprop="title"><a href="../building-jekyll-site.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-2">Создание сайта на Jekyll</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">Система комментирования на Firebase</span></div></div></div></div></div></div></div><div class="row"><div class="medium-12 large-9 columns main-section">
+<script id="dsq-count-scr" src="https://webref.disqus.com/count.js" async></script>
+<p class="num_comments"><a href="firebase-backed-commenting-system.html#disqus_thread">Комментарии</a></p><div class="region region-content"><div id="system-main" class="block"><p>Этот урок о добавлении некоторой функциональности к сайту на Jekyll, которая кажется невозможной: комментариев. Это потому, что у Jekyll нет бэкенд-компонент для сохранения комментариев. Но нам это и не нужно, поскольку мы сделаем всё на фронтенде с помощью <a href="http://firebase.com">Firebase</a>!</p><p>Собственные решения обеспечивают больше контроля над дизайном, функциональностью и данными, чем готовые решения, такие как <a href="https://disqus.com">Disqus</a> и плагин <a href="https://developers.facebook.com/docs/plugins/comments">комментариев Facebook</a>.</p><h2>Что такое Firebase?</h2><p>Firebase — масштабируемый бэкенд, работающий в режиме реального времени. Это позволяет разработчикам создавать приложения с аутентификацией и постоянными данными для статичных сайтов.</p><p>Мы собираемся хранить комментарии нашего блога в Firebase и получать их, когда кто-то просматривает статью блога.</p><h2>Регистрация</h2><p>Для начала зарегистрируйте аккаунт Firebase.</p><p class="fig"><img src="../../assets/images/jekyll/sign-up-firebase.jpg" alt=""></p><p>После регистрации создайте новое приложение для комментариев блога и запишите <strong>App URL</strong> для дальнейшего использования.</p><p class="fig"><img src="../../assets/images/jekyll/app-url.jpg" alt=""></p><h2>Настройка</h2><p>Нам нужен ряд библиотек JavaScript для запуска системы комментирования. Firebase сохраняет и извлекает комментарии, jQuery добавляет элементы на страницу, Moment форматирует даты, а blueimp-md5 генерирует MD5. /js/blog.js содержит код нашего приложения для системы комментирования.</p><p>Добавьте следующие скрипты выше <span class="tag">&lt;/body&gt;</span> в _layouts/default.html:</p><p class="exampleTitle">HTML</p>
+<pre><code data-language="html">&lt;script src=&quot;https://cdn.firebase.com/js/client/2.2.1/firebase.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.0/moment.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.1.0/js/md5.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/js/blog.js&quot;&gt;&lt;/script&gt;</code></pre>
+<h2>Обзор Firebase</h2><p>Когда посетитель просматривает статью блога мы получаем все подходящие комментарии Firebase.</p><p>Посетители оставляют комментарии с именем, адресом электронной почты и сообщением. Мы берём эту информацию, добавляем метку времени и текущую страницу, а затем сохраняем всё в Firebase.</p><p>В Firebase данные хранятся в виде объектов JSON. Комментарии хранятся в виде массива объектов для каждой статьи блога.</p><p class="exampleTitle">JSON</p>
+<pre><code data-language="javascript">{
+  &quot;/tutorial/2016/01/02/title-tag.html&quot;: [
+    {
+      &quot;name&quot;: &quot;Bill&quot;,
+      &quot;email&quot;: &quot;bill@example.org&quot;,
+      &quot;message&quot;: &quot;Hi there, nice blog!&quot;,
+      &quot;timestamp&quot;: 1452042357209
+    },
+    {
+      &quot;name&quot;: &quot;Bob&quot;,
+      &quot;email&quot;: &quot;bob@example.org&quot;,
+      &quot;message&quot;: &quot;Wow look at this blog.&quot;,
+      &quot;timestamp&quot;: 145204235846
+    }
+  ],
+  &quot;/announcement/2016/01/01/latest-seo-trends.html&quot;: [
+    {
+      &quot;name&quot;: &quot;Steve&quot;,
+      &quot;email&quot;: &quot;steve@example.org&quot;,
+      &quot;message&quot;: &quot;First post!&quot;,
+      &quot;timestamp&quot;: 1452043267245
+    }
+  ]
+}</code></pre>
+<h2>Реализация</h2><p>Указатели в Firebase обеспечивают доступ для чтения и записи базы данных. Добавьте указатель на базу данных в /js/blog.js:</p><p class="exampleTitle">JavaScript</p>
+<pre><code data-language="javascript">var ref = new Firebase(&quot;https://&lt;YOUR-APP-ID&gt;.firebaseio.com/&quot;);</code></pre>
+<p><span class="var">ref</span> даёт нам доступ к корню базы данных. Мы можем получить указатель на статью блога с помощью <span class="var">ref.child (&quot;&lt;путь_к_статье_блога&gt;&quot;)</span>.</p><h3>Сохранение комментариев</h3><p>Путь это отличный способ для идентификации статей блога, но Firebase не поддерживает символы, такие как амперсанд в имени ключа. Чтобы решить эту проблему, добавьте функцию для замены недопустимых символов:</p><h3>JavaScript</h3>
+<pre><code data-language="javascript">function slugify(text) {
+  return text.toString().toLowerCase().trim()
+    .replace(/&amp;/g, '-and-')
+    .replace(/[\s\W-]+/g, '-')
+    .replace(/[^a-zA-Z0-9-_]+/g,'');
+}</code></pre>
+<p>Сохраните указатель, используя функцию <span class="var">slugify()</span> и текущий путь.</p><p class="exampleTitle">JavaScript</p>
+<pre><code data-language="javascript">var postRef = ref.child(slugify(window.location.pathname));</code></pre>
+<p>Добавим форму для отправки новых комментариев после статьи блога. Введите следующую разметку ниже <span class="var">{{&nbsp;content&nbsp;}}</span> в _layouts/post.html:</p><p class="exampleTitle">HTML</p>
+<pre><code data-language="html">&lt;h3&gt;Leave a comment&lt;/h3&gt;
+
+&lt;form id=&quot;comment&quot;&gt;
+  &lt;label for=&quot;message&quot;&gt;Message&lt;/label&gt;
+  &lt;textarea id=&quot;message&quot;&gt;&lt;/textarea&gt;
+
+  &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;name&quot;&gt;
+
+  &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;email&quot;&gt;
+
+  &lt;input type=&quot;submit&quot; value=&quot;Post Comment&quot;&gt;
+&lt;/form&gt;</code></pre>
+<p>Для отправки данных в Firebase при отправке формы, переопределим слушателя submit по умолчанию в /js/blog.js:</p><p class="exampleTitle">jQuery</p>
+<pre><code data-language="javascript">$(&quot;#comment&quot;).submit(function() {
+  postRef.push().set({
+    name: $(&quot;#name&quot;).val(),
+    message: $(&quot;#message&quot;).val(),
+    md5Email: md5($(&quot;#email&quot;).val()),
+    postedAt: Firebase.ServerValue.TIMESTAMP
+  });
+
+ $(&quot;input[type=text], textarea&quot;).val(&quot;&quot;);
+  return false;
+});</code></pre>
+<p><span class="var">postRef.push()</span> создаёт массив в Firebase, если он не существует, и возвращает указатель на первый элемент. <span class="var">set</span> сохраняет данные в Firebase.</p><p>Мы храним MD5 для адреса электронной почты для защиты конфиденциальности комментаторов, поскольку данные общедоступны. <a href="https://ru.gravatar.com">Gravatar</a> использует MD5 для отображения изображения профиля.</p><p>Вместо <span class="var">new Date().getTime()</span> для метки времени, мы используем <span class="var">Firebase.ServerValue.TIMESTAMP</span>. Это метка времени серверов Firebase, которая позволяет избежать проблем с часовыми поясами и подделкой запросов.</p><h3>Отображение комментариев</h3><p>Добавим контейнер для хранения комментариев выше формы комментария в _layouts/post.html:</p><p class="exampleTitle">HTML</p>
+<pre><code data-language="html">&lt;hr&gt;
+
+&lt;div class=&quot;comments&quot;&gt;&lt;/div&gt;</code></pre>
+<p>В Firebase есть указатель для прослушивания новых комментариев. <span class="var">child_added</span> — это триггер событий для существующих и новых комментариев. Мы используем это же событие для отображения всех комментариев.</p><p><span class="var">child_added</span> возвращает текущий снимок данных. Мы получаем данные из снимка, форматируем их в HTML и добавляем в <span class="var">&lt;div class=&quot;comments&quot;&gt;&lt;/div&gt;</span>.</p><p class="exampleTitle">jQuery</p>
+<pre><code data-language="javascript">postRef.on(&quot;child_added&quot;, function(snapshot) {
+  var newComment = snapshot.val();
+  $(&quot;.comments&quot;).prepend('&lt;div class=&quot;comment&quot;&gt;' +
+    '&lt;h4&gt;' + newComment.name + '&lt;/h4&gt;' +
+    '&lt;div class=&quot;profile-image&quot;&gt;&lt;img src=&quot;http://www.gravatar.com/avatar/' + newComment.md5Email + '?s=100&amp;d=retro&quot;/&gt;&lt;/div&gt; ' +
+    '' + moment(newComment.postedAt).fromNow() + '&lt;p&gt;' + newComment.message  + '&lt;/p&gt;&lt;/div&gt;');
+});</code></pre>
+<h3>Окончательный файл</h3><p>Сохраните окончательный файл в /js/blog.js. Измените <span class="var">&lt;YOUR-APP-ID&gt;</span> на идентификатор, записанный ранее.</p><p class="exampleTitle">jQuery</p>
+<pre><code data-language="javascript">$(function() {
+  var ref = new Firebase(&quot;https://&lt;YOUR-APP-ID&gt;.firebaseio.com/&quot;),
+  postRef = ref.child(slugify(window.location.pathname));
+
+  postRef.on(&quot;child_added&quot;, function(snapshot) {
+    var newPost = snapshot.val();
+    $(&quot;.comments&quot;).prepend('&lt;div class=&quot;comment&quot;&gt;' +
+    '&lt;h4&gt;' + newPost.name + '&lt;/h4&gt;' +
+    '&lt;div class=&quot;profile-image&quot;&gt;&lt;img src=&quot;http://www.gravatar.com/avatar/' + newPost.md5Email + '?s=100&amp;d=retro&quot;/&gt;&lt;/div&gt; ' +
+    '&lt;span class=&quot;date&quot;&gt;' + moment(newPost.postedAt).fromNow() + '&lt;/span&gt;&lt;p&gt;' + newPost.message  + '&lt;/p&gt;&lt;/div&gt;');
+  });
+
+  $(&quot;#comment&quot;).submit(function() {
+    postRef.push().set({
+    name: $(&quot;#name&quot;).val(),
+    message: $(&quot;#message&quot;).val(),
+    md5Email: md5($(&quot;#email&quot;).val()),
+    postedAt: Firebase.ServerValue.TIMESTAMP
+  });
+
+  $(&quot;input[type=text], textarea&quot;).val(&quot;&quot;);
+    return false;
+  });
+});
+
+function slugify(text) {
+  return text.toString().toLowerCase().trim()
+    .replace(/&amp;/g, '-and-')
+    .replace(/[\s\W-]+/g, '-')
+    .replace(/[^a-zA-Z0-9-_]+/g,'');
+}</code></pre>
+<p>Завершённая система комментирования выглядит следующим образом:</p><p class="fig"><img src="../../assets/images/jekyll/comment-system.jpg" alt=""></p><p><a href="http://amber-plane.cloudvent.net/information/2016/01/01/what-is-coffee.html">Опробуйте рабочую демонстрацию здесь</a>. Откройте два окна, оставьте комментарий и вы увидите, что он появится в двух окнах сразу.</p><h2>Безопасность</h2><p>На данный момент любой желающий может редактировать или удалять комментарии. Для базовой безопасности мы сделаем правило, что только посетители могут добавлять комментарии. В Firebase откройте вкладку <strong>Security and Rules</strong>:</p><p class="fig"><img src="../../assets/images/jekyll/security-firebase.jpg" alt=""></p><p>Существующие правила разрешают глобальные операции чтения и записи. Чтобы предотвратить удаление или запись данных Firebase, если они уже существуют, измените <span class="var">.write</span> на следующее:</p>
+<pre><code data-language="javascript">{
+  &quot;rules&quot;: {
+    &quot;.read&quot;: true,
+    &quot;.write&quot;: &quot;false&quot;,
+    &quot;$slug&quot;: {
+      &quot;.write&quot;: &quot;!data.exists()&quot;,
+      &quot;$message&quot;: {
+        &quot;.write&quot;: &quot;!data.exists() &amp;&amp; newData.exists()&quot;
+      }
+    }
+  }
+}</code></pre>
+<p><a href="https://www.firebase.com/docs/web/guide/user-auth.html">Полный набор вариантов аутентификации</a> позволяет построить нечто более сложное.</p><h2>Готовый сайт</h2><p>С помощью нескольких библиотек и 31 строки на JavaScript мы получили полнофункциональный бэкенд для комментариев блога, работающих на статичном сайте.</p><p>Это подводит нас к финалу данного руководства. За три коротких урока мы перешли от статичного сайта к обновляемому, живому сайту на Jekyll с нашей собственной системой комментирования.</p><section class="row credit"><div class="columns small-6 credit-author"><i class="icon-user"></i> Автор: Майк Ньюмеген</div><div class="columns small-6 credit-changed"><i class="icon-calendar"></i> Последнее изменение: 30.09.2016</div><div class="columns small-12 credit-editor"><i class="icon-users"></i> Редакторы: Влад Мержевич</div></section><script src="../../sites/all/themes/ori/js/mousetrap.min.js"></script>
+<script>
+Mousetrap.bind('mod+left', function()   { document.location ='/dev/building-jekyll-site/jekyll-cms-with-cloudcannon'; });</script>
+<div class="book-navigation row" id="book-navigation-bottom"><div class="small-6 columns page-previous"><a href="jekyll-cms-with-cloudcannon.html" title="На предыдущую страницу">Добавление Jekyll CMS на CloudCannon</a><br><span class="navigation-tooltip"><kbd>Ctrl</kbd>+<kbd>←</kbd></span></div><div class="small-6 columns page-next"></div></div><div id="block-9" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+ad = document.getElementById('block-9');
+if (ad.getBoundingClientRect().width) {
+adWidth = ad.getBoundingClientRect().width;
+} else {
+adWidth = ad.offsetWidth;
+}
+google_ad_client = "ca-pub-0708135098984815";
+if (adWidth >= 728) { google_ad_size = ["728", "90"]; google_ad_slot = "1258944978"; }
+else { google_ad_size = ["300", "250"]; google_ad_slot = "8016056172"; }
+document.write (
+'<ins class="adsbygoogle" style="display:inline-block;width:'
++ google_ad_size[0] + 'px;height:'
++ google_ad_size[1] + 'px" data-ad-client="'
++ google_ad_client + '" data-ad-slot="'
++ google_ad_slot + '"></ins>'
+);
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div><div id="block-18" class="block"><h2 class="block_title">Рекомендуем</h2><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6422661373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div><div id="block-10" class="block"><div class="block_content"><div id="disqus_thread"></div>
+<script>
+var disqus_shortname = "webref";
+(function() {
+var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+(document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+})();
+</script>
+</div></div></div></div></div><aside class="large-3 columns right-off-canvas-menu"><div class="region region-sidebar-toc"><div id="book-navigation" class="block"><h2 class="block_title">Содержание</h2><div class="block_content"><ul class="menu"><li class="first leaf"><a href="converting-static-site-to-jekyll.html">Конвертация статичного сайта в Jekyll</a></li><li class="leaf"><a href="jekyll-cms-with-cloudcannon.html">Добавление Jekyll CMS на CloudCannon</a></li><li class="last leaf active-trail"><a href="firebase-backed-commenting-system.html" class="active-trail active">Система комментирования на Firebase</a></li></ul></div></div><div id="block-12" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:240px;height:400px" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6456026170"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div></aside></div></main><a class="exit-off-canvas"></a></div></div><div class="footer"><div class="adv_footer"><div class="row"><div class="medium-12 columns hide-for-medium-down"><div class="region region-adv-footer"><div id="block-15" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+ad = document.getElementById('block-15');
+if (ad.getBoundingClientRect().width) {
+adWidth = ad.getBoundingClientRect().width;
+} else {
+adWidth = ad.offsetWidth;
+}
+google_ad_client = "ca-pub-0708135098984815";
+if (adWidth >= 728) { google_ad_size = ["728", "90"]; google_ad_slot = "1258944978"; }
+else { google_ad_size = ["300", "250"]; google_ad_slot = "8016056172"; }
+document.write (
+'<ins class="adsbygoogle" style="display:inline-block;width:'
++ google_ad_size[0] + 'px;height:'
++ google_ad_size[1] + 'px" data-ad-client="'
++ google_ad_client + '" data-ad-slot="'
++ google_ad_slot + '"></ins>'
+);
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div></div></div></div><div class="copyright"><div class="row"><div class="small-2 columns"><p><a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow"><img alt="Лицензия Creative Commons" src="../../sites/all/themes/ori/img/cc.png" width="88" height="31"></a></p></div><div class="small-10 columns"><p>Все материалы сайта доступны по <a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow">лицензии Creative Commons «Attribution-NonCommercial» («Атрибуция — Некоммерческое использование») 4.0 Всемирная</a>, если не указано иное.</p></div></div></div><footer><div class="row"><div class="medium-12 large-4 columns"><h4>О сайте</h4><p>На сайте находятся справочники по различным веб-технологиям, а также руководства по вёрстке веб-страниц и разработке мобильных приложений.</p><p class="about-last">Главный редактор: Влад Мержевич</p></div><div class="small-6 large-2 columns"><h4>Связи</h4><ul id="community"><li><i class="icon-rss"></i> <a href="https://feeds.feedburner.com/webref" rel="nofollow">RSS</a></li><li><i class="icon-jsfiddle"></i> <a href="https://jsfiddle.net/user/webref/fiddles/" rel="nofollow">JSFiddle</a></li><li><i class="icon-github"></i> <a href="https://github.com/webref" rel="nofollow">GitHub</a></li><li><i class="icon-doc-text"></i> <a href="https://drive.google.com/folderview?id=0B4u62HGG7TOnTVJ4aFlFa1Jpb2M" rel="nofollow">Google Диск</a></li></ul></div><div class="small-6 large-3 columns"><h4>Разделы сайта</h4><ul id="footer-menu" class="links"><li><i class="icon-book"></i> <a href="../../ref.html">Справочники</a></li><li><i class="icon-layout"></i> <a href="../../layout.html">Вёрстка</a></li><li><i class="icon-gear"></i> <a href="../../dev.html">Веб-технологии</a></li><li><i class="icon-mobile"></i> <a href="../../mobile.html">Мобильные приложения</a></li><li><i class="icon-bookmark"></i> <a href="../../course.html">Учебные курсы</a></li></ul></div><div class="small-12 medium-12 large-3 columns"><h4>Популярные материалы</h4><div class="region region-popular"><div id="views-popular-popular" class="block"><div class="block_content"><div class="view view-popular view-id-popular view-display-id-popular view-dom-id-b81b8849fc938071defe6bc83609a530"><div class="view-content"><ul><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/learn-html-css.html">Уроки по HTML и CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/howtocodeinhtml.html">Как верстать на HTML5 и CSS3</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/html5-css3.html">HTML5 и CSS3 на примерах</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/css3.svg.png" src="../../assets/images/thumb/css3.svg" width="16" height="16" alt="" /> <a href="../../layout/magic-of-css.html">Магия CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/jquery.svg.png" src="../../assets/images/thumb/jquery.svg" width="16" height="16" alt="" /> <a href="../jqfundamentals.html">Основы jQuery</a></li></ul></div></div></div></div></div></div></div><div class="row"><div class="small-12 columns counter">
+<script src="../../sites/all/themes/ori/js/li.js"></script>
+</div></div><a href="firebase-backed-commenting-system.html#top"><div class="row"><div class="small-12 columns ontop">Наверх</div></div></a></footer></div><script type="text/javascript" src="../../assets/js/js_p2Pm92U0xNKrBps4v5uAeOIq9sGMPp8zPpZGieWq8eo.js"></script>
+<script type="text/javascript" src="../../assets/js/js_H7q2xORKmR9AN8Qx5spKEIBp7R_wG2apAswJoCUZY7I.js"></script>
+<script type="text/javascript" src="../../assets/js/js_Xmre84srNMv9IsL3EsmaMioO7AzocdnCMpWwTIu-jp8.js"></script>
+<script type="text/javascript" src="../../assets/js/js_V2GNOshuLPzy1pw-N0E22cul4mNDg2mFEMr1chJ4aBw.js"></script>
+</body>
+</html>

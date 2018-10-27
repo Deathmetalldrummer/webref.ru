@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Строчные элементы | Уроки | WebReference</title>
+<meta charset="utf-8" />
+<meta name="description" content="Строчными называются такие элементы, которые являются непосредственной частью строки, у них значение свойства display установлено как inline. Элементы, для которых это значение задано по умолчанию, — , , , и др., в основном они используются для изменения вида текста или его смыслового выделения." />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_GmPV_e3YNAzxsGyZNJb8l3jyzuLiXRRwUYoy5enMRkM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_85G4vgc28WvulnfM3s500wdVxpyNLRJAbbrbya_4QC0.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_TRgZiIWJG1Kscmnc2ThzsQLBI4y7E3_GdynGIqED184.css" media="screen" />
+</head>
+<body>
+<div class="off-canvas-wrap" data-offcanvas><div class="inner-wrap"><header><div class="row"><div class="small-12 large-4 columns logo"><a href="../../index.html">WebReference<span>.</span>ru</a></div><nav class="small-10 large-7 columns topmenu"><div class="region region-menu"><div id="system-main-menu" class="block"><div class="block_content"><ul class="menu"><li class="first leaf"><a href="../../ref.html" title="">Справочники</a></li><li class="leaf"><a href="../../layout.html" title="">Вёрстка</a></li><li class="leaf"><a href="../../dev.html" title="">Веб-технологии</a></li><li class="leaf"><a href="../../mobile.html" title="">Мобильные приложения</a></li><li class="last leaf"><a href="../../course.html">Курсы</a></li></ul></div></div></div></nav><div class="small-2 large-1 columns search"><div id="search-button" tabindex="1"></div><form action="https://webref.ru/search/" id="cse-search-box"><input type="search" placeholder="Поиск по сайту" name="s" autocomplete="off" id="cse-search-input"><input type="hidden" name="cx" value="partner-pub-0708135098984815:9970767379"><input type="hidden" name="cof" value="FORID:10"><input type="hidden" name="ie" value="UTF-8"></form></div></div></header><main><div class="title"><div class="row"><div class="small-12 columns"><h1>Строчные элементы</h1></div></div></div><div class="breadcrumb"><div class="row"><div class="small-12 columns"><div class="region region-crumbs"><div id="easy_breadcrumb-easy_breadcrumb" class="block"><div class="block_content"><div itemscope class="easy-breadcrumb" itemtype="http://data-vocabulary.org/Breadcrumb"> <span itemprop="title"><a href="../../index.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Главная</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span itemprop="title"><a href="../../course.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-1">Учебные курсы</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span itemprop="title"><a href="../block-inline.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-2">Блочные и строчные элементы</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">Строчные элементы</span></div></div></div></div></div></div></div><div class="row"><div class="medium-12 large-9 columns main-section">
+<script id="dsq-count-scr" src="https://webref.disqus.com/count.js" async></script>
+<p class="num_comments"><a href="inline.html#disqus_thread">Комментарии</a></p><div class="region region-content"><div id="system-main" class="block"><ul class="tabs" data-tabs data-deep-link="true" data-update-history="true" id="lesson-tabs" role="tablist"><li class="tabs-title is-active"><a href="inline.html#content" aria-selected="true" role="tab" aria-controls="lesson-content">Описание</a></li><li class="tabs-title"><a href="inline.html#task" role="tab" aria-controls="lesson-task">Задания</a></li><li class="tabs-title"><a href="inline.html#individual" role="tab" aria-controls="lesson-practice">Самостоятельная</a></li></ul><div class="tabs-content" data-tabs-content="lesson-tabs" id="lesson"><div id="example-form"></div><section class="tabs-panel is-active" id="content" role="tabpanel"><p>Строчными называются такие элементы, которые являются непосредственной частью строки, у них значение свойства <a href="../../css/display.html">display</a> установлено как <span class="value">inline</span>. Элементы, для которых это значение задано по умолчанию,&nbsp;— <span class="tag">&lt;span&gt;</span>, <span class="tag">&lt;a&gt;</span>, <span class="tag">&lt;q&gt;</span>, <span class="tag">&lt;code&gt;</span> и др., в основном они используются для изменения вида текста или его смыслового выделения.</p><h2>Особенности строчных элементов</h2><p>Перечислим характерные особенности строчных элементов.</p><p><strong>Свойства, связанные с размерами (width, height), не применимы.</strong></p><p>Размеры строчных элементов определяются их содержимым и не могут напрямую меняться с помощью свойств <span class="attribute">width</span> и <span class="attribute">height</span>, которые, соответственно, задают ширину и высоту элемента. Добавление этих свойств к строчным элементам просто игнорируется.</p><p><strong>Размер элемента равен его содержимому плюс значения margin, border и padding.</strong></p><p>Несмотря на то, что явно задать размеры элемента нельзя, на него можно влиять косвенно с помощью свойств <span class="attribute">margin</span>, <span class="attribute">border</span> и <span class="attribute">padding</span>, значения которых суммируются с размерами содержимого (пример&nbsp;1).</p><p class="exampleTitle">Пример 1. Размеры элемента</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Размеры элемента&lt;/title&gt;
+  &lt;style&gt;
+   h1 {
+    background: #EDE6CE; /* Цвет фона */
+   }
+   h1 span {
+    margin: 16px; /* Отступы */
+    padding: 1px; /* Поля */
+    border-bottom: 2px solid #D71920; /* Линия снизу */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;&lt;span&gt;Заголовок&lt;/span&gt;&lt;/h1&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере внутрь блочного элемента <span class="tag">&lt;h1&gt;</span> добавлен строчный элемент <span class="tag">&lt;span&gt;</span> и для него уже заданы свойства <span class="attribute">margin</span>, <span class="attribute">padding</span> и <span class="attribute">border</span>. Это сделано для того, чтобы линия была строго под текстом (рис.&nbsp;1), а не на всю длину блока, как получилось бы, добавь мы <span class="attribute">border</span> для <span class="tag">h1</span> напрямую.</p><p class="fig"><img src="../../assets/images/block-inline/inline1.png" alt="Линия под текстом" width="602" height="266"></p><p class="figsign">Рис. 1. Линия под текстом</p><p class="note">Заметьте одну особенность — для строчных элементов <span class="attribute">margin</span> работает только по горизонтали, но никак не вертикали. Таким образом, свойства <span class="attribute">margin-left</span> и <span class="attribute">margin-right</span> не действуют.</p><p><strong>Срочные элементы переносятся на другую строку при необходимости.</strong></p><p>Раз мы имеем дело со строками, то текст, естественно, переносится, чтобы строка целиком поместилась по ширине. Перенос текста, как правило, происходит в месте пробела и может разделить наш строчный элемент на две части и более. Это не страшно, пока к элементу не применяется стилевое оформление. На рис.&nbsp;2 показано, как фон и рамка разбивается на две части.</p><p class="fig"><img src="../../assets/images/block-inline/inline2.png" alt="Перенос строки в тексте" width="584" height="266"></p><p class="figsign">Рис. 2. Перенос строки</p><p>Чтобы запретить перенос текста внутри элемента, добавьте свойство <a href="../../css/white-space.html">white-space</a> со значением <span class="value">nowrap</span> (пример&nbsp;2).</p><p class="exampleTitle">Пример 2. Перенос строк</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Перенос строк&lt;/title&gt;
+  &lt;style&gt;
+   .muscle {
+    padding: 2px; /* Поля вокруг текста */
+    border: 1px dotted maroon; /* Параметры рамки */
+    background: #C5E2BD; /* Цвет фона */
+    white-space: nowrap; /* Запрещаем перенос текста */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;Лягте животом на пол. Соедините стопы вместе, согнув ноги в коленях 
+  и развернув их в стороны. Руки за головой. Тяните голову руками 
+  вверх и вперёд до полного сокращения &lt;span class=&quot;muscle&quot;&gt;мышц живота&lt;/span&gt;.
+  Задержитесь на две секунды. Выполните восемь повторений.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p><strong>Перенос текста считается за пробел.</strong></p><p>В коде HTML любой перенос текста воспринимается браузером как пробел, это касается и размещения элементов на отдельных строках. Сравните два абзаца в примере&nbsp;3. В первом абзаце каждый <span class="tag">&lt;span&gt;</span> располагается на отдельной строке, а во втором абзаце код идёт сплошной строкой без пробелов и переносов.</p><p class="exampleTitle">Пример 3. Перенос но новую строку</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Перенос строк&lt;/title&gt;
+  &lt;style&gt;
+   span {
+    padding: 5px; /* Поля вокруг текста */
+    background: #008EB0; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;
+   &lt;span&gt;Uno&lt;/span&gt;
+   &lt;span&gt;Dos&lt;/span&gt;
+   &lt;span&gt;Tres&lt;/span&gt;
+  &lt;/p&gt;
+  &lt;p&gt;&lt;span&gt;Cinco&lt;/span&gt;&lt;span&gt;Seis&lt;/span&gt;&lt;span&gt;Siete&lt;/span&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан на рис. 3. В первой строке между цветных прямоугольников появилось небольшое пространство, а вторая строка выглядит сплошной.</p><p class="fig"><img src="../../assets/images/block-inline/inline3.png" alt="Пробелы между элементами" width="538" height="266"></p><p class="figsign">Рис. 3. Пробелы между элементами</p><p>В строчно-блочных элементах мы ещё вернёмся к этой особенности.</p><p><strong>Можно выравнивать по вертикали с помощью свойства vertical-align.</strong></p><p>Свойство <a href="../../css/vertical-align.html">vertical-align</a> выравнивает элементы относительно друг друга по вертикали, что позволяет делать верхний и нижний индексы, задавать выравнивание содержимого ячеек таблицы, задавать положение блоков и др. В примере&nbsp;4 показано выравнивание картинок и текста по середине друг друга.</p><p class="exampleTitle">Пример 4. Использование vertical-align</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Выравнивание&lt;/title&gt;
+  &lt;style&gt;
+   img {
+    vertical-align: middle; /* Выравнивание по середине */
+   }
+   .icon {
+    vertical-align: middle; /* Выравнивание по середине */
+    margin-left: 7px; /* Отступ слева */
+    margin-right: 20px; /* Отступ справа */
+    color: #ED1C24; /* Цвет текста */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;
+   &lt;img src=&quot;image/animate.png&quot; alt=&quot;&quot;&gt;&lt;span class=&quot;icon&quot;&gt;Анимация&lt;/span&gt;
+   &lt;img src=&quot;image/list.png&quot; alt=&quot;&quot;&gt;&lt;span class=&quot;icon&quot;&gt;Список&lt;/span&gt;
+   &lt;img src=&quot;image/print.png&quot; alt=&quot;&quot;&gt;&lt;span class=&quot;icon&quot;&gt;Печать&lt;/span&gt;
+   &lt;img src=&quot;image/text.png&quot; alt=&quot;&quot;&gt;&lt;span class=&quot;icon&quot;&gt;Текст&lt;/span&gt;
+  &lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан на рис. 4.</p><p class="fig"><img src="../../assets/images/block-inline/inline4.png" alt="Выравнивание картинок и текста" width="538" height="266"></p><p class="figsign">Рис. 4. Выравнивание картинок и текста</p><h2>Преобразование в строчный элемент</h2><p>Строчные элементы можно превращать в блочные с помощью свойства <span class="attribute">display</span> и его значения <span class="value">block</span>. Также возможно и обратное действие через значение <span class="value">inline</span> и преобразование блочного элемента в строчный (пример&nbsp;5).</p><p class="exampleTitle">Пример 5. Меню</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Меню&lt;/title&gt;
+  &lt;style&gt;
+   .menu {
+    margin: 0; padding: 0; /* Убираем пустое пространство */
+    line-height: 1.8; /* Межстрочный интервал */
+   }
+   .menu li {
+    display: inline; /* Строчные элементы */
+    background: #D9B492; /* Цвет фона */
+    padding: 3px 7px; /* Поля вокруг текста */
+    white-space: nowrap; /* Запрещаем перенос текста */
+   }
+   .menu li a {
+    text-decoration: none; /* Убираем подчёркивание у ссылок */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;ul class=&quot;menu&quot;&gt;
+   &lt;li&gt;&lt;a href=&quot;1.html&quot;&gt;Метод простых итераций&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;2.html&quot;&gt;Метод случайных чисел&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;3.html&quot;&gt;Метод дихотомии&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;4.html&quot;&gt;Метод золотого сечения&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан на рис. 5.</p><p class="fig"><img src="../../assets/images/block-inline/inline5.png" alt="Строчные элементы" width="538" height="266"></p><p class="figsign">Рис. 5. Строчные элементы</p><p class="note">Внимание! Превращение элемента в строчный не даёт право нарушать структуру кода HTML и порядок вложения элементов.</p><p>Надо понимать, что HTML и CSS проверяются независимо друг от друга и какие бы вы манипуляции не производили с элементами через стили, на HTML это не оказывает влияние. Код HTML в любом случае должен быть корректным с точки зрения синтаксиса HTML.</p><p><a href="inline.html#lesson-tabs" class="button radius" onclick="jQuery('#lesson-tabs').foundation('selectTab', 'task')">Перейти к заданиям</a></p><div id="views-similar-block" class="block"><h2 class="block_title">См. также</h2><div class="block_content"><div class="view view-similar view-id-similar view-display-id-block view-dom-id-a9b3fe4c3f0eff426ed38b7efd5f37db"><div class="view-content"><div class="similar"><ul><li class=""> <a href="../../css/border.html">border</a></li><li class=""> <a href="../../css/display.html">display</a></li><li class=""> <a href="../box-model/display.html">display в CSS</a></li><li class=""> <a href="../../css/height.html">height</a></li><li class=""> <a href="../../css/margin.html">margin</a></li><li class=""> <a href="../box-model/margin.html">margin в CSS</a></li><li class=""> <a href="../../css/padding.html">padding</a></li><li class=""> <a href="../../css/vertical-align.html">vertical-align</a></li><li class=""> <a href="../../css/width.html">width</a></li><li class=""> <a href="../position/absolute.html">Абсолютное позиционирование</a></li><li class=""> <a href="block.html">Блочные элементы</a></li><li class=""> <a href="../../layout/html5-css3/text/sup.html">Верхний и нижний индекс</a></li><li class=""> <a href="../../layout/html5-css3/img/align.html">Выравнивание картинок</a></li><li class=""> <a href="../box-model/height-width-overflow.html">Высота и ширина в CSS</a></li><li class=""> <a href="../box-model/shorthand-wheel.html">Колесо для сокращённых свойств</a></li><li class=""> <a href="../float/description.html">Описание float</a></li><li class=""> <a href="../../layout/advanced-html-css/responsive-web-design.html">Отзывчивый веб-дизайн</a></li><li class=""> <a href="../../layout/learn-html-css/box-model.html">Открываем блочную модель</a></li><li class=""> <a href="../positioning/flow.html">Поток</a></li><li class=""> <a href="../float/use.html">Примеры использования float</a></li><li class=""> <a href="../../layout/html5-css3/img/border.html">Рамка вокруг изображений</a></li><li class=""> <a href="../css-text/text-properties.html">Свойства текста в CSS</a></li><li class=""> <a href="inline-block.html">Строчно-блочные элементы</a></li></ul></div></div></div></div></div></section><section class="tabs-panel" id="task" role="tabpanel" aria-hidden><div id="views-task-block" class="block"><div class="block_content"><div class="view view-task view-id-task view-display-id-block view-dom-id-cafd653c31586ac4e2d38b13bc559e95"><div class="view-content"><ul class="tabs" data-tabs id="task-tabs"><li class="tabs-title is-active"><a href="inline.html#t1" aria-selected="true">1</a></li><li class="tabs-title"><a href="inline.html#t2">2</a></li><li class="tabs-title"><a href="inline.html#t3">3</a></li></ul><div class="tabs-content" data-tabs-content="task-tabs"><section id="t1" class="tabs-panel task-content is-active"><div class="h5p-content" data-content-id="7738"></div></section><section class="tabs-panel task-content" id="t2"><div class="h5p-content" data-content-id="7739"></div></section><section class="tabs-panel task-content" id="t3"><div class="h5p-content" data-content-id="7740"></div></section></div></div></div></div></div></section><section class="tabs-panel" id="individual" role="tabpanel" aria-hidden><div id="views-individual-block" class="block"><div class="block_content"><div class="view view-individual view-id-individual view-display-id-block view-dom-id-26453733d31d6c21fa75116db6eb2136"><div class="view-content"><ul class="tabs" data-tabs id="individual-tabs"><li class="tabs-title is-active"><a href="inline.html#i1" aria-selected="true">1</a></li><li class="tabs-title"><a href="inline.html#i2">2</a></li></ul><div class="tabs-content" data-tabs-content="individual-tabs"><section id="i1" class="tabs-panel task-content is-active"><h2 class="node-title"><a href="https://webref.ru/practice/1955">Строчные элементы</a></h2><p>Есть следующий код HTML.</p>
+<pre><code data-language="html">&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;results.html&quot;&gt;Results&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;news.html&quot;&gt;News&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;players.html&quot;&gt;Players&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;table.html&quot;&gt;Table&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<p>Не внося изменений в HTML, оформите список, как показано на рис. 1. При наведении ссылки должны подчёркиваться.</p><p class="fig"><img src="../../assets/images/individual/inline.png" alt="" width="603" height="195"></p><p class="figsign">Рис. 1</p><div class="individual-result"><button type="button" class="button show-result">Показать ответ</button></div><div class="field field-name-field-individual-result field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Навигация&lt;/title&gt;
+  &lt;style&gt;
+   ul {
+    background: #b41a83;
+    padding: 10px 15px;
+   }
+   li {
+    list-style: none;
+    display: inline;
+    margin-right: 15px;
+   }
+   a { 
+   color: #fff; 
+   text-decoration: none;
+   }
+   a:hover { 
+   text-decoration: underline;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;ul&gt;
+   &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;results.html&quot;&gt;Results&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;news.html&quot;&gt;News&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;players.html&quot;&gt;Players&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;table.html&quot;&gt;Table&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div></div></section><section class="tabs-panel task-content" id="i2"><h2 class="node-title"><a href="https://webref.ru/practice/1957">Строчные элементы 2</a></h2><p>Создайте веб-страницу, показанную на рис. 1. Для формирования меток используйте список <span class="tag">&lt;ul&gt;</span>.</p><p class="fig"><img src="../../assets/images/individual/inline-2.png" alt="" width="482" height="230"></p><p class="figsign">Рис. 1</p><div class="individual-result"><button type="button" class="button show-result">Показать ответ</button></div><div class="field field-name-field-individual-result field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Метки&lt;/title&gt;
+  &lt;style&gt;
+   body {
+   background: #f5f5f5;
+   font-family: Arial, sans-serif;
+  }
+  .block {
+   background: #fff;
+  }
+  .block-title {
+   background: #e1e1e1;
+  }
+  .block-title h2 {
+   display: inline-block;
+   background: #d63138;
+   color: #fff;
+   text-transform: uppercase;
+   padding: 10px;
+   margin: 0;
+   font-size: 16px;
+  }
+  .block-content {
+   padding: 10px;
+   line-height: 1.4;
+  }
+  .block-content ul {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+  }
+  .block-content li {
+   display: inline;
+   margin-right: 10px;
+  }
+  .block-content a {
+   color: #363636;
+  }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;block&quot;&gt;
+   &lt;div class=&quot;block-title&quot;&gt;&lt;h2&gt;Метки&lt;/h2&gt;&lt;/div&gt;
+   &lt;div class=&quot;block-content&quot;&gt;
+    &lt;ul&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;вращение&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;отведение&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;приведение&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;пронация&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;разгибание&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;сгибание&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;супинация&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div></div></section></div></div></div></div></div></section></div><section class="row credit"><div class="columns small-6 credit-author"><i class="icon-user"></i> Автор: Влад Мержевич</div><div class="columns small-6 credit-changed"><i class="icon-calendar"></i> Последнее изменение: 13.08.2017</div><div class="columns small-12 credit-editor"><i class="icon-users"></i> Редакторы: Влад Мержевич</div></section><div id="block-9" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+ad = document.getElementById('block-9');
+if (ad.getBoundingClientRect().width) {
+adWidth = ad.getBoundingClientRect().width;
+} else {
+adWidth = ad.offsetWidth;
+}
+google_ad_client = "ca-pub-0708135098984815";
+if (adWidth >= 728) { google_ad_size = ["728", "90"]; google_ad_slot = "1258944978"; }
+else { google_ad_size = ["300", "250"]; google_ad_slot = "8016056172"; }
+document.write (
+'<ins class="adsbygoogle" style="display:inline-block;width:'
++ google_ad_size[0] + 'px;height:'
++ google_ad_size[1] + 'px" data-ad-client="'
++ google_ad_client + '" data-ad-slot="'
++ google_ad_slot + '"></ins>'
+);
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div><div id="block-18" class="block"><h2 class="block_title">Рекомендуем</h2><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6422661373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div><div id="block-10" class="block"><div class="block_content"><div id="disqus_thread"></div>
+<script>
+var disqus_shortname = "webref";
+(function() {
+var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+(document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+})();
+</script>
+</div></div></div></div></div><aside class="large-3 columns right-off-canvas-menu"><div class="region region-sidebar-toc"><div id="views-course-toc" class="block"><h2 class="block_title">Содержание</h2><div class="block_content"><div class="view view-course view-id-course view-display-id-toc view-dom-id-ab824c57965f67db03d819c65bb0d45a"><div class="view-content"><ul class="menu"><li class=""> <a href="block.html">Блочные элементы</a></li><li class=""> <a href="inline.html" class="active">Строчные элементы</a></li><li class=""> <a href="inline-block.html">Строчно-блочные элементы</a></li><li class=""> <a href="quiz.html">Проверка знаний</a></li></ul></div></div></div></div><div id="block-12" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:240px;height:400px" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6456026170"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div></aside></div></main><a class="exit-off-canvas"></a></div></div><div class="footer"><div class="adv_footer"><div class="row"><div class="medium-12 columns hide-for-medium-down"><div class="region region-adv-footer"><div id="block-15" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+ad = document.getElementById('block-15');
+if (ad.getBoundingClientRect().width) {
+adWidth = ad.getBoundingClientRect().width;
+} else {
+adWidth = ad.offsetWidth;
+}
+google_ad_client = "ca-pub-0708135098984815";
+if (adWidth >= 728) { google_ad_size = ["728", "90"]; google_ad_slot = "1258944978"; }
+else { google_ad_size = ["300", "250"]; google_ad_slot = "8016056172"; }
+document.write (
+'<ins class="adsbygoogle" style="display:inline-block;width:'
++ google_ad_size[0] + 'px;height:'
++ google_ad_size[1] + 'px" data-ad-client="'
++ google_ad_client + '" data-ad-slot="'
++ google_ad_slot + '"></ins>'
+);
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div></div></div></div><div class="copyright"><div class="row"><div class="small-2 columns"><p><a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow"><img alt="Лицензия Creative Commons" src="../../sites/all/themes/ori/img/cc.png" width="88" height="31"></a></p></div><div class="small-10 columns"><p>Все материалы сайта доступны по <a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow">лицензии Creative Commons «Attribution-NonCommercial» («Атрибуция — Некоммерческое использование») 4.0 Всемирная</a>, если не указано иное.</p></div></div></div><footer><div class="row"><div class="medium-12 large-4 columns"><h4>О сайте</h4><p>На сайте находятся справочники по различным веб-технологиям, а также руководства по вёрстке веб-страниц и разработке мобильных приложений.</p><p class="about-last">Главный редактор: Влад Мержевич</p></div><div class="small-6 large-2 columns"><h4>Связи</h4><ul id="community"><li><i class="icon-rss"></i> <a href="https://feeds.feedburner.com/webref" rel="nofollow">RSS</a></li><li><i class="icon-jsfiddle"></i> <a href="https://jsfiddle.net/user/webref/fiddles/" rel="nofollow">JSFiddle</a></li><li><i class="icon-github"></i> <a href="https://github.com/webref" rel="nofollow">GitHub</a></li><li><i class="icon-doc-text"></i> <a href="https://drive.google.com/folderview?id=0B4u62HGG7TOnTVJ4aFlFa1Jpb2M" rel="nofollow">Google Диск</a></li></ul></div><div class="small-6 large-3 columns"><h4>Разделы сайта</h4><ul id="footer-menu" class="links"><li><i class="icon-book"></i> <a href="../../ref.html">Справочники</a></li><li><i class="icon-layout"></i> <a href="../../layout.html">Вёрстка</a></li><li><i class="icon-gear"></i> <a href="../../dev.html">Веб-технологии</a></li><li><i class="icon-mobile"></i> <a href="../../mobile.html">Мобильные приложения</a></li><li><i class="icon-bookmark"></i> <a href="../../course.html">Учебные курсы</a></li></ul></div><div class="small-12 medium-12 large-3 columns"><h4>Популярные материалы</h4><div class="region region-popular"><div id="views-popular-popular" class="block"><div class="block_content"><div class="view view-popular view-id-popular view-display-id-popular view-dom-id-4029ab5778c08270f264ca05c47061c0"><div class="view-content"><ul><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/learn-html-css.html">Уроки по HTML и CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/howtocodeinhtml.html">Как верстать на HTML5 и CSS3</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/html5-css3.html">HTML5 и CSS3 на примерах</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/css3.svg.png" src="../../assets/images/thumb/css3.svg" width="16" height="16" alt="" /> <a href="../../layout/magic-of-css.html">Магия CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/jquery.svg.png" src="../../assets/images/thumb/jquery.svg" width="16" height="16" alt="" /> <a href="../../dev/jqfundamentals.html">Основы jQuery</a></li></ul></div></div></div></div></div></div></div><div class="row"><div class="small-12 columns counter">
+<script src="../../sites/all/themes/ori/js/li.js"></script>
+</div></div><a href="inline.html#top"><div class="row"><div class="small-12 columns ontop">Наверх</div></div></a></footer></div><script type="text/javascript" src="../../assets/js/js_p2Pm92U0xNKrBps4v5uAeOIq9sGMPp8zPpZGieWq8eo.js"></script>
+<script type="text/javascript" src="../../assets/js/js_H7q2xORKmR9AN8Qx5spKEIBp7R_wG2apAswJoCUZY7I.js"></script>
+<script type="text/javascript" src="../../assets/js/js_Md7Rwx9SxIWMw1OIA53RcVFhFl4vE3bNniItpF3BGCg.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+H5PIntegration = {"baseUrl":"https:\/\/webref.ru","url":"\/assets\/h5p","postUserStatistics":false,"ajax":{"setFinished":"\/h5p-ajax\/set-finished.json?token=809cc6c334d3b","contentUserData":"\/h5p-ajax\/content-user-data\/:contentId\/:dataType\/:subContentId?token=f3cb8cb4ee313"},"saveFreq":false,"l10n":{"H5P":{"fullscreen":"Fullscreen","disableFullscreen":"Disable fullscreen","download":"\u0421\u043a\u0430\u0447\u0430\u0442\u044c","copyrights":"Rights of use","embed":"Embed","size":"\u0420\u0430\u0437\u043c\u0435\u0440","showAdvanced":"Show advanced","hideAdvanced":"Hide advanced","advancedHelp":"Include this script on your website if you want dynamic sizing of the embedded content:","copyrightInformation":"Rights of use","close":"\u0417\u0430\u043a\u0440\u044b\u0442\u044c","title":"\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a","author":"\u0410\u0432\u0442\u043e\u0440","year":"Year","source":"Source","license":"License","thumbnail":"Thumbnail","noCopyrights":"No copyright information available for this content.","downloadDescription":"Download this content as a H5P file.","copyrightsDescription":"View copyright information for this content.","embedDescription":"View the embed code for this content.","h5pDescription":"Visit H5P.org to check out more cool content.","contentChanged":"This content has changed since you last used it.","startingOver":"You'll be starting over.","by":"by","showMore":"Show more","showLess":"Show less","subLevel":"Sublevel","confirmDialogHeader":"Confirm action","confirmDialogBody":"Please confirm that you wish to proceed. This action is not reversible.","cancelLabel":"\u041e\u0442\u043c\u0435\u043d\u0438\u0442\u044c","confirmLabel":"\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044c","licenseU":"Undisclosed","licenseCCBY":"Attribution","licenseCCBYSA":"Attribution-ShareAlike","licenseCCBYND":"Attribution-NoDerivs","licenseCCBYNC":"Attribution-NonCommercial","licenseCCBYNCSA":"Attribution-NonCommercial-ShareAlike","licenseCCBYNCND":"Attribution-NonCommercial-NoDerivs","licenseCC40":"4.0 International","licenseCC30":"3.0 Unported","licenseCC25":"2.5 Generic","licenseCC20":"2.0 Generic","licenseCC10":"1.0 Generic","licenseGPL":"General Public License","licenseV3":"Version 3","licenseV2":"Version 2","licenseV1":"Version 1","licensePD":"Public Domain","licenseCC010":"CC0 1.0 Universal (CC0 1.0) Public Domain Dedication","licensePDM":"Public Domain Mark","licenseC":"Copyright"}},"hubIsEnabled":true,"siteUrl":"https:\/\/webref.ru\/","contents":{"cid-7738":{"library":"H5P.SingleChoiceSet 1.8","jsonContent":"{\"choices\":[{\"subContentId\":\"24a0178b-cab0-4bd3-ab8b-47259958561a\",\"question\":\"<p>\\u041a\\u0430\\u043a\\u043e\\u0435 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u0430 display \\u0434\\u0435\\u043b\\u0430\\u0435\\u0442 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u0442\\u0440\\u043e\\u0447\\u043d\\u044b\\u043c?<\\\/p>\\n\",\"answers\":[\"<p>inline<\\\/p>\\n\",\"<p>block<\\\/p>\\n\",\"<p>inline-block<\\\/p>\\n\",\"<p>none<\\\/p>\\n\"]},{\"subContentId\":\"92d07a80-e673-4a03-bdb7-cdc51383e789\",\"question\":\"<p>\\u041a\\u043e\\u0441\\u0442\\u044f \\u0432\\u043b\\u043e\\u0436\\u0438\\u043b \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 &lt;div&gt; \\u0432\\u043d\\u0443\\u0442\\u0440\\u044c &lt;p&gt; \\u0438 \\u0441\\u0434\\u0435\\u043b\\u0430\\u043b \\u0435\\u0433\\u043e \\u0441\\u0442\\u0440\\u043e\\u0447\\u043d\\u044b\\u043c, \\u043d\\u043e \\u0432\\u0430\\u043b\\u0438\\u0434\\u0430\\u0442\\u043e\\u0440 HTML \\u0432\\u044b\\u0434\\u0430\\u043b \\u043e\\u0448\\u0438\\u0431\\u043a\\u0443. \\u041f\\u043e\\u0447\\u0435\\u043c\\u0443?<\\\/p>\\n\",\"answers\":[\"<p>\\u0412\\u043d\\u0443\\u0442\\u0440\\u044c &lt;p&gt; \\u043d\\u0435\\u043b\\u044c\\u0437\\u044f \\u0434\\u043e\\u0431\\u0430\\u0432\\u043b\\u044f\\u0442\\u044c &lt;div&gt;.<\\\/p>\\n\",\"<p>\\u041d\\u0435\\u043a\\u043e\\u0440\\u0440\\u0435\\u043a\\u0442\\u043d\\u043e \\u043e\\u0431\\u044a\\u044f\\u0432\\u043b\\u0435\\u043d display.<\\\/p>\\n\",\"<p>\\u0421\\u0442\\u0438\\u043b\\u044c \\u0434\\u043e\\u043b\\u0436\\u0435\\u043d \\u0431\\u044b\\u0442\\u044c \\u043e\\u043f\\u0438\\u0441\\u0430\\u043d \\u0432\\u043d\\u0443\\u0442\\u0440\\u0438 &lt;style&gt;.<\\\/p>\\n\",\"<p>\\u041d\\u0435 \\u0443\\u043a\\u0430\\u0437\\u0430\\u043d \\u0434\\u043e\\u043a\\u0442\\u0430\\u0439\\u043f.<\\\/p>\\n\"]},{\"subContentId\":\"f20c2084-3c2e-4978-989b-56ffbbbb4f88\",\"question\":\"<p>\\u041c\\u0435\\u0436\\u0434\\u0443 \\u0441\\u0442\\u0440\\u043e\\u0447\\u043d\\u044b\\u043c\\u0438 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430\\u043c\\u0438 \\u043d\\u0430 \\u0432\\u0435\\u0431-\\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0435 \\u043f\\u043e\\u044f\\u0432\\u0438\\u043b\\u0441\\u044f \\u043d\\u0435\\u0431\\u043e\\u043b\\u044c\\u0448\\u043e\\u0439 \\u043f\\u0440\\u043e\\u043c\\u0435\\u0436\\u0443\\u0442\\u043e\\u043a. \\u041e\\u0442\\u043a\\u0443\\u0434\\u0430 \\u043e\\u043d \\u0432\\u0437\\u044f\\u043b\\u0441\\u044f?<\\\/p>\\n\",\"answers\":[\"<p>\\u0418\\u0437-\\u0437\\u0430 \\u043f\\u0435\\u0440\\u0435\\u043d\\u043e\\u0441\\u0430 \\u0442\\u0435\\u043a\\u0441\\u0442\\u0430 \\u0432 \\u043a\\u043e\\u0434\\u0435.<\\\/p>\\n\",\"<p>\\u041a \\u0441\\u0442\\u0440\\u043e\\u0447\\u043d\\u044b\\u043c \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430\\u043c \\u0430\\u0432\\u0442\\u043e\\u043c\\u0430\\u0442\\u0438\\u0447\\u0435\\u0441\\u043a\\u0438 \\u0434\\u043e\\u0431\\u0430\\u0432\\u043b\\u044f\\u0435\\u0442\\u0441\\u044f margin.<\\\/p>\\n\",\"<p>\\u041a \\u0441\\u0442\\u0440\\u043e\\u0447\\u043d\\u044b\\u043c \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430\\u043c \\u0430\\u0432\\u0442\\u043e\\u043c\\u0430\\u0442\\u0438\\u0447\\u0435\\u0441\\u043a\\u0438 \\u0434\\u043e\\u0431\\u0430\\u0432\\u043b\\u044f\\u0435\\u0442\\u0441\\u044f padding.<\\\/p>\\n\",\"<p>\\u042d\\u0442\\u043e \\u043d\\u0435\\u0432\\u0438\\u0434\\u0438\\u043c\\u044b\\u0439 \\u0441\\u0438\\u043c\\u0432\\u043e\\u043b \\u0437\\u0430\\u0432\\u0435\\u0440\\u0448\\u0435\\u043d\\u0438\\u044f \\u0441\\u0442\\u0440\\u043e\\u043a\\u0438.<\\\/p>\\n\"]},{\"subContentId\":\"3f70f015-7ca6-401d-b6ac-38f22b3d7eb1\",\"question\":\"<p>\\u041a\\u0430\\u043a\\u043e\\u0435 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043f\\u043e\\u0437\\u0432\\u043e\\u043b\\u044f\\u0435\\u0442 \\u0437\\u0430\\u043f\\u0440\\u0435\\u0442\\u0438\\u0442\\u044c \\u043f\\u0435\\u0440\\u0435\\u043d\\u043e\\u0441 \\u0442\\u0435\\u043a\\u0441\\u0442\\u0430?<\\\/p>\\n\",\"answers\":[\"<p>white-space<\\\/p>\\n\",\"<p>word-wrap<\\\/p>\\n\",\"<p>word-break<\\\/p>\\n\",\"<p>nowrap<\\\/p>\\n\"]},{\"subContentId\":\"77a74103-6fa1-4b2e-9b91-a40a360e2614\",\"question\":\"<p>\\u0427\\u0435\\u043c\\u0443 \\u0440\\u0430\\u0432\\u043d\\u0430 \\u0432\\u044b\\u0441\\u043e\\u0442\\u0430 \\u0441\\u0442\\u0440\\u043e\\u0447\\u043d\\u043e\\u0433\\u043e \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430?<\\\/p>\\n\",\"answers\":[\"<p>\\u0412\\u044b\\u0441\\u043e\\u0442\\u0430 \\u0441\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u043c\\u043e\\u0433\\u043e \\u043f\\u043b\\u044e\\u0441 border \\u0438 padding.<\\\/p>\\n\",\"<p>\\u0412\\u044b\\u0441\\u043e\\u0442\\u0430 \\u0441\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u043c\\u043e\\u0433\\u043e \\u043f\\u043b\\u044e\\u0441 margin, border \\u0438 padding.<\\\/p>\\n\",\"<p>height \\u043f\\u043b\\u044e\\u0441 margin, border \\u0438 padding.<\\\/p>\\n\",\"<p>height \\u043f\\u043b\\u044e\\u0441 border \\u0438 padding.<\\\/p>\\n\"]}],\"behaviour\":{\"timeoutCorrect\":2000,\"timeoutWrong\":3000,\"soundEffectsEnabled\":false,\"enableRetry\":true,\"enableSolutionsButton\":true,\"passPercentage\":100},\"l10n\":{\"resultSlideTitle\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e :numcorrect \\u0438\\u0437 :maxscore\",\"showSolutionButtonLabel\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"retryButtonLabel\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"solutionViewTitle\":\"\\u0420\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"correctText\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e!\",\"incorrectText\":\"\\u041d\\u0435\\u0432\\u0435\\u0440\\u043d\\u043e!\",\"muteButtonLabel\":\"\\u0412\\u044b\\u043a\\u043b\\u044e\\u0447\\u0438\\u0442\\u044c \\u0437\\u0432\\u0443\\u043a\",\"closeButtonLabel\":\"\\u0417\\u0430\\u043a\\u0440\\u044b\\u0442\\u044c\",\"slideOfTotal\":\":num \\u0438\\u0437 :total\"}}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1861\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1861","url":"https:\/\/webref.ru\/task\/1861","title":"\u0421\u0442\u0440\u043e\u0447\u043d\u044b\u0435 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u044b 1","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}},"cid-7739":{"library":"H5P.MultiChoice 1.9","jsonContent":"{\"media\":{\"params\":{\"contentName\":\"Image\"},\"library\":\"H5P.Image 1.0\",\"subContentId\":\"fc78dc97-a0ea-4b51-b220-94fd5bb87db1\"},\"answers\":[{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>\\n<div>margin<\\\/div>\\n<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>\\n<div>border<\\\/div>\\n<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>\\n<div>padding<\\\/div>\\n<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>\\n<div>vertical-align<\\\/div>\\n<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>width<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>height<\\\/div>\\n\"}],\"UI\":{\"checkAnswerButton\":\"\\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u0438\\u0442\\u044c\",\"showSolutionButton\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"tryAgainButton\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"tipsLabel\":\"\\u041f\\u043e\\u0434\\u0441\\u043a\\u0430\\u0437\\u043a\\u0430\",\"scoreBarLabel\":\"\\u0421\\u0447\\u0451\\u0442\",\"tipAvailable\":\"Tip available\",\"feedbackAvailable\":\"Feedback available\",\"readFeedback\":\"Read feedback\",\"wrongAnswer\":\"Wrong answer\",\"correctAnswer\":\"Correct answer\",\"feedback\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e @score \\u0438\\u0437 @total\",\"shouldCheck\":\"Should have been checked\",\"shouldNotCheck\":\"Should not have been checked\",\"noInput\":\"Please answer before viewing the solution\"},\"behaviour\":{\"enableRetry\":true,\"enableSolutionsButton\":true,\"type\":\"auto\",\"singlePoint\":false,\"randomAnswers\":true,\"showSolutionsRequiresInput\":true,\"disableImageZooming\":false,\"confirmCheckDialog\":false,\"confirmRetryDialog\":false,\"autoCheck\":false,\"passPercentage\":100},\"confirmCheck\":{\"header\":\"Finish ?\",\"body\":\"Are you sure you wish to finish ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Finish\"},\"confirmRetry\":{\"header\":\"Retry ?\",\"body\":\"Are you sure you wish to retry ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Confirm\"},\"question\":\"<p>\\u041a\\u0430\\u043a\\u0438\\u0435 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u0430 \\u043c\\u043e\\u0436\\u043d\\u043e \\u043f\\u0440\\u0438\\u043c\\u0435\\u043d\\u0438\\u0442\\u044c \\u043a \\u0441\\u0442\\u0440\\u043e\\u0447\\u043d\\u043e\\u043c\\u0443 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0443?<\\\/p>\\n\"}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1862\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1862","url":"https:\/\/webref.ru\/task\/1862","title":"\u0421\u0442\u0440\u043e\u0447\u043d\u044b\u0435 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u044b 2","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}},"cid-7740":{"library":"H5P.MultiChoice 1.9","jsonContent":"{\"media\":{\"params\":{\"contentName\":\"Image\"},\"library\":\"H5P.Image 1.0\",\"subContentId\":\"fc78dc97-a0ea-4b51-b220-94fd5bb87db1\"},\"answers\":[{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>\\n<div>margin-top<\\\/div>\\n<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>\\n<div>margin-bottom<\\\/div>\\n<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>\\n<div>height<\\\/div>\\n<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>\\n<div>border-top<\\\/div>\\n<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>border-bottom<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>padding-top<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>padding-bottom<\\\/div>\\n\"}],\"UI\":{\"checkAnswerButton\":\"\\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u0438\\u0442\\u044c\",\"showSolutionButton\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"tryAgainButton\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"tipsLabel\":\"\\u041f\\u043e\\u0434\\u0441\\u043a\\u0430\\u0437\\u043a\\u0430\",\"scoreBarLabel\":\"\\u0421\\u0447\\u0451\\u0442\",\"tipAvailable\":\"Tip available\",\"feedbackAvailable\":\"Feedback available\",\"readFeedback\":\"Read feedback\",\"wrongAnswer\":\"Wrong answer\",\"correctAnswer\":\"Correct answer\",\"feedback\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e @score \\u0438\\u0437 @total\",\"shouldCheck\":\"Should have been checked\",\"shouldNotCheck\":\"Should not have been checked\",\"noInput\":\"Please answer before viewing the solution\"},\"behaviour\":{\"enableRetry\":true,\"enableSolutionsButton\":true,\"type\":\"auto\",\"singlePoint\":false,\"randomAnswers\":true,\"showSolutionsRequiresInput\":true,\"disableImageZooming\":false,\"confirmCheckDialog\":false,\"confirmRetryDialog\":false,\"autoCheck\":false,\"passPercentage\":100},\"confirmCheck\":{\"header\":\"Finish ?\",\"body\":\"Are you sure you wish to finish ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Finish\"},\"confirmRetry\":{\"header\":\"Retry ?\",\"body\":\"Are you sure you wish to retry ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Confirm\"},\"question\":\"<p>\\u041a\\u0430\\u043a\\u0438\\u0435 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u0430 \\u043d\\u0435 \\u043e\\u043a\\u0430\\u0437\\u044b\\u0432\\u0430\\u044e\\u0442 \\u0432\\u043b\\u0438\\u044f\\u043d\\u0438\\u044f \\u043d\\u0430 \\u0432\\u044b\\u0441\\u043e\\u0442\\u0443 \\u0441\\u0442\\u0440\\u043e\\u0447\\u043d\\u043e\\u0433\\u043e \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430?<\\\/p>\\n\"}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1863\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1863","url":"https:\/\/webref.ru\/task\/1863","title":"\u0421\u0442\u0440\u043e\u0447\u043d\u044b\u0435 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u044b 3","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}}},"loadedJs":"\/assets\/h5p\/libraries\/H5P.MultiChoice-1.9\/js\/multichoice.js?ver=1.9.2","loadedCss":["\/assets\/h5p\/libraries\/Tether-1.0\/styles\/tether.min.css?ver=1.0.2","\/assets\/h5p\/libraries\/Drop-1.0\/css\/drop-theme-arrows-bounce.min.css?ver=1.0.2","\/assets\/h5p\/libraries\/FontAwesome-4.5\/h5p-font-awesome.min.css?ver=4.5.4","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-help-dialog.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-message-dialog.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-progress-circle.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-simple-rounded-button.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-speech-bubble.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-tip.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-slider.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-score-bar.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-progressbar.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-ui.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.Question-1.2\/styles\/question.css?ver=1.2.2","\/assets\/h5p\/libraries\/H5P.SingleChoiceSet-1.8\/styles\/single-choice-set.css?ver=1.8.4","\/assets\/h5p\/libraries\/H5P.Image-1.0\/image.css?ver=1.0.28","\/assets\/h5p\/libraries\/H5P.MultiChoice-1.9\/css\/multichoice.css?ver=1.9.2"]};
+//--><!]]>
+</script>
+<script type="text/javascript" src="../../assets/js/js_V2GNOshuLPzy1pw-N0E22cul4mNDg2mFEMr1chJ4aBw.js"></script>
+</body>
+</html>

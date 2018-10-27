@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блочные элементы | Уроки | WebReference</title>
+<meta charset="utf-8" />
+<meta name="description" content="Блочным называется элемент, который занимает всю доступную ширину и всегда начинается с новой строки. У элементов с таким поведением в стилях свойство display задано как block, list-item, table и в некоторых случаях run-in. В HTML есть ряд элементов, у которых эти значения display установлены по умолчанию, поэтому они уже наделены свойствами блочных элементов." />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_GmPV_e3YNAzxsGyZNJb8l3jyzuLiXRRwUYoy5enMRkM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_asnXCU16m7gaIv491geyEqv26jawRWRbP_tumU0B87w.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../assets/css/css_TRgZiIWJG1Kscmnc2ThzsQLBI4y7E3_GdynGIqED184.css" media="screen" />
+</head>
+<body>
+<div class="off-canvas-wrap" data-offcanvas><div class="inner-wrap"><header><div class="row"><div class="small-12 large-4 columns logo"><a href="../../index.html">WebReference<span>.</span>ru</a></div><nav class="small-10 large-7 columns topmenu"><div class="region region-menu"><div id="system-main-menu" class="block"><div class="block_content"><ul class="menu"><li class="first leaf"><a href="../../ref.html" title="">Справочники</a></li><li class="leaf"><a href="../../layout.html" title="">Вёрстка</a></li><li class="leaf"><a href="../../dev.html" title="">Веб-технологии</a></li><li class="leaf"><a href="../../mobile.html" title="">Мобильные приложения</a></li><li class="last leaf"><a href="../../course.html">Курсы</a></li></ul></div></div></div></nav><div class="small-2 large-1 columns search"><div id="search-button" tabindex="1"></div><form action="https://webref.ru/search/" id="cse-search-box"><input type="search" placeholder="Поиск по сайту" name="s" autocomplete="off" id="cse-search-input"><input type="hidden" name="cx" value="partner-pub-0708135098984815:9970767379"><input type="hidden" name="cof" value="FORID:10"><input type="hidden" name="ie" value="UTF-8"></form></div></div></header><main><div class="title"><div class="row"><div class="small-12 columns"><h1>Блочные элементы</h1></div></div></div><div class="breadcrumb"><div class="row"><div class="small-12 columns"><div class="region region-crumbs"><div id="easy_breadcrumb-easy_breadcrumb" class="block"><div class="block_content"><div itemscope class="easy-breadcrumb" itemtype="http://data-vocabulary.org/Breadcrumb"> <span itemprop="title"><a href="../../index.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Главная</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span itemprop="title"><a href="../../course.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-1">Учебные курсы</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span itemprop="title"><a href="../block-inline.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-2">Блочные и строчные элементы</a></span> <span class="easy-breadcrumb_segment-separator">/</span> <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">Блочные элементы</span></div></div></div></div></div></div></div><div class="row"><div class="medium-12 large-9 columns main-section">
+<script id="dsq-count-scr" src="https://webref.disqus.com/count.js" async></script>
+<p class="num_comments"><a href="block.html#disqus_thread">Комментарии</a></p><div class="region region-content"><div id="system-main" class="block"><ul class="tabs" data-tabs data-deep-link="true" data-update-history="true" id="lesson-tabs" role="tablist"><li class="tabs-title is-active"><a href="block.html#content" aria-selected="true" role="tab" aria-controls="lesson-content">Описание</a></li><li class="tabs-title"><a href="block.html#task" role="tab" aria-controls="lesson-task">Задания</a></li><li class="tabs-title"><a href="block.html#individual" role="tab" aria-controls="lesson-practice">Самостоятельная</a></li></ul><div class="tabs-content" data-tabs-content="lesson-tabs" id="lesson"><div id="example-form"></div><section class="tabs-panel is-active" id="content" role="tabpanel"><p>Блочным называется элемент, который занимает всю доступную ширину и всегда начинается с новой строки. У элементов с таким поведением в стилях свойство <a href="../../css/display.html">display</a> задано как <span class="value">block</span>, <span class="value">list-item</span>, <span class="value">table</span> и в некоторых случаях <span class="value">run-in</span>. В HTML есть ряд элементов, у которых эти значения <span class="attribute">display</span> установлены по умолчанию, поэтому они уже наделены свойствами блочных элементов. В частности, это <span class="tag">&lt;address&gt;</span>, <span class="tag">&lt;blockquote&gt;</span>, <span class="tag">&lt;h1&gt;</span>…<span class="tag">&lt;h6&gt;</span>, <span class="tag">&lt;p&gt;</span>, <span class="tag">&lt;ol&gt;</span>, <span class="tag">&lt;ul&gt;</span>, <span class="tag">&lt;section&gt;</span>, <span class="tag">&lt;div&gt;</span> и др.</p><h2>Особенности блочных элементов</h2><p>Для блочных элементов характерны следующие особенности.</p><p><strong>По ширине блочные элементы занимают всё допустимое пространство.</strong></p><p>Если элемент располагается непосредственно внутри <span class="tag">&lt;body&gt;</span>, то он будет занимать всю ширину веб-страницы. Если один элемент находится внутри другого, то он будет занимать всю ширину своего родителя. В примере&nbsp;1 показано, как это получается.</p><p class="exampleTitle">Пример 1. Ширина блоков</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Ширина&lt;/title&gt;
+  &lt;style&gt;
+   section {
+    background: #F5E8D0; /* Цвет фона */
+    padding: 20px; /* Поля */
+   }
+   h2 {
+    background: #F0BA7D; /* Цвет фона */
+    margin-top: 0; /* Убираем пустое пространство сверху */
+    padding: 10px; /* Поля */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;section&gt;
+   &lt;h2&gt;Дочь Монтесумы&lt;/h2&gt;
+   &lt;p&gt;Они шли, чтобы покорить нас, чтобы пытать нас и сжигать живьем на кострах, 
+      они шли, чтобы сделать с нами, вольными англичанами, то же самое, что 
+      Кортес сделал с индейцами Анауака.&lt;/p&gt;
+  &lt;/section&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>На рис. 1 показан результат действия примера. Элемент <span class="tag">&lt;section&gt;</span> занимает всю ширину веб-страницы, а заголовок <span class="tag">&lt;h2&gt;</span> и абзац <span class="tag">&lt;p&gt;</span> внутри <span class="tag">&lt;section&gt;</span> занимают всю доступную ширину блока.</p><p class="fig"><img src="../../assets/images/block-inline/block1.png" alt="Ширина блоков" width="702" height="339"></p><p class="figsign">Рис. 1. Ширина блоков</p><p><strong>Ширина блока складывается из значений свойств width, padding, border и margin.</strong></p><p>В примере 1 намеренно не указано свойство <span class="attribute">width</span>, которое определяет ширину содержимого блока. Как только мы добавляем <span class="attribute">width</span>, то блок уже не будет занимать всё доступное пространство по ширине. При этом ширина самого блока определяется сложением значений <span class="attribute">margin-left</span>, <span class="attribute">border-left</span>, <span class="attribute">padding-left</span>, <span class="attribute">width</span>, <span class="attribute">padding-right</span>, <span class="attribute">border-right</span>, <span class="attribute">margin-right</span>. Иными словами, ширина содержимого плюс значения свойств <span class="attribute">padding</span>, <span class="attribute">border</span> и <span class="attribute">margin</span> слева и справа (пример&nbsp;2).</p><p class="exampleTitle">Пример 2. Ширина блока</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Ширина&lt;/title&gt;
+  &lt;style&gt;
+   section {
+    background: #F5E8D0; /* Цвет фона */
+    width: 400px; /* Ширина содержимого */
+    padding: 20px; /* Поля */
+   }
+   h2 {
+    background: #F0BA7D; /* Цвет фона */
+    margin-top: 0; /* Убираем пустое пространство сверху */
+    padding: 10px; /* Поля */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;section&gt;
+   &lt;h2&gt;Дочь Монтесумы&lt;/h2&gt;
+   &lt;p&gt;Они шли, чтобы покорить нас, чтобы пытать нас и сжигать живьем на кострах, 
+      они шли, чтобы сделать с нами, вольными англичанами, то же самое, что 
+      Кортес сделал с индейцами Анауака.&lt;/p&gt;
+  &lt;/section&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере добавлено свойство <span class="attribute">width</span> со значением <span class="value">400px</span>. В итоге, ширина самого блока будет 440 пикселей, поскольку из всего набора свойств у нас есть только <span class="attribute">width</span> и <span class="attribute">padding</span> (рис.&nbsp;2). Не забываем, что к <span class="attribute">width</span> надо добавлять левый и правый <span class="attribute">padding</span>.</p><p class="fig"><img src="../../assets/images/block-inline/block2.png" alt="Фиксированная ширина блока 440px" width="702" height="339"></p><p class="figsign">Рис. 2. Фиксированная ширина блока 440px</p><p>Всё это кажется довольно сложным, так что следует помнить, что <span class="attribute">width</span> — это не ширина блока, а лишь ширина содержимого, а сам блок состоит из его содержимого, отступов, границ и полей. Для упрощения применяется свойство <a href="../../css/box-sizing.html">box-sizing</a>, которое меняет алгоритм расчёта ширины. При значении <span class="value">border-box</span> свойство <span class="attribute">width</span> определяет уже ширину блока, включая <span class="attribute">padding</span> и <span class="attribute">border</span>, но не <span class="attribute">margin</span> (пример&nbsp;3).</p><p class="exampleTitle">Пример 3. Использование box-sizing</p>
+<pre class="no-result"><code data-language="css">section {
+  background: #F5E8D0; /* Цвет фона */
+  box-sizing: border-box; /* Алгоритм расчёта ширины */
+  width: 400px; /* Ширина блока */
+  border: 1px solid #333; /* Рамка */
+  padding: 20px; /* Поля */
+}</code></pre>
+<p>Теперь <span class="attribute">width</span> устанавливает не ширину содержимого, а ширину блока целиком и она равна 400px (рис.&nbsp;3).</p><p class="fig"><img src="../../assets/images/block-inline/block3.png" alt="Фиксированная ширина блока 400px" width="702" height="339"></p><p class="figsign">Рис. 3. Фиксированная ширина блока 400px</p><p><strong>Высота блочного элемента вычисляется браузером автоматически, исходя из содержимого блока.</strong></p><p>Для высоты элемента работают те же принципы, что и для ширины, за исключением того, что высота блока зависит от высоты содержимого и меняется динамически, например, при изменении размера шрифта или окна браузера. Если явно установить высоту содержимого через свойство <span class="attribute">height</span>, то высота блока складывается из <span class="attribute">height</span> и значений <span class="attribute">margin</span>, <span class="attribute">border</span>, <span class="attribute">padding</span> сверху и снизу (пример&nbsp;4).</p><p class="exampleTitle">Пример 4. Высота блока</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Высота&lt;/title&gt;
+  &lt;style&gt;
+   div {
+    height: 100px; /*  Высота содержимого */
+    background: #F2EFE6; /* Цвет фона */
+    border: 1px solid #B25538; /* Параметры рамки */
+    padding: 0 10px; /* Пространство сверху и снизу */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div&gt;
+   &lt;p&gt;Лев ревёт только в том случае, когда сообщает, что 
+      территория принадлежит ему или провозглашает себя царём природы.&lt;/p&gt;
+   &lt;p&gt;Охотничий участок льва может иметь длину и ширину 
+      до тридцати километров.&lt;/p&gt;
+  &lt;/div&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>При превышении указанной высоты содержимое отображается поверх блока (рис.&nbsp;4).</p><p class="fig"><img src="../../assets/images/block-inline/block4.png" alt="Высота блока" width="603" height="311"></p><p class="figsign">Рис. 4. Высота блока</p><p><strong>Блоки располагаются по вертикали друг под другом.</strong></p><p>Поскольку блочные элементы занимают всё доступное пространство по ширине, то они располагаются друг под другом по вертикали.</p><p><strong>На блочные элементы не действуют свойства, предназначенные для строчных элементов.</strong></p><p>Ряд стилевых свойств, вроде <span class="attribute">vertical-align</span>, работает только для строчных элементов и их применение к блочным элементам не даёт никакого видимого результата.</p><h2>Преобразование в блочный элемент</h2><p>В некоторых случаях требуется наделить строчный элемент характеристиками блочного. Так, превращение ссылки в блок позволяет увеличить полезную площадь ссылки за счёт использования свойств <span class="attribute">width</span> и <span class="attribute">height</span>. В примере&nbsp;5 показано создание меню, в котором ссылкой является вся доступная по ширине область.</p><p class="exampleTitle">Пример 5. Меню</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Меню&lt;/title&gt;
+  &lt;style&gt;
+   .menu {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 5px; /* Поля от рамки до пунктов меню */
+    border: 1px solid #000; /* Рамка вокруг меню */
+   } 
+   .menu a {
+    padding: 2px; /* Поля вокруг текста */
+    display: block; /* Ссылка как блочный элемент */
+    border: 1px solid transparent; /* Маскируем рамку вокруг ссылки */
+    text-decoration: none; /* Убираем подчёркивание у ссылок */
+   }
+   .menu a:hover {
+    background: #faf3d2; /* Цвет фона под ссылкой */
+    color: #800000; /* Новый цвет ссылки */
+    border: 1px dashed #634f36 /* Рамка вокруг ссылки */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;ul class=&quot;menu&quot;&gt;
+   &lt;li&gt;&lt;a href=&quot;1.html&quot;&gt;Метод простых итераций&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;2.html&quot;&gt;Метод случайных чисел&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;3.html&quot;&gt;Метод дихотомии&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;4.html&quot;&gt;Метод золотого сечения&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Для превращения ссылки в блочный элемент к селектору <span class="tag">a</span> добавляется свойство <span class="attribute">display</span> со значением <span class="value">block</span>. После этого вся строка выступает ссылкой, поэтому при наведении курсора на строку, даже за пределами текста, происходит изменение стиля ссылки (рис.&nbsp;5).</p><p class="fig"><img src="../../assets/images/block-inline/block5.png" alt="Ссылка как блочный элемент" width="603" height="275"></p><p class="figsign">Рис. 5. Ссылка как блочный элемент</p><p><a href="block.html#lesson-tabs" class="button radius" onclick="jQuery('#lesson-tabs').foundation('selectTab', 'task')">Перейти к заданиям</a></p><div id="views-similar-block" class="block"><h2 class="block_title">См. также</h2><div class="block_content"><div class="view view-similar view-id-similar view-display-id-block view-dom-id-76bd409801161666ad3c45af6322f566"><div class="view-content"><div class="similar"><ul><li class=""> <a href="../../css/border.html">border</a></li><li class=""> <a href="../../css/display.html">display</a></li><li class=""> <a href="../box-model/display.html">display в CSS</a></li><li class=""> <a href="../../css/height.html">height</a></li><li class=""> <a href="../../css/margin.html">margin</a></li><li class=""> <a href="../box-model/margin.html">margin в CSS</a></li><li class=""> <a href="../../css/padding.html">padding</a></li><li class=""> <a href="../../css/vertical-align.html">vertical-align</a></li><li class=""> <a href="../../css/width.html">width</a></li><li class=""> <a href="../position/absolute.html">Абсолютное позиционирование</a></li><li class=""> <a href="../../layout/html5-css3/text/sup.html">Верхний и нижний индекс</a></li><li class=""> <a href="../../layout/html5-css3/img/align.html">Выравнивание картинок</a></li><li class=""> <a href="../box-model/height-width-overflow.html">Высота и ширина в CSS</a></li><li class=""> <a href="../box-model/shorthand-wheel.html">Колесо для сокращённых свойств</a></li><li class=""> <a href="../float/description.html">Описание float</a></li><li class=""> <a href="../../layout/advanced-html-css/responsive-web-design.html">Отзывчивый веб-дизайн</a></li><li class=""> <a href="../../layout/learn-html-css/box-model.html">Открываем блочную модель</a></li><li class=""> <a href="../positioning/flow.html">Поток</a></li><li class=""> <a href="../float/use.html">Примеры использования float</a></li><li class=""> <a href="../../layout/html5-css3/img/border.html">Рамка вокруг изображений</a></li><li class=""> <a href="../css-text/text-properties.html">Свойства текста в CSS</a></li><li class=""> <a href="inline-block.html">Строчно-блочные элементы</a></li><li class=""> <a href="inline.html">Строчные элементы</a></li></ul></div></div></div></div></div></section><section class="tabs-panel" id="task" role="tabpanel" aria-hidden><div id="views-task-block" class="block"><div class="block_content"><div class="view view-task view-id-task view-display-id-block view-dom-id-941a77800d02d360df15619a9fc1b8c6"><div class="view-content"><ul class="tabs" data-tabs id="task-tabs"><li class="tabs-title is-active"><a href="block.html#t1" aria-selected="true">1</a></li><li class="tabs-title"><a href="block.html#t2">2</a></li><li class="tabs-title"><a href="block.html#t3">3</a></li><li class="tabs-title"><a href="block.html#t4">4</a></li><li class="tabs-title"><a href="block.html#t5">5</a></li></ul><div class="tabs-content" data-tabs-content="task-tabs"><section id="t1" class="tabs-panel task-content is-active"><div class="h5p-content" data-content-id="7732"></div></section><section class="tabs-panel task-content" id="t2"><div class="h5p-content" data-content-id="7733"></div></section><section class="tabs-panel task-content" id="t3"><div class="h5p-content" data-content-id="7734"></div></section><section class="tabs-panel task-content" id="t4"><div class="h5p-content" data-content-id="7735"></div></section><section class="tabs-panel task-content" id="t5"><div class="h5p-content" data-content-id="7736"></div></section></div></div></div></div></div></section><section class="tabs-panel" id="individual" role="tabpanel" aria-hidden><div id="views-individual-block" class="block"><div class="block_content"><div class="view view-individual view-id-individual view-display-id-block view-dom-id-abd84f3a11f7c584f77a064d0803d8a2"><div class="view-content"><ul class="tabs" data-tabs id="individual-tabs"><li class="tabs-title is-active"><a href="block.html#i1" aria-selected="true">1</a></li><li class="tabs-title"><a href="block.html#i2">2</a></li></ul><div class="tabs-content" data-tabs-content="individual-tabs"><section id="i1" class="tabs-panel task-content is-active"><h2 class="node-title"><a href="https://webref.ru/practice/1953">Блочные элементы</a></h2><p>Создайте веб-страницу, показанную на рис. 1.</p><p class="fig"><img src="../../assets/images/individual/block.png" alt="" width="717" height="465"></p><p class="figsign">Рис. 1</p><div class="individual-result"><button type="button" class="button show-result">Показать ответ</button></div><div class="field field-name-field-individual-result field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Форма&lt;/title&gt;
+  &lt;style&gt;
+  body {
+   background: #18326d;
+  }
+  form {
+   background: #2b417a;
+   padding: 20px;
+   margin: 20px;
+   border: 1px solid #44567e;
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  .row {
+   overflow: hidden;
+   margin-bottom: 1rem;
+  }
+  label {
+   color: #8dacfe;
+   width: 100px;
+   float: left;
+   text-align: right;
+   margin-right: 10px;
+  }  
+  input, textarea {
+   background: #182a50;
+   box-shadow: inset -2px -2px 2px #425575;
+   width: 300px;
+   border: none;
+   color: #fff;
+   padding: 5px;
+  }
+  textarea {
+   height: 100px;
+  }
+  button {
+   margin-left: 110px;
+   background: #0d1321;
+   border: none;
+   color: #6d82bb;
+   padding: 10px 20px;
+   font-weight: bold;
+   text-transform: uppercase;
+  }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;form&gt;
+   &lt;div class=&quot;row&quot;&gt;&lt;label&gt;Имя&lt;/label&gt;&lt;input name=&quot;first-name&quot;&gt;&lt;/div&gt;
+   &lt;div class=&quot;row&quot;&gt;&lt;label&gt;Фамилия&lt;/label&gt;&lt;input name=&quot;last-name&quot;&gt;&lt;/div&gt;
+   &lt;div class=&quot;row&quot;&gt;&lt;label&gt;Email&lt;/label&gt;&lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;&lt;/div&gt;
+   &lt;div class=&quot;row&quot;&gt;&lt;label&gt;Сообщение&lt;/label&gt;&lt;textarea name=&quot;msg&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+   &lt;div&gt;&lt;button&gt;Отправить&lt;/button&gt;&lt;/div&gt;
+  &lt;/form&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div></div></section><section class="tabs-panel task-content" id="i2"><h2 class="node-title"><a href="https://webref.ru/practice/1958">Блочные элементы 2</a></h2><p>Создайте веб-страницу, показанную на рис. 1. Вся строка в списке является ссылкой и меняет свой вид при наведении на неё курсора.</p><p class="fig"><img src="../../assets/images/individual/block-2.png" alt="" width="489" height="399"></p><p class="figsign">Рис. 1</p><div class="individual-result"><button type="button" class="button show-result">Показать ответ</button></div><div class="field field-name-field-individual-result field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Архивы&lt;/title&gt;
+  &lt;style&gt;
+   .block {
+    border: 1px solid #ddd;
+   }
+   .block h2 {
+    background: #f5f4f1;
+    color: #444;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0;
+    font-size: 16px;
+   }
+   .block-content ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+   }
+   .block-content li {
+    border-top: 1px solid #ddd;
+   }
+   .block-content li:first-child {
+    border-top: none;
+   }
+   .block-content a {
+    color: #444;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+   }
+   .block-content a:hover {
+    background: #bc8e5c;
+    color: #fff;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;block&quot;&gt;
+   &lt;h2&gt;Архивы&lt;/h2&gt;
+   &lt;div class=&quot;block-content&quot;&gt;
+    &lt;ul&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Август 2013&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Июль 2013&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Июнь 2013&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Май 2013&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Апрель 2013&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Март 2013&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Февраль 2013&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Январь 2013&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div></div></section></div></div></div></div></div></section></div><section class="row credit"><div class="columns small-6 credit-author"><i class="icon-user"></i> Автор: Влад Мержевич</div><div class="columns small-6 credit-changed"><i class="icon-calendar"></i> Последнее изменение: 13.08.2017</div><div class="columns small-12 credit-editor"><i class="icon-users"></i> Редакторы: Влад Мержевич</div></section><div id="block-9" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+ad = document.getElementById('block-9');
+if (ad.getBoundingClientRect().width) {
+adWidth = ad.getBoundingClientRect().width;
+} else {
+adWidth = ad.offsetWidth;
+}
+google_ad_client = "ca-pub-0708135098984815";
+if (adWidth >= 728) { google_ad_size = ["728", "90"]; google_ad_slot = "1258944978"; }
+else { google_ad_size = ["300", "250"]; google_ad_slot = "8016056172"; }
+document.write (
+'<ins class="adsbygoogle" style="display:inline-block;width:'
++ google_ad_size[0] + 'px;height:'
++ google_ad_size[1] + 'px" data-ad-client="'
++ google_ad_client + '" data-ad-slot="'
++ google_ad_slot + '"></ins>'
+);
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div><div id="block-18" class="block"><h2 class="block_title">Рекомендуем</h2><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6422661373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div><div id="block-10" class="block"><div class="block_content"><div id="disqus_thread"></div>
+<script>
+var disqus_shortname = "webref";
+(function() {
+var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+(document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+})();
+</script>
+</div></div></div></div></div><aside class="large-3 columns right-off-canvas-menu"><div class="region region-sidebar-toc"><div id="views-course-toc" class="block"><h2 class="block_title">Содержание</h2><div class="block_content"><div class="view view-course view-id-course view-display-id-toc view-dom-id-271e6514921a8d4290a66ef3ce57590a"><div class="view-content"><ul class="menu"><li class=""> <a href="block.html" class="active">Блочные элементы</a></li><li class=""> <a href="inline.html">Строчные элементы</a></li><li class=""> <a href="inline-block.html">Строчно-блочные элементы</a></li><li class=""> <a href="quiz.html">Проверка знаний</a></li></ul></div></div></div></div><div id="block-12" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:240px;height:400px" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6456026170"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div></aside></div></main><a class="exit-off-canvas"></a></div></div><div class="footer"><div class="adv_footer"><div class="row"><div class="medium-12 columns hide-for-medium-down"><div class="region region-adv-footer"><div id="block-15" class="block"><div class="block_content">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+ad = document.getElementById('block-15');
+if (ad.getBoundingClientRect().width) {
+adWidth = ad.getBoundingClientRect().width;
+} else {
+adWidth = ad.offsetWidth;
+}
+google_ad_client = "ca-pub-0708135098984815";
+if (adWidth >= 728) { google_ad_size = ["728", "90"]; google_ad_slot = "1258944978"; }
+else { google_ad_size = ["300", "250"]; google_ad_slot = "8016056172"; }
+document.write (
+'<ins class="adsbygoogle" style="display:inline-block;width:'
++ google_ad_size[0] + 'px;height:'
++ google_ad_size[1] + 'px" data-ad-client="'
++ google_ad_client + '" data-ad-slot="'
++ google_ad_slot + '"></ins>'
+);
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div></div></div></div><div class="copyright"><div class="row"><div class="small-2 columns"><p><a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow"><img alt="Лицензия Creative Commons" src="../../sites/all/themes/ori/img/cc.png" width="88" height="31"></a></p></div><div class="small-10 columns"><p>Все материалы сайта доступны по <a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow">лицензии Creative Commons «Attribution-NonCommercial» («Атрибуция — Некоммерческое использование») 4.0 Всемирная</a>, если не указано иное.</p></div></div></div><footer><div class="row"><div class="medium-12 large-4 columns"><h4>О сайте</h4><p>На сайте находятся справочники по различным веб-технологиям, а также руководства по вёрстке веб-страниц и разработке мобильных приложений.</p><p class="about-last">Главный редактор: Влад Мержевич</p></div><div class="small-6 large-2 columns"><h4>Связи</h4><ul id="community"><li><i class="icon-rss"></i> <a href="https://feeds.feedburner.com/webref" rel="nofollow">RSS</a></li><li><i class="icon-jsfiddle"></i> <a href="https://jsfiddle.net/user/webref/fiddles/" rel="nofollow">JSFiddle</a></li><li><i class="icon-github"></i> <a href="https://github.com/webref" rel="nofollow">GitHub</a></li><li><i class="icon-doc-text"></i> <a href="https://drive.google.com/folderview?id=0B4u62HGG7TOnTVJ4aFlFa1Jpb2M" rel="nofollow">Google Диск</a></li></ul></div><div class="small-6 large-3 columns"><h4>Разделы сайта</h4><ul id="footer-menu" class="links"><li><i class="icon-book"></i> <a href="../../ref.html">Справочники</a></li><li><i class="icon-layout"></i> <a href="../../layout.html">Вёрстка</a></li><li><i class="icon-gear"></i> <a href="../../dev.html">Веб-технологии</a></li><li><i class="icon-mobile"></i> <a href="../../mobile.html">Мобильные приложения</a></li><li><i class="icon-bookmark"></i> <a href="../../course.html">Учебные курсы</a></li></ul></div><div class="small-12 medium-12 large-3 columns"><h4>Популярные материалы</h4><div class="region region-popular"><div id="views-popular-popular" class="block"><div class="block_content"><div class="view view-popular view-id-popular view-display-id-popular view-dom-id-7faa04a71f7da59ea149307d07be5585"><div class="view-content"><ul><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/learn-html-css.html">Уроки по HTML и CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/howtocodeinhtml.html">Как верстать на HTML5 и CSS3</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/html5-css3.html">HTML5 и CSS3 на примерах</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/css3.svg.png" src="../../assets/images/thumb/css3.svg" width="16" height="16" alt="" /> <a href="../../layout/magic-of-css.html">Магия CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/jquery.svg.png" src="../../assets/images/thumb/jquery.svg" width="16" height="16" alt="" /> <a href="../../dev/jqfundamentals.html">Основы jQuery</a></li></ul></div></div></div></div></div></div></div><div class="row"><div class="small-12 columns counter">
+<script src="../../sites/all/themes/ori/js/li.js"></script>
+</div></div><a href="block.html#top"><div class="row"><div class="small-12 columns ontop">Наверх</div></div></a></footer></div><script type="text/javascript" src="../../assets/js/js_p2Pm92U0xNKrBps4v5uAeOIq9sGMPp8zPpZGieWq8eo.js"></script>
+<script type="text/javascript" src="../../assets/js/js_H7q2xORKmR9AN8Qx5spKEIBp7R_wG2apAswJoCUZY7I.js"></script>
+<script type="text/javascript" src="../../assets/js/js_yHulgye1kzgsvt4_DHDhzYGrigniD4EgBQlnjNuMOdY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+H5PIntegration = {"baseUrl":"https:\/\/webref.ru","url":"\/assets\/h5p","postUserStatistics":false,"ajax":{"setFinished":"\/h5p-ajax\/set-finished.json?token=d830183c3d3e9","contentUserData":"\/h5p-ajax\/content-user-data\/:contentId\/:dataType\/:subContentId?token=dcb290efb02ad"},"saveFreq":false,"l10n":{"H5P":{"fullscreen":"Fullscreen","disableFullscreen":"Disable fullscreen","download":"\u0421\u043a\u0430\u0447\u0430\u0442\u044c","copyrights":"Rights of use","embed":"Embed","size":"\u0420\u0430\u0437\u043c\u0435\u0440","showAdvanced":"Show advanced","hideAdvanced":"Hide advanced","advancedHelp":"Include this script on your website if you want dynamic sizing of the embedded content:","copyrightInformation":"Rights of use","close":"\u0417\u0430\u043a\u0440\u044b\u0442\u044c","title":"\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a","author":"\u0410\u0432\u0442\u043e\u0440","year":"Year","source":"Source","license":"License","thumbnail":"Thumbnail","noCopyrights":"No copyright information available for this content.","downloadDescription":"Download this content as a H5P file.","copyrightsDescription":"View copyright information for this content.","embedDescription":"View the embed code for this content.","h5pDescription":"Visit H5P.org to check out more cool content.","contentChanged":"This content has changed since you last used it.","startingOver":"You'll be starting over.","by":"by","showMore":"Show more","showLess":"Show less","subLevel":"Sublevel","confirmDialogHeader":"Confirm action","confirmDialogBody":"Please confirm that you wish to proceed. This action is not reversible.","cancelLabel":"\u041e\u0442\u043c\u0435\u043d\u0438\u0442\u044c","confirmLabel":"\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044c","licenseU":"Undisclosed","licenseCCBY":"Attribution","licenseCCBYSA":"Attribution-ShareAlike","licenseCCBYND":"Attribution-NoDerivs","licenseCCBYNC":"Attribution-NonCommercial","licenseCCBYNCSA":"Attribution-NonCommercial-ShareAlike","licenseCCBYNCND":"Attribution-NonCommercial-NoDerivs","licenseCC40":"4.0 International","licenseCC30":"3.0 Unported","licenseCC25":"2.5 Generic","licenseCC20":"2.0 Generic","licenseCC10":"1.0 Generic","licenseGPL":"General Public License","licenseV3":"Version 3","licenseV2":"Version 2","licenseV1":"Version 1","licensePD":"Public Domain","licenseCC010":"CC0 1.0 Universal (CC0 1.0) Public Domain Dedication","licensePDM":"Public Domain Mark","licenseC":"Copyright"}},"hubIsEnabled":true,"siteUrl":"https:\/\/webref.ru\/","contents":{"cid-7732":{"library":"H5P.SingleChoiceSet 1.8","jsonContent":"{\"choices\":[{\"subContentId\":\"2ad67dfc-0d53-495a-a240-db86285faa70\",\"question\":\"<p>\\u041f\\u0430\\u0448\\u0430 \\u043d\\u0430\\u043f\\u0438\\u0441\\u0430\\u043b \\u0441\\u043b\\u0435\\u0434\\u0443\\u044e\\u0449\\u0438\\u0439 \\u043a\\u043e\\u0434:<\\\/p>\\n\\n<p>div {<br>\\n&nbsp; width: 100%;<br>\\n&nbsp; padding: 20px;<br>\\n&nbsp; border: 1px solid red;<br>\\n}<\\\/p>\\n\\n<p>\\u041f\\u0440\\u0438 \\u044d\\u0442\\u043e\\u043c \\u043d\\u0430 \\u0432\\u0435\\u0431-\\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0435 \\u043f\\u043e\\u044f\\u0432\\u0438\\u043b\\u0430\\u0441\\u044c \\u0433\\u043e\\u0440\\u0438\\u0437\\u043e\\u043d\\u0442\\u0430\\u043b\\u044c\\u043d\\u0430\\u044f \\u043f\\u043e\\u043b\\u043e\\u0441\\u0430 \\u043f\\u0440\\u043e\\u043a\\u0440\\u0443\\u0442\\u043a\\u0438. \\u041f\\u043e\\u0447\\u0435\\u043c\\u0443?<\\\/p>\\n\",\"answers\":[\"<p>\\u041e\\u0431\\u0449\\u0430\\u044f \\u0448\\u0438\\u0440\\u0438\\u043d\\u0430 \\u0431\\u043b\\u043e\\u043a\\u0430 \\u043f\\u0440\\u0435\\u0432\\u044b\\u0448\\u0430\\u0435\\u0442 \\u0448\\u0438\\u0440\\u0438\\u043d\\u0443 \\u0432\\u0435\\u0431-\\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u044b.<\\\/p>\\n\",\"<p>\\u041d\\u0435 \\u0443\\u043a\\u0430\\u0437\\u0430\\u043d\\u043e \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e margin.<\\\/p>\\n\",\"<p>\\u0414\\u043b\\u044f \\u0431\\u043b\\u043e\\u043a\\u0430 \\u043d\\u0435 \\u0437\\u0430\\u0434\\u0430\\u043d\\u0430 \\u0432\\u044b\\u0441\\u043e\\u0442\\u0430.<\\\/p>\\n\",\"<p>\\u041d\\u0435\\u0432\\u0435\\u0440\\u043d\\u043e \\u0438\\u0441\\u043f\\u043e\\u043b\\u044c\\u0437\\u043e\\u0432\\u0430\\u043d\\u043e \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e border.<\\\/p>\\n\"]},{\"subContentId\":\"200ceeaf-2d2c-4d72-9b21-82524dab701a\",\"question\":\"<p>\\u041a\\u0430\\u043a\\u043e\\u0435 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u0430 display \\u0434\\u0435\\u043b\\u0430\\u0435\\u0442 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0431\\u043b\\u043e\\u0447\\u043d\\u044b\\u043c?<\\\/p>\\n\",\"answers\":[\"<p>block<\\\/p>\\n\",\"<p>inline<\\\/p>\\n\",\"<p>inline-block<\\\/p>\\n\",\"<p>none<\\\/p>\\n\"]},{\"subContentId\":\"d38ed060-4e21-4159-97ea-e4349d72852f\",\"question\":\"<p>\\u042e\\u043b\\u044f \\u043d\\u0430\\u043f\\u0438\\u0441\\u0430\\u043b\\u0430 \\u0441\\u043b\\u0435\\u0434\\u0443\\u044e\\u0449\\u0438\\u0439 \\u043a\\u043e\\u0434:<\\\/p>\\n\\n<p>div {<br>\\n&nbsp;height: 100px;<br>\\n&nbsp;background: #333;<br>\\n&nbsp;color: #fff;<br>\\n&nbsp;padding: 10px;<br>\\n}<\\\/p>\\n\\n<p>\\u041d\\u043e \\u0442\\u0435\\u043a\\u0441\\u0442 \\u0432 \\u0431\\u043b\\u043e\\u043a\\u0435 \\u0432\\u044b\\u0448\\u0435\\u043b \\u0437\\u0430 \\u043f\\u0440\\u0435\\u0434\\u0435\\u043b\\u044b \\u0444\\u043e\\u043d\\u0430. \\u0427\\u0442\\u043e \\u042e\\u043b\\u0435 \\u0441\\u0434\\u0435\\u043b\\u0430\\u0442\\u044c \\u0434\\u043b\\u044f \\u0438\\u0441\\u043f\\u0440\\u0430\\u0432\\u043b\\u0435\\u043d\\u0438\\u044f?<\\\/p>\\n\",\"answers\":[\"<p>\\u0423\\u0431\\u0440\\u0430\\u0442\\u044c height.<\\\/p>\\n\",\"<p>\\u0414\\u043e\\u0431\\u0430\\u0432\\u0438\\u0442\\u044c width.<\\\/p>\\n\",\"<p>\\u0418\\u0437\\u043c\\u0435\\u043d\\u0438\\u0442\\u044c \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 padding.<\\\/p>\\n\",\"<p>\\u0414\\u043e\\u0431\\u0430\\u0432\\u0438\\u0442\\u044c margin.<\\\/p>\\n\"]},{\"subContentId\":\"63eebdc7-bb32-4927-8b8d-8c8b6a2946ab\",\"question\":\"<p>\\u041a\\u0430\\u043a\\u043e\\u0435 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043c\\u0435\\u043d\\u044f\\u0435\\u0442 \\u0430\\u043b\\u0433\\u043e\\u0440\\u0438\\u0442\\u043c \\u0440\\u0430\\u0441\\u0447\\u0451\\u0442\\u0430 \\u0440\\u0430\\u0437\\u043c\\u0435\\u0440\\u043e\\u0432 \\u0431\\u043b\\u043e\\u043a\\u0430?<\\\/p>\\n\",\"answers\":[\"<p>box-sizing<\\\/p>\\n\",\"<p>padding<\\\/p>\\n\",\"<p>resize<\\\/p>\\n\",\"<p>margin<\\\/p>\\n\"]},{\"subContentId\":\"220abfb3-3364-464f-bde2-216ba1bf43f4\",\"question\":\"<p>\\u0415\\u0441\\u0442\\u044c \\u0441\\u043b\\u0435\\u0434\\u0443\\u044e\\u0449\\u0438\\u0439 \\u043a\\u043e\\u0434 HTML \\u0441 \\u0434\\u0432\\u0443\\u043c\\u044f \\u0431\\u043b\\u043e\\u0447\\u043d\\u044b\\u043c\\u0438 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430\\u043c\\u0438.<\\\/p>\\n\\n<p>&lt;article&gt;\\u2026&lt;\\\/article&gt;<br>\\n&lt;aside&gt;\\u2026&lt;\\\/aside&gt;<\\\/p>\\n\\n<p>\\u0413\\u0434\\u0435 \\u043f\\u043e \\u0443\\u043c\\u043e\\u043b\\u0447\\u0430\\u043d\\u0438\\u044e \\u043d\\u0430 \\u0432\\u0435\\u0431-\\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0435 \\u0431\\u0443\\u0434\\u0435\\u0442 \\u0440\\u0430\\u0441\\u043f\\u043e\\u043b\\u0430\\u0433\\u0430\\u0442\\u044c\\u0441\\u044f &lt;aside&gt; \\u043e\\u0442\\u043d\\u043e\\u0441\\u0438\\u0442\\u0435\\u043b\\u044c\\u043d\\u043e &lt;article&gt;?<\\\/p>\\n\",\"answers\":[\"<p>\\u0421\\u043d\\u0438\\u0437\\u0443.<\\\/p>\\n\",\"<p>\\u0421\\u0432\\u0435\\u0440\\u0445\\u0443.<\\\/p>\\n\",\"<p>\\u0421\\u043b\\u0435\\u0432\\u0430.<\\\/p>\\n\",\"<p>\\u0421\\u043f\\u0440\\u0430\\u0432\\u0430.<\\\/p>\\n\"]}],\"behaviour\":{\"timeoutCorrect\":2000,\"timeoutWrong\":3000,\"soundEffectsEnabled\":false,\"enableRetry\":true,\"enableSolutionsButton\":true,\"passPercentage\":100},\"l10n\":{\"resultSlideTitle\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e :numcorrect \\u0438\\u0437 :maxscore\",\"showSolutionButtonLabel\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"retryButtonLabel\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"solutionViewTitle\":\"\\u0420\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"correctText\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e!\",\"incorrectText\":\"\\u041d\\u0435\\u0432\\u0435\\u0440\\u043d\\u043e!\",\"muteButtonLabel\":\"\\u041e\\u0442\\u043a\\u043b\\u044e\\u0447\\u0438\\u0442\\u044c \\u0437\\u0432\\u0443\\u043a\",\"closeButtonLabel\":\"\\u0417\\u0430\\u043a\\u0440\\u044b\\u0442\\u044c\",\"slideOfTotal\":\":num \\u0438\\u0437 :total\"}}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1855\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1855","url":"https:\/\/webref.ru\/task\/1855","title":"\u0411\u043b\u043e\u0447\u043d\u044b\u0435 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u044b 1","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}},"cid-7733":{"library":"H5P.MultiChoice 1.9","jsonContent":"{\"media\":{\"params\":{\"contentName\":\"Image\"},\"library\":\"H5P.Image 1.0\",\"subContentId\":\"1bdf5e4d-ec65-4661-b47a-06b8f6355e12\"},\"answers\":[{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>width<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>height<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>margin<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>border<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>padding<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>vertical-align<\\\/div>\\n\"}],\"UI\":{\"checkAnswerButton\":\"\\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u0438\\u0442\\u044c\",\"showSolutionButton\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"tryAgainButton\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"tipsLabel\":\"\\u041f\\u043e\\u0434\\u0441\\u043a\\u0430\\u0437\\u043a\\u0430\",\"scoreBarLabel\":\"\\u0421\\u0447\\u0451\\u0442\",\"tipAvailable\":\"Tip available\",\"feedbackAvailable\":\"Feedback available\",\"readFeedback\":\"Read feedback\",\"wrongAnswer\":\"Wrong answer\",\"correctAnswer\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u044b\\u0439 \\u043e\\u0442\\u0432\\u0435\\u0442\",\"feedback\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e @score \\u0438\\u0437 @total\",\"shouldCheck\":\"Should have been checked\",\"shouldNotCheck\":\"Should not have been checked\",\"noInput\":\"Please answer before viewing the solution\"},\"behaviour\":{\"enableRetry\":true,\"enableSolutionsButton\":true,\"type\":\"multi\",\"singlePoint\":false,\"randomAnswers\":true,\"showSolutionsRequiresInput\":true,\"disableImageZooming\":false,\"confirmCheckDialog\":false,\"confirmRetryDialog\":false,\"autoCheck\":false,\"passPercentage\":100},\"confirmCheck\":{\"header\":\"Finish ?\",\"body\":\"Are you sure you wish to finish ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Finish\"},\"confirmRetry\":{\"header\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c?\",\"body\":\"<p>\\u0423\\u0432\\u0435\\u0440\\u0435\\u043d\\u044b, \\u0447\\u0442\\u043e \\u0445\\u043e\\u0442\\u0438\\u0442\\u0435 \\u043f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c?<\\\/p>\\n\",\"cancelLabel\":\"\\u041e\\u0442\\u043c\\u0435\\u043d\\u0430\",\"confirmLabel\":\"\\u041f\\u043e\\u0434\\u0442\\u0432\\u0435\\u0440\\u0434\\u0438\\u0442\\u044c\"},\"question\":\"<p>\\u041a\\u0430\\u043a\\u0438\\u0435 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u0430 \\u043c\\u043e\\u0436\\u043d\\u043e \\u043f\\u0440\\u0438\\u043c\\u0435\\u043d\\u0438\\u0442\\u044c \\u043a \\u0431\\u043b\\u043e\\u0447\\u043d\\u043e\\u043c\\u0443 \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0443?<\\\/p>\\n\"}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1856\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1856","url":"https:\/\/webref.ru\/task\/1856","title":"\u0411\u043b\u043e\u0447\u043d\u044b\u0435 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u044b 2","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}},"cid-7734":{"library":"H5P.MultiChoice 1.9","jsonContent":"{\"media\":{\"params\":{\"contentName\":\"Image\"},\"library\":\"H5P.Image 1.0\",\"subContentId\":\"1bdf5e4d-ec65-4661-b47a-06b8f6355e12\"},\"answers\":[{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>width<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>margin-left<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>padding-left<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>border-left<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>margin-right<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>padding-right<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>border-right<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>height<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>margin-top<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>padding-top<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>border-top<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>margin-bottom<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>padding-bottom<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>border-bottom<\\\/div>\\n\"}],\"UI\":{\"checkAnswerButton\":\"\\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u0438\\u0442\\u044c\",\"showSolutionButton\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"tryAgainButton\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"tipsLabel\":\"\\u041f\\u043e\\u0434\\u0441\\u043a\\u0430\\u0437\\u043a\\u0430\",\"scoreBarLabel\":\"\\u0421\\u0447\\u0451\\u0442\",\"tipAvailable\":\"Tip available\",\"feedbackAvailable\":\"Feedback available\",\"readFeedback\":\"Read feedback\",\"wrongAnswer\":\"Wrong answer\",\"correctAnswer\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u044b\\u0439 \\u043e\\u0442\\u0432\\u0435\\u0442\",\"feedback\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e @score \\u0438\\u0437 @total\",\"shouldCheck\":\"Should have been checked\",\"shouldNotCheck\":\"Should not have been checked\",\"noInput\":\"Please answer before viewing the solution\"},\"behaviour\":{\"enableRetry\":true,\"enableSolutionsButton\":true,\"type\":\"multi\",\"singlePoint\":false,\"randomAnswers\":true,\"showSolutionsRequiresInput\":true,\"disableImageZooming\":false,\"confirmCheckDialog\":false,\"confirmRetryDialog\":false,\"autoCheck\":false,\"passPercentage\":100},\"confirmCheck\":{\"header\":\"Finish ?\",\"body\":\"Are you sure you wish to finish ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Finish\"},\"confirmRetry\":{\"header\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c?\",\"body\":\"<p>\\u0423\\u0432\\u0435\\u0440\\u0435\\u043d\\u044b, \\u0447\\u0442\\u043e \\u0445\\u043e\\u0442\\u0438\\u0442\\u0435 \\u043f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c?<\\\/p>\\n\",\"cancelLabel\":\"\\u041e\\u0442\\u043c\\u0435\\u043d\\u0430\",\"confirmLabel\":\"\\u041f\\u043e\\u0434\\u0442\\u0432\\u0435\\u0440\\u0434\\u0438\\u0442\\u044c\"},\"question\":\"<p>\\u041a\\u0430\\u043a\\u0438\\u0435 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u0430 \\u0432\\u043b\\u0438\\u044f\\u044e\\u0442 \\u043d\\u0430 \\u0448\\u0438\\u0440\\u0438\\u043d\\u0443 \\u0431\\u043b\\u043e\\u043a\\u0430?<\\\/p>\\n\"}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1857\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1857","url":"https:\/\/webref.ru\/task\/1857","title":"\u0411\u043b\u043e\u0447\u043d\u044b\u0435 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u044b 3","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}},"cid-7735":{"library":"H5P.MultiChoice 1.9","jsonContent":"{\"media\":{\"params\":{\"contentName\":\"Image\"},\"library\":\"H5P.Image 1.0\",\"subContentId\":\"1bdf5e4d-ec65-4661-b47a-06b8f6355e12\"},\"answers\":[{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>width<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>margin-left<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>padding-left<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>border-left<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>margin-right<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>padding-right<\\\/div>\\n\"},{\"correct\":false,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>border-right<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>height<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>margin-top<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>padding-top<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>border-top<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>margin-bottom<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>padding-bottom<\\\/div>\\n\"},{\"correct\":true,\"tipsAndFeedback\":{\"tip\":\"\",\"chosenFeedback\":\"\",\"notChosenFeedback\":\"\"},\"text\":\"<div>border-bottom<\\\/div>\\n\"}],\"UI\":{\"checkAnswerButton\":\"\\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u0438\\u0442\\u044c\",\"showSolutionButton\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"tryAgainButton\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"tipsLabel\":\"\\u041f\\u043e\\u0434\\u0441\\u043a\\u0430\\u0437\\u043a\\u0430\",\"scoreBarLabel\":\"\\u0421\\u0447\\u0451\\u0442\",\"tipAvailable\":\"Tip available\",\"feedbackAvailable\":\"Feedback available\",\"readFeedback\":\"Read feedback\",\"wrongAnswer\":\"Wrong answer\",\"correctAnswer\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u044b\\u0439 \\u043e\\u0442\\u0432\\u0435\\u0442\",\"feedback\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e @score \\u0438\\u0437 @total\",\"shouldCheck\":\"Should have been checked\",\"shouldNotCheck\":\"Should not have been checked\",\"noInput\":\"Please answer before viewing the solution\"},\"behaviour\":{\"enableRetry\":true,\"enableSolutionsButton\":true,\"type\":\"multi\",\"singlePoint\":false,\"randomAnswers\":true,\"showSolutionsRequiresInput\":true,\"disableImageZooming\":false,\"confirmCheckDialog\":false,\"confirmRetryDialog\":false,\"autoCheck\":false,\"passPercentage\":100},\"confirmCheck\":{\"header\":\"Finish ?\",\"body\":\"Are you sure you wish to finish ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Finish\"},\"confirmRetry\":{\"header\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c?\",\"body\":\"<p>\\u0423\\u0432\\u0435\\u0440\\u0435\\u043d\\u044b, \\u0447\\u0442\\u043e \\u0445\\u043e\\u0442\\u0438\\u0442\\u0435 \\u043f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c?<\\\/p>\\n\",\"cancelLabel\":\"\\u041e\\u0442\\u043c\\u0435\\u043d\\u0430\",\"confirmLabel\":\"\\u041f\\u043e\\u0434\\u0442\\u0432\\u0435\\u0440\\u0434\\u0438\\u0442\\u044c\"},\"question\":\"<p>\\u041a\\u0430\\u043a\\u0438\\u0435 \\u0441\\u0432\\u043e\\u0439\\u0441\\u0442\\u0432\\u0430 \\u0432\\u043b\\u0438\\u044f\\u044e\\u0442 \\u043d\\u0430 \\u0432\\u044b\\u0441\\u043e\\u0442\\u0443 \\u0431\\u043b\\u043e\\u043a\\u0430?<\\\/p>\\n\"}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1858\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1858","url":"https:\/\/webref.ru\/task\/1858","title":"\u0411\u043b\u043e\u0447\u043d\u044b\u0435 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u044b 4","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}},"cid-7736":{"library":"H5P.Blanks 1.7","jsonContent":"{\"media\":{\"params\":{\"contentName\":\"Image\"},\"library\":\"H5P.Image 1.0\",\"subContentId\":\"216bdb3e-c72a-456d-9368-612f9526c0f0\"},\"text\":\"<p>\\u0412\\u043f\\u0438\\u0448\\u0438\\u0442\\u0435 \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u044f, \\u0447\\u0442\\u043e\\u0431\\u044b \\u043f\\u043e\\u043b\\u0443\\u0447\\u0438\\u0442\\u044c \\u0448\\u0438\\u0440\\u0438\\u043d\\u0443 \\u0431\\u043b\\u043e\\u043a\\u0430 240 \\u043f\\u0438\\u043a\\u0441\\u0435\\u043b\\u0435\\u0439.<\\\/p>\\n\",\"score\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e @score \\u0438\\u0437 @total\",\"showSolutions\":\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c \\u0440\\u0435\\u0448\\u0435\\u043d\\u0438\\u0435\",\"tryAgain\":\"\\u041f\\u043e\\u0432\\u0442\\u043e\\u0440\\u0438\\u0442\\u044c\",\"checkAnswer\":\"\\u041f\\u0440\\u043e\\u0432\\u0435\\u0440\\u0438\\u0442\\u044c\",\"notFilledOut\":\"\\u041f\\u043e\\u0436\\u0430\\u043b\\u0443\\u0439\\u0441\\u0442\\u0430, \\u0437\\u0430\\u043f\\u043e\\u043b\\u043d\\u0438\\u0442\\u0435 \\u0432\\u0441\\u0435 \\u043f\\u043e\\u043b\\u044f\",\"answerIsCorrect\":\"&#039;:ans&#039; \\u043f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u043e\",\"answerIsWrong\":\"&#039;:ans&#039; \\u043d\\u0435\\u0432\\u0435\\u0440\\u043d\\u043e\",\"answeredCorrectly\":\"\\u041e\\u0442\\u0432\\u0435\\u0442\\u044b \\u043f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u044b\\u0435\",\"answeredIncorrectly\":\"\\u041e\\u0442\\u0432\\u0435\\u0442\\u044b \\u043d\\u0435\\u0432\\u0435\\u0440\\u043d\\u044b\\u0435\",\"solutionLabel\":\"\\u041f\\u0440\\u0430\\u0432\\u0438\\u043b\\u044c\\u043d\\u044b\\u0439 \\u043e\\u0442\\u0432\\u0435\\u0442:\",\"inputLabel\":\"Blank input @num of @total\",\"inputHasTipLabel\":\"Tip available\",\"tipLabel\":\"Tip\",\"behaviour\":{\"enableRetry\":true,\"enableSolutionsButton\":true,\"autoCheck\":false,\"caseSensitive\":false,\"showSolutionsRequiresInput\":true,\"separateLines\":false,\"disableImageZooming\":false,\"confirmCheckDialog\":false,\"confirmRetryDialog\":false},\"confirmCheck\":{\"header\":\"Finish ?\",\"body\":\"Are you sure you wish to finish ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Finish\"},\"confirmRetry\":{\"header\":\"Retry ?\",\"body\":\"Are you sure you wish to retry ?\",\"cancelLabel\":\"Cancel\",\"confirmLabel\":\"Confirm\"},\"questions\":[\"<p>div {<br>\\n&nbsp;width: *228px*;<br>\\n&nbsp;padding: 5px;<br>\\n&nbsp;border: 1px solid black;<br>\\n}<\\\/p>\\n\",\"<p>div {<br>\\n&nbsp;width: 200px;<br>\\n&nbsp;padding: 10px;<br>\\n&nbsp;margin: *10px*;<br>\\n}<\\\/p>\\n\",\"<p>div {<br>\\n&nbsp;width: 220px;<br>\\n&nbsp;margin: 8px;<br>\\n&nbsp;border: *2px* solid green;<br>\\n}<\\\/p>\\n\",\"<p>div {<br>\\n&nbsp;width: 226px;<br>\\n&nbsp;padding: *7px*;<br>\\n}<\\\/p>\\n\",\"<p>div {<br>\\n&nbsp;width: 200px;<br>\\n&nbsp;padding: *14px*;<br>\\n&nbsp;margin-left: 10px;<br>\\n&nbsp;border-left: 2px solid red;&nbsp;<br>\\n}<\\\/p>\\n\"]}","fullScreen":"0","exportUrl":"","embedCode":"<iframe src=\"https:\/\/webref.ru\/h5p\/embed\/1859\" width=\":w\" height=\":h\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"><\/iframe>","resizeCode":"<script src=\"https:\/\/webref.ru\/sites\/all\/modules\/h5p\/library\/js\/h5p-resizer.js\" charset=\"UTF-8\"><\/script>","mainId":"1859","url":"https:\/\/webref.ru\/task\/1859","title":"\u0411\u043b\u043e\u0447\u043d\u044b\u0435 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u044b 5","contentUserData":[{"state":"{}"}],"displayOptions":{"frame":false,"export":true,"embed":true,"copyright":true,"icon":false}}},"loadedJs":"\/assets\/h5p\/libraries\/H5P.Blanks-1.7\/js\/cloze.js?ver=1.7.3","loadedCss":["\/assets\/h5p\/libraries\/Tether-1.0\/styles\/tether.min.css?ver=1.0.2","\/assets\/h5p\/libraries\/Drop-1.0\/css\/drop-theme-arrows-bounce.min.css?ver=1.0.2","\/assets\/h5p\/libraries\/FontAwesome-4.5\/h5p-font-awesome.min.css?ver=4.5.4","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-help-dialog.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-message-dialog.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-progress-circle.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-simple-rounded-button.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-speech-bubble.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-tip.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-slider.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-score-bar.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-progressbar.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.JoubelUI-1.2\/css\/joubel-ui.css?ver=1.2.13","\/assets\/h5p\/libraries\/H5P.Question-1.2\/styles\/question.css?ver=1.2.2","\/assets\/h5p\/libraries\/H5P.SingleChoiceSet-1.8\/styles\/single-choice-set.css?ver=1.8.4","\/assets\/h5p\/libraries\/H5P.Image-1.0\/image.css?ver=1.0.28","\/assets\/h5p\/libraries\/H5P.MultiChoice-1.9\/css\/multichoice.css?ver=1.9.2","\/assets\/h5p\/libraries\/H5P.Blanks-1.7\/css\/blanks.css?ver=1.7.3"]};
+//--><!]]>
+</script>
+<script type="text/javascript" src="../../assets/js/js_V2GNOshuLPzy1pw-N0E22cul4mNDg2mFEMr1chJ4aBw.js"></script>
+</body>
+</html>

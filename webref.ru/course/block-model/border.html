@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="ru"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Свойство border | Учебные курсы | WebReference</title><meta charset="utf-8" /><meta name="description" content="Свойство border добавляет вокруг элемента рамку заданной толщины, стиля и цвета. Для создания линий на отдельных сторонах элемента используются свойства border-top, border-right, border-bottom и border-left, соответственно устанавливающие линию сверху, справа, снизу и слева." /><link rel="stylesheet" href="../../assets/css/css_YrTqVPtzuXZHD0T2BJg8EHLXUPW7xk5WWk8pstZypIw.css" /><link rel="stylesheet" href="../../assets/css/css_-FSXTEApofvZ1FwxICRGF2JtLJ1PW5ZzPome35sOLp0.css" media="screen" /></head><body><header><div class="grid-container"><div class="grid-x align-middle"><div class="cell logo small-12 medium-12 large-6"><a href="../../index.html"><span class="t1">Web</span><span class="t2">Reference</span></a></div><div class="cell small-12 medium-12 large-6"><form action="https://webref.ru/search/" id="cse-search-box"><div class="input-group"><div class="input-group-field"><input type="search" placeholder="Поиск по сайту" name="s" autocomplete="off" id="cse-search-input"><input type="hidden" name="cx" value="partner-pub-0708135098984815:9970767379"><input type="hidden" name="cof" value="FORID:10"><input type="hidden" name="ie" value="UTF-8"></div><div class="input-group-button"><button class="button"><i class="icon-search"></i></button></div></div></form></div></div></div><nav id="navMenu" class="navbar"><div class="grid-container"><ul class="menu"><li><a href="../../index.html">Главная</a></li><li class="dropdown"><span>Справочники</span><ul><li><a href="../../html.html">HTML</a></li><li><a href="../../css.html">CSS</a></li></ul></li><li class="dropdown"><span>Руководства</span><ul><li><a href="../../layout.html">Вёрстка</a></li><li><a href="../../dev.html">Веб-технологии</a></li><li><a href="../../mobile.html">Мобильные приложения</a></li></ul></li><li><a href="../../recipe.html">Рецепты</a></li><li><a href="../../course.html">Курсы</a></li><li><a href="../../practice.html">Практика</a></li><li><a href="../../individual.html">Самостоятельная</a></li><li><a href="../../quiz.html">Тесты</a></li></ul></div></nav></header><main><div class="grid-container breadcrumb"><section class="region region-crumbs"><div id="easy_breadcrumb-easy_breadcrumb" class="block"><div class="block_content"><div itemscope class="easy-breadcrumb" itemtype="http://data-vocabulary.org/Breadcrumb"> <span itemprop="title"><a href="../../index.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Главная</a></span> <span class="easy-breadcrumb_segment-separator"></span> <span itemprop="title"><a href="../../course.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-1">Курсы</a></span> <span class="easy-breadcrumb_segment-separator"></span> <span class="easy-breadcrumb_segment easy-breadcrumb_segment-2" itemprop="title">Block model</span> <span class="easy-breadcrumb_segment-separator"></span> <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">Свойство border</span></div></div></div></section></div><div class="grid-container"><div class="grid-x grid-margin-x"><div class="cell medium-12 large-9 content-section"><div class="title"><h1>Свойство border</h1></div><div id="example-form"></div><section class="region region-content"><div id="system-main" class="block"><div class="block_content"><ul class="tabs" data-tabs data-deep-link="true" data-update-history="true" id="lesson-tabs" role="tablist"><li class="tabs-title is-active"><a href="border.html#content" aria-selected="true" role="tab" aria-controls="lesson-content">Описание</a></li><li class="tabs-title"><a href="border.html#individual" role="tab" aria-controls="lesson-practice">Самостоятельная</a></li></ul><div class="tabs-content" data-tabs-content="lesson-tabs" id="lesson"><section class="tabs-panel is-active" id="content" role="tabpanel"><p>Свойство <a href="../../css/border.html">border</a> добавляет вокруг элемента рамку заданной толщины, стиля и цвета. Для создания линий на отдельных сторонах элемента используются свойства <a href="../../css/border-top.html">border-top</a>, <a href="../../css/border-right.html">border-right</a>, <a href="../../css/border-bottom.html">border-bottom</a> и <a href="../../css/border-left.html">border-left</a>, соответственно устанавливающие линию сверху, справа, снизу и слева.</p><p>Сама рамка идёт после содержимого элемента и пустого пространства, создаваемого <a href="../../css/padding.html">padding</a> (рис.&nbsp;1). Если свойство <span class="attribute">padding</span> не задано, то рамка начинается сразу вокруг содержимого.</p><p class="fig"><img src="../../assets/images/box-model/border.png" alt="Положение рамки в элементе"/></p><p class="figsign">Рис. 1. Положение рамки в элементе</p><p>В примере 1 показано добавление линии слева от цитаты с помощью свойства <span class="attribute">border-left</span>.</p><p class="exampleTitle">Пример 1. Использование border-left</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Линия&lt;/title&gt;
+  &lt;style&gt;
+   blockquote {
+    background: #d2f7ff; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    border-left: 2px solid #0069b5; /* Параметры линии */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;blockquote&gt;
+   Фьюжн начинает форшлаг.
+  &lt;/blockquote&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан на рис. 2.</p><p class="fig"><img src="../../assets/images/box-model/border2.png" alt="&lt;blockquote&gt; с линией"/></p><p class="figsign">Рис. 2. &lt;blockquote&gt; с линией</p><p>Расстояние от рамки до содержимого регулируется с помощью свойства <span class="attribute">padding</span>. Сами линии отображаются поверх цветного фона, что становится заметно, когда добавляется пунктирная или точечная линия. В примере&nbsp;2 показано добавление такой линии.</p><p class="exampleTitle">Пример 2. Точечный пунктир</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Линия&lt;/title&gt;
+  &lt;style&gt;
+   blockquote {
+    background: #d2f7ff; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    border: 5px dotted #0069b5; /* Параметры рамки */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;blockquote&gt;
+   Фьюжн начинает форшлаг.
+  &lt;/blockquote&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан на рис. 3.</p><p class="fig"><img src="../../assets/images/box-model/border3.png" alt="Линия поверх фона"/></p><p class="figsign">Рис. 3. Линия поверх фона</p><p>Поведение фона в подобных случаях можно изменить с помощью свойства <a href="../../css/background-clip.html">background-clip</a>. К примеру, значение <span class="value">padding-box</span> будет выводить фон внутри границ, а <span class="value">content-box</span> внутри содержимого. Это позволяет создавать интересной формы блоки, если задать единый цвет рамки и фона и воспользоваться свойством <span class="attribute">background-clip</span> (пример&nbsp;3).</p><p class="exampleTitle">Пример 3. Использование background-clip</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Линия&lt;/title&gt;
+  &lt;style&gt;
+   blockquote {
+    background: #0069b5; /* Цвет фона */
+    color: #fff; /* Белый цвет текста */
+    padding: 10px; /* Поля вокруг текста */
+    border: 5px dashed #0069b5; /* Параметры рамки */ 
+    background-clip: padding-box; /* Фон внутри рамки */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;blockquote&gt;
+   Фьюжн начинает форшлаг.
+  &lt;/blockquote&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан на рис. 4.</p><p class="fig"><img src="../../assets/images/box-model/border4.png" alt="Пунктирная рамка"/></p><p class="figsign">Рис. 4. Пунктирная рамка</p><p>Свойство border является частью блока и влияет на его размеры. Альтернативой <span class="attribute">border</span> выступает свойство <a href="../../css/outline.html">outline</a>. Вот его особенности:</p><ul><li><span class="attribute">outline</span> не влияет на размеры и положение самого элемента;</li><li><span class="attribute">outline</span> не занимает место, не влияет на окружающие элементы и отображается поверх них;</li><li>для <span class="attribute">outline</span> нельзя задать параметры линии на отдельных сторонах элемента, <span class="attribute">outline</span> применяется сразу ко всем четырём сторонам;</li><li>свойство <a href="../../css/border-radius.html">border-radius</a>, задающее радиус скругления рамки, не действует на <span class="attribute">outline</span>;</li><li><span class="attribute">outline</span> можно расширять и сжимать с помощью <a href="../../css/outline-offset.html">outline-offset</a>, отрицательное значение выводит рамку внутри элемента.</li></ul><p>Свойство <span class="attribute">outline</span> не заменяет <span class="attribute">border</span> и вполне может существовать вместе с ним. В примере&nbsp;4 показано сочетание этих свойств.</p><p class="exampleTitle">Пример 4. Использование outline</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Линия&lt;/title&gt;
+  &lt;style&gt;
+   blockquote {
+    background: #d6eff8; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    border: 2px solid #0069b5; /* Параметры синей рамки */
+    outline: 2px solid #c52b1c; /* Параметры красной рамки */
+    outline-offset: 3px; /* Смещение красной рамки */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;blockquote&gt;
+   Фьюжн начинает форшлаг.
+  &lt;/blockquote&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан на рис. 5.</p><p class="fig"><img src="../../assets/images/box-model/border5.png" alt="Две рамки"/></p><p class="figsign">Рис. 4. Две рамки</p><div id="views-similar-block" class="block"><h2 class="block_title">См. также</h2><div class="block_content"><div class="view view-similar view-id-similar view-display-id-block view-dom-id-fa4548e9a019cbb9952d543fe8f77fd1"><div class="view-content"><div class="similar"><ul><li class=""> <a href="../../layout/pseudo-class-focus/input.html">:focus для полей формы</a></li><li class=""> <a href="../../css/background-clip.html">background-clip</a></li><li class=""> <a href="../../css/border.html">border</a></li><li class=""> <a href="../../css/outline.html">outline</a></li><li class=""> <a href="../../css/outline-color.html">outline-color</a></li><li class=""> <a href="../../css/outline-offset.html">outline-offset</a></li><li class=""> <a href="../../css/outline-style.html">outline-style</a></li><li class=""> <a href="../../css/outline-width.html">outline-width</a></li><li class=""> <a href="../block-inline/block.html">Блочные элементы</a></li><li class=""> <a href="../../layout/after-before/layout/triangle.html">Добавление треугольника</a></li><li class=""> <a href="../box-model/shorthand-wheel.html">Колесо для сокращённых свойств</a></li><li class=""> <a href="../../layout/learn-html-css/box-model.html">Открываем блочную модель</a></li><li class=""> <a href="../../layout/after-before/layout/border.html">Повёрнутые рамки</a></li><li class=""> <a href="../../layout/html5-css3/img/border.html">Рамка вокруг изображений</a></li><li class=""> <a href="../block-inline/inline.html">Строчные элементы</a></li></ul></div></div></div></div></div></section><section class="tabs-panel" id="individual" role="tabpanel" aria-hidden><div id="views-individual-block" class="block"><div class="block_content"><div class="view view-individual view-id-individual view-display-id-block view-dom-id-d80f89dcea624553baa711459a5b0048"><div class="view-content"><ul class="tabs" data-tabs id="individual-tabs"><li class="tabs-title is-active"><a href="border.html#i1" aria-selected="true">1</a></li><li class="tabs-title"><a href="border.html#i2">2</a></li></ul><div class="tabs-content" data-tabs-content="individual-tabs"><section id="i1" class="tabs-panel task-content is-active"><h2 class="node-title"><a href="../../individual/2358.html">Рамка</a></h2><p>Создайте блок с рамкой, как показано на рис. 1. В браузере IE вид может отличаться.</p><p class="fig"><img src="../../assets/images/individual/border.png" alt=""/></p><p class="figsign">Рис. 1</p><div class="individual-result"><button type="button" class="button show-result">Показать ответ</button></div><div class="field field-name-field-individual-result field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Рамка&lt;/title&gt;
+  &lt;style&gt;
+   div {
+    background: #B2D235; /* Цвет фона */
+    padding: 40px; /* Поля вокруг текста */
+    outline: 2px solid #fff; /* Параметры рамки */
+    outline-offset: -20px; /* Смещение рамки */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div&gt;
+   По мере нашего продвижения страна, как и ее обитатели, 
+   становилась все более дикой и прекрасной. Теперь мы двигались 
+   сквозь сосновые леса с островками дубовых рощ, зарослей 
+   красивого кустарника и папоротника. 
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div></div></section><section class="tabs-panel task-content" id="i2"><h2 class="node-title"><a href="../../individual/2360.html">Рамка таблицы</a></h2><p>Создайте таблицу, как показано на рис. 1.</p><p class="fig"><img src="../../assets/images/individual/table-border.png" alt=""/></p><p class="figsign">Рис. 1</p><div class="individual-result"><button type="button" class="button show-result">Показать ответ</button></div><div class="field field-name-field-individual-result field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Рамка таблицы&lt;/title&gt;
+  &lt;style&gt;
+   table {
+    width: 100%; /* Ширина таблицы */
+    border-collapse: collapse;
+    background: #B6DEC2; /* Цвет фона таблицы */
+   }
+   th, td {
+    border: 2px solid #fff; /* Параметры рамки */
+    padding: 7px; /* Поля в ячейках */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;table&gt;
+   &lt;tr&gt;&lt;th&gt;Имя&lt;/th&gt;&lt;th&gt;Оружие&lt;/th&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;Леонардо&lt;/td&gt;&lt;td&gt;Катаны&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;Рафаэль&lt;/td&gt;&lt;td&gt;Кинжалы-сай&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;Донателло&lt;/td&gt;&lt;td&gt;Шест-бо&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;Микеланджело&lt;/td&gt;&lt;td&gt;Нунчаки&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div></div></section></div></div></div></div></div></section></div><section class="grid-container credit"><div class="grid-x grid-margin-x"><h2 class="element-invisible">Автор и редакторы</h2><div class="cell small-6 credit-author"><i class="icon-user"></i> Автор: Влад Мержевич</div><div class="cell small-6 credit-changed"><i class="icon-calendar"></i> Последнее изменение: 03.10.2018</div><div class="cell small-12 credit-editor"><i class="icon-users"></i> Редакторы: Влад Мержевич</div></div></section><div id="block-20" class="block"><div class="block_content"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0708135098984815" data-ad-slot="1599783371" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div></div><div id="block-10" class="block"><div class="block_content"><div id="disqus_thread"></div><script>var disqus_shortname="webref";(function(){var dsq=document.createElement("script");dsq.type="text/javascript";dsq.async=true;dsq.src="//"+disqus_shortname+".disqus.com/embed.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(dsq);})();</script></div></div></div></div></section></div><aside class="cell medium-12 large-3 sidebar-section"><section class="region region-sidebar-toc"><div id="views-course-toc" class="block"><h2 class="block_title">Содержание</h2><div class="block_content"><div class="view view-course view-id-course view-display-id-toc view-dom-id-a47c193fc73d4417354d3d9cb996034b"><div class="view-content"><ul class="menu"><li class=""> <a href="properties.html">Свойства блока</a></li><li class=""> <a href="padding.html">Свойство padding</a></li><li class=""> <a href="border.html" class="active">Свойство border</a></li></ul></div></div></div></div><div id="block-12" class="block"><div class="block_content"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:240px;height:400px" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6456026170"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div></div></section></aside></div></div></main><footer><div class="footer-top"><div class="grid-container"><div class="grid-x grid-margin-x"><div class="cell small-12 large-3"><p class="logo"><span>Web</span><span class="t2">Reference</span></p><p>Гл. редактор: Влад Мержевич</p><address>vlad@webref.ru</address></div><section class="cell small-12 large-8"><h3>О сайте</h3><p>На сайте находятся справочники и учебные курсы по различным веб-технологиям, а также руководства по вёрстке веб-страниц и разработке мобильных приложений.</p></section><div class="cell hide-for-small large-1 counter"><script src="../../sites/all/themes/v3/js/li.js"></script></div></div></div></div><div class="footer-bottom"><div class="grid-container"><div class="grid-x grid-margin-x"><section class="cell small-6 large-3"><h3>Связи</h3><ul id="community"><li><i class="icon-rss"></i> <a href="https://feeds.feedburner.com/webref" rel="nofollow">RSS</a></li><li><i class="icon-jsfiddle"></i> <a href="https://jsfiddle.net/user/webref/fiddles/" rel="nofollow">JSFiddle</a></li><li><i class="icon-github"></i> <a href="https://github.com/webref" rel="nofollow">GitHub</a></li><li><i class="icon-vk"></i> <a href="https://vk.com/webref" rel="nofollow">ВКонтакте</a></li><li><i class="icon-doc-text"></i> <a href="https://drive.google.com/folderview?id=0B4u62HGG7TOnTVJ4aFlFa1Jpb2M" rel="nofollow">Google Диск</a></li><li><i class="icon-users"></i> <a href="https://htmlforum.io/" rel="nofollow">Форум</a></li></ul></section><section class="cell small-6 large-3"><h3>Разделы сайта</h3><ul id="footer-menu" class="links"><li><i class="icon-book"></i> <a href="../../ref.html">Справочники</a></li><li><i class="icon-layout"></i> <a href="../../layout.html">Вёрстка</a></li><li><i class="icon-gear"></i> <a href="../../dev.html">Веб-технологии</a></li><li><i class="icon-mobile"></i> <a href="../../mobile.html">Мобильные приложения</a></li><li><i class="icon-help"></i> <a href="../../recipe.html">Рецепты</a></li><li><i class="icon-bookmark"></i> <a href="../../course.html">Учебные курсы</a></li><li><i class="icon-pencil"></i> <a href="../../practice.html">Практика</a></li><li><i class="icon-css3"></i> <a href="../../individual.html">Самостоятельная</a></li><li><i class="icon-help"></i> <a href="../../quiz.html">Тесты</a></li></ul></section><section class="cell small-6 large-3"><h3>Популярное</h3><section class="region region-popular"><div id="views-popular-popular" class="block"><div class="block_content"><div class="view view-popular view-id-popular view-display-id-popular view-dom-id-d8616551acbb78c9d34b418f878d5418"><div class="view-content"><ul><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/learn-html-css.html">Уроки по HTML и CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/howtocodeinhtml.html">Как верстать на HTML5 и CSS3</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../../layout/html5-css3.html">HTML5 и CSS3 на примерах</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/css3.svg.png" src="../../assets/images/thumb/css3.svg" width="16" height="16" alt="" /> <a href="../../layout/magic-of-css.html">Магия CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/jquery.svg.png" src="../../assets/images/thumb/jquery.svg" width="16" height="16" alt="" /> <a href="../../dev/jqfundamentals.html">Основы jQuery</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/js.svg.png" src="../../assets/images/thumb/js.svg" width="16" height="16" alt="" /> <a href="../../dev/learn-javascript.html">Знакомство с JavaScript</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/bootstrap.svg.png" src="../../assets/images/thumb/bootstrap.svg" width="16" height="16" alt="" /> <a href="../../layout/bootstrap.html">Bootstrap</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/gulp.svg.png" src="../../assets/images/thumb/gulp.svg" width="16" height="16" alt="" /> <a href="../../dev/automate-with-gulp.html">Автоматизация работы с Gulp</a></li></ul></div></div></div></div></section></section><section class="cell small-6 large-3"><h3>Помощь по сайту</h3><ul><li><a href="../../author.html">Авторы</a></li><li><a href="../../help/legend.html">Обозначения</a></li><li><a href="../../help/term.html">Терминология</a></li><li><a href="../../help/slang.html" title="">Жаргон</a></li><li><a href="../../help/app.html" title="">Наши приложения</a></li><li><a href="../../help/download.html" title="">Скачать</a></li></ul></section></div></div></div><div class="copyright"><div class="grid-container"><div class="grid-x align-middle"><div class="cell small-12 medium-2 large-1"><a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow"><img alt="Лицензия Creative Commons" src="../../sites/all/themes/v3/img/cc.png" width="88" height="31"></a></div><div class="cell small-12 medium-10 large-11">Все материалы сайта доступны по <a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow">лицензии Creative Commons «Attribution-NonCommercial» («Атрибуция — Некоммерческое использование») 4.0 Всемирная</a>, если не указано иное.</div></div></div></div></footer><script src="../../sites/all/themes/v3/js/ads.js"></script><script>window.google_analytics_uacct="UA-88593016-2";</script><script src="../../assets/js/js_II2ib-sdAYUJkLc_BSmoT9CvFgkQHjbX6ZwWkuMJpi0.js"></script><script src="../../assets/js/js_H7q2xORKmR9AN8Qx5spKEIBp7R_wG2apAswJoCUZY7I.js"></script><script src="../../assets/js/js_ugJmGmW_zO124nItiV-hF5EGZnqY8ON-Eh9qKRmh3VQ.js"></script><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create","UA-88593016-2",{"cookieDomain":"auto"});ga("set","anonymizeIp",true);ga("send","pageview");</script><script src="../../assets/js/js_95zrqqJtzWUuXIi1ZfpbbSdR9ZFsgvDGGbZuOa-bLiw.js"></script><script src="../../assets/js/js_b8aWPOnPHDVS7UxsbF3r192VwrZUv_iQK2bBEwdOjzM.js"></script><script>jQuery.extend(Drupal.settings,{"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"v3","theme_token":"Ybog6TunLHv_l6bRwOyFD7xpAQUO2tf7r02yjBk0eYY","js":{"modules\/statistics\/statistics.js":1,"0":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/3.1\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"public:\/\/languages\/ru_eQ6_MlK9JXj_doTDHktg3qRCVZqnXcvZ7gDAljGIQ34.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"1":1,"sites\/all\/themes\/v3\/js\/vendor\/codemirror\/codemirror.min.js":1,"sites\/all\/themes\/v3\/js\/vendor\/codemirror\/mode\/xml\/xml.min.js":1,"sites\/all\/themes\/v3\/js\/practice.min.js":1,"sites\/all\/themes\/v3\/js\/foundation.min.js":1,"sites\/all\/themes\/v3\/js\/vendor\/rainbow.min.js":1,"sites\/all\/themes\/v3\/js\/vendor\/scrollTo.min.js":1,"sites\/all\/themes\/v3\/js\/vendor\/autocomplete.min.js":1,"sites\/all\/themes\/v3\/js\/vendor\/sticky.min.js":1,"sites\/all\/themes\/v3\/js\/vendor\/slick\/slick.min.js":1,"sites\/all\/themes\/v3\/js\/app.min.js":1,"sites\/all\/themes\/v3\/js\/adblock.js":1},"css":{"sites\/all\/themes\/v3\/js\/vendor\/codemirror\/codemirror.min.css":1,"sites\/all\/themes\/v3\/css\/foundation.min.css":1,"sites\/all\/themes\/v3\/css\/style.min.css":1,"sites\/all\/themes\/v3\/js\/vendor\/slick\/slick.min.css":1}},"googleanalytics":{"trackOutbound":1},"statistics":{"data":{"nid":"2357"},"url":"\/modules\/statistics\/statistics.php"}});</script></body></html>

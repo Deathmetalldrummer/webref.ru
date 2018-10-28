@@ -6,6 +6,72 @@
     <language>ru</language>
      <atom:link href="https://webref.ru/rss.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>Структурные псевдоклассы</title>
+    <link>https://webref.ru/layout/structural-pseudo-classes</link>
+    <description>      &lt;p&gt;Структурные псевдоклассы позволяют выбрать элементы, основываясь на их положении в дереве документа и отношении к другим элементам. К примеру, &lt;span class=&quot;attribute&quot;&gt;:first-child&lt;/span&gt; выбирает первый элемент в группе братских элементов, т.&amp;nbsp;е., имеющих одного родителя.&lt;/p&gt;</description>
+     <pubDate>Wed, 01 Aug 2018 03:24:35 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">2156 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>Псевдокласс :focus</title>
+    <link>https://webref.ru/layout/pseudo-class-focus</link>
+    <description>      &lt;p&gt;Псевдокласс &lt;span class=&quot;attribute&quot;&gt;:focus&lt;/span&gt; определяет стиль элемента, когда он получает фокус, иными словами, становится активным для взаимодействия. К примеру, при получении фокуса в текстовом поле можно набирать текст, на мобильных устройствах включается экранная клавиатура.&lt;/p&gt;
+&lt;p&gt;Фокус могут получить не все элементы, а только ссылки, кнопки, поля формы. Именно к ним в стилях и следует добавлять &lt;span class=&quot;attribute&quot;&gt;:focus&lt;/span&gt;, для остальных элементов это не даст видимого результата.&lt;/p&gt;</description>
+     <pubDate>Fri, 25 May 2018 11:41:38 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">2150 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>Псевдокласс :hover</title>
+    <link>https://webref.ru/layout/pseudo-class-hover</link>
+    <description>      &lt;p&gt;Псевдокласс &lt;span class=&quot;attribute&quot;&gt;:hover&lt;/span&gt; определяет стиль элемента при наведении на него курсора мыши. Это один из самых самых популярных псевдоклассов, поскольку простыми методами позволяет создать разные эффекты и привлечь внимание к элементам интерфейса. К примеру, с помощью &lt;span class=&quot;attribute&quot;&gt;:hover&lt;/span&gt; можно менять цвет ссылок, создавать всплывающие подсказки, меню, увеличивать изображения и др.&lt;/p&gt;
+</description>
+     <pubDate>Tue, 22 May 2018 02:00:58 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">2143 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>Псевдокласс :checked</title>
+    <link>https://webref.ru/layout/pseudo-class-checked</link>
+    <description>      &lt;p&gt;Псевдокласс &lt;span class=&quot;attribute&quot;&gt;:checked&lt;/span&gt; определяет, помечен флажок (&lt;span class=&quot;var&quot;&gt;&amp;lt;input type=&quot;checkbox&quot;&amp;gt;&lt;/span&gt;), переключатель (&lt;span class=&quot;var&quot;&gt;&amp;lt;input type=&quot;radio&quot;&amp;gt;&lt;/span&gt;) или пункт списка (&lt;span class=&quot;tag&quot;&gt;&amp;lt;option&amp;gt;&lt;/span&gt;), соответственно, применяет стиль только к помеченному элементу формы. С помощью &lt;span class=&quot;attribute&quot;&gt;:checked&lt;/span&gt; можно стилизовать поля формы, создавать вкладки, меню, галерею изображений и др.&lt;/p&gt;</description>
+     <pubDate>Wed, 16 May 2018 13:15:54 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">2136 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>Визуальное руководство по свойствам flexbox</title>
+    <link>https://webref.ru/layout/visual-guide-flexbox</link>
+    <description>      &lt;p&gt;Вёрстка с помощью &lt;strong&gt;flexbox&lt;/strong&gt;, официально называемая &lt;a href=&quot;https://www.w3.org/TR/css-flexbox/&quot; rel=&quot;nofollow&quot;&gt;CSS Flexible Box Layout Module&lt;/a&gt;, представляет собой новый модуль компоновки в CSS3, предназначенный для улучшения выравнивания, направления и порядка элементов в контейнере, даже если они имеют динамический или  неизвестный размер. Главной характеристикой flex-контейнера является способность менять ширину или высоту дочерних элементов, чтобы наиболее оптимально заполнить доступное пространство при разных размерах экрана.&lt;/p&gt;</description>
+     <pubDate>Tue, 15 May 2018 03:35:05 +0000</pubDate>
+ <dc:creator>Димитар Стоянов</dc:creator>
+ <guid isPermaLink="false">2132 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>Разделы веб-страницы</title>
+    <link>https://webref.ru/course/section</link>
+    <description>      &lt;p&gt;Практически любую веб-страницу можно разбить на ряд визуальных блоков, которые обычно отделяются друг от друга фоном или пустым пространством, поэтому хорошо заметны. Подобное разделение помогает нам ориентироваться на веб-странице и сразу выделять главное и второстепенное содержимое.&lt;/p&gt;</description>
+     <pubDate>Fri, 30 Mar 2018 11:18:57 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">2084 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>::after и ::before</title>
+    <link>https://webref.ru/layout/after-before</link>
+    <description>      &lt;p&gt;Использование псевдоэлементов &lt;a href=&quot;/css/after&quot;&gt;::after&lt;/a&gt; и &lt;a href=&quot;/css/before&quot;&gt;::before&lt;/a&gt; является одним из самых популярных приёмов при вёрстке фрагментов веб-страниц и их стилизации. С их помощью можно выводить произвольный текст, добавлять тени, треугольники, линии и др.&lt;/p&gt;</description>
+     <pubDate>Fri, 16 Feb 2018 12:27:59 +0000</pubDate>
+ <dc:creator>Влад Мержевич</dc:creator>
+ <guid isPermaLink="false">2073 at https://webref.ru</guid>
+  </item>
+  <item>
+    <title>Создание адаптивных фигур с помощью clip-path</title>
+    <link>https://webref.ru/layout/shapes-polygon</link>
+    <description>      &lt;p&gt;Стилевое свойство &lt;span class=&quot;attribute&quot;&gt;clip-path&lt;/span&gt; — это способ отказаться от однообразных прямоугольных макетов, традиционно ассоциируемых с плоским, адаптивным дизайном. Вы станете думать не только о прямоугольниках, на ваших страницах они буквально начнут принимать форму шестиугольников, звёзд и восьмиугольников.&lt;/p&gt;</description>
+     <pubDate>Tue, 05 Sep 2017 13:11:51 +0000</pubDate>
+ <dc:creator>Карен Менезес</dc:creator>
+ <guid isPermaLink="false">2067 at https://webref.ru</guid>
+  </item>
+  <item>
     <title>float в теории и на практике</title>
     <link>https://webref.ru/course/float</link>
     <description>      &lt;p&gt;Стилевое свойство float изначально было внедрено в CSS для создания обтекаемых картинок и текстовых врезок, но со временем расширило сферу своего применения. Веб-разработчикам не хватало инструментов для вёрстки макетов, таблицы же для этих целей оказались громоздки, неудобны и морально устарели. На смену таблицам для вёрстки колонок приспособили &lt;span class=&quot;attribute&quot;&gt;float&lt;/span&gt;, несмотря на то, что это свойство не предназначено для этой роли. Зато оно достаточно универсальное и поддерживается всеми браузерами.&lt;/p&gt;</description>
@@ -20,81 +86,6 @@
      <pubDate>Sat, 22 Jul 2017 12:39:03 +0000</pubDate>
  <dc:creator>Влад Мержевич</dc:creator>
  <guid isPermaLink="false">1897 at https://webref.ru</guid>
-  </item>
-  <item>
-    <title>Блочные и строчные элементы</title>
-    <link>https://webref.ru/course/block-inline</link>
-    <description>      &lt;p&gt;В HTML4 практически все элементы относятся к двум типам, различающихся своим поведением и свойствами — это блочные и строчные элементы. Блочные элементы (такие как &lt;span class=&quot;tag&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;, &lt;span class=&quot;tag&quot;&gt;&amp;lt;ol&amp;gt;&lt;/span&gt;, &lt;span class=&quot;tag&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;) начинаются с новой строки и занимают всё доступное им пространство по ширине, независимо от содержимого, строчные (такие как &lt;span class=&quot;tag&quot;&gt;&amp;lt;a&amp;gt;&lt;/span&gt;, &lt;span class=&quot;tag&quot;&gt;&amp;lt;var&amp;gt;&lt;/span&gt;, &lt;span class=&quot;tag&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;) являются частью строки и размеры элементов определяются их содержимым.&lt;/p&gt;</description>
-     <pubDate>Fri, 02 Jun 2017 15:31:18 +0000</pubDate>
- <dc:creator>Влад Мержевич</dc:creator>
- <guid isPermaLink="false">1852 at https://webref.ru</guid>
-  </item>
-  <item>
-    <title>Создание сайта на Jekyll</title>
-    <link>https://webref.ru/dev/building-jekyll-site</link>
-    <description>      &lt;p&gt;Jekyll является наиболее популярным генератором статичного сайта. Он берёт исходные файлы и создаёт сайт из статичных страниц, готовых обслуживать пользователей напрямую. Это отличается от того, как работают традиционные CMS, вроде WordPress.&lt;/p&gt;&lt;div class=&quot;field field-name-field-book-thumb field-type-image field-label-hidden&quot;&gt;
-    &lt;div class=&quot;field-items&quot;&gt;
-          &lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/dev/building-jekyll-site&quot;&gt;&lt;img src=&quot;https://webref.ru/assets/styles/category-square/public/images/book/jekyll.png?itok=p4uE5pGZ&quot; width=&quot;300&quot; height=&quot;300&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
-      &lt;/div&gt;
-&lt;/div&gt;
-</description>
-     <pubDate>Fri, 30 Sep 2016 12:25:40 +0000</pubDate>
- <dc:creator>Майк Ньюмеген</dc:creator>
- <guid isPermaLink="false">1834 at https://webref.ru</guid>
-  </item>
-  <item>
-    <title>Самоучитель HTML</title>
-    <link>https://webref.ru/course/html-tutorial</link>
-    <description>      &lt;p&gt;HTML (HyperText Markup Language, язык разметки гипертекста) — это язык разметки, который определяет, какие элементы должны располагаться на веб-странице. Текст, ссылки, изображения, списки, таблицы, видео и др.&amp;nbsp;— всё это является элементами, которые можно отобразить на веб-странице с помощью HTML.&lt;/p&gt;
-&lt;p&gt;  Данный самоучитель предназначен в первую очередь для начинающих, только постигающих азы создания сайтов. Множество примеров, иллюстраций, вопросов для проверки и заданий для самостоятельной работы помогут быстрее изучить HTML.&lt;/p&gt;</description>
-     <pubDate>Sun, 14 Aug 2016 17:00:53 +0000</pubDate>
- <dc:creator>Влад Мержевич</dc:creator>
- <guid isPermaLink="false">1732 at https://webref.ru</guid>
-  </item>
-  <item>
-    <title>Атрибут dirname</title>
-    <link>https://webref.ru/html/input/dirname</link>
-    <description>&lt;div class=&quot;field field-name-field-html-descr field-type-text-long field-label-hidden&quot;&gt;
-    &lt;div class=&quot;field-items&quot;&gt;
-          &lt;div class=&quot;field-item even&quot;&gt;На сервер отправляется пара имя/значение, где имя задаётся атрибутом dirname, а значение подставляется браузером. Для текста, идущего слева направо, значение будет ltr, а для текста справа налево значение будет rtl.&lt;/div&gt;
-      &lt;/div&gt;
-&lt;/div&gt;
-</description>
-     <pubDate>Sat, 13 Aug 2016 08:27:50 +0000</pubDate>
- <dc:creator>Влад Мержевич</dc:creator>
- <guid isPermaLink="false">1731 at https://webref.ru</guid>
-  </item>
-  <item>
-    <title>Формы в HTML</title>
-    <link>https://webref.ru/course/html5-form</link>
-    <description>      &lt;p&gt;Формы являются одним из важных элементов любого сайта и предназначены для обмена данными между пользователем и сервером. Область применения форм не ограничена отправкой данных на сервер, с помощью клиентских скриптов можно получить доступ к любому элементу формы, изменять его и применять по своему усмотрению.&lt;/p&gt;</description>
-     <pubDate>Mon, 25 Jul 2016 12:18:14 +0000</pubDate>
- <dc:creator>Влад Мержевич</dc:creator>
- <guid isPermaLink="false">1655 at https://webref.ru</guid>
-  </item>
-  <item>
-    <title>Фильтр</title>
-    <link>https://webref.ru/css/value/filter</link>
-    <description>      &lt;p&gt;Фильтр — это функция, которая позволяет изменять вид изображения, применяя к нему разные эффекты, вроде контрастности, яркости, преобразования в чёрно-белую картинку и др.&lt;/p&gt;</description>
-     <pubDate>Mon, 25 Jul 2016 04:57:31 +0000</pubDate>
- <dc:creator>Влад Мержевич</dc:creator>
- <guid isPermaLink="false">1653 at https://webref.ru</guid>
-  </item>
-  <item>
-    <title>sepia()</title>
-    <link>https://webref.ru/css/value/sepia</link>
-    <description>      &lt;p&gt;Функция &lt;span class=&quot;var&quot;&gt;sepia()&lt;/span&gt; превращает изображение в сепию — так называется чёрно-белое изображение с коричневым оттенком. Сепия придаёт фотографиям старинный вид.&lt;/p&gt;</description>
-     <pubDate>Mon, 25 Jul 2016 04:01:17 +0000</pubDate>
- <dc:creator>Влад Мержевич</dc:creator>
- <guid isPermaLink="false">1652 at https://webref.ru</guid>
-  </item>
-  <item>
-    <title>saturate()</title>
-    <link>https://webref.ru/css/value/saturate</link>
-    <description>      &lt;p&gt;Функция &lt;span class=&quot;var&quot;&gt;saturate()&lt;/span&gt; изменяет насыщенность цветов в изображении.&lt;/p&gt;</description>
-     <pubDate>Mon, 25 Jul 2016 03:38:51 +0000</pubDate>
- <dc:creator>Влад Мержевич</dc:creator>
- <guid isPermaLink="false">1651 at https://webref.ru</guid>
   </item>
   </channel>
 </rss>

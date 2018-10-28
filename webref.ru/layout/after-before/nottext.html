@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="ru"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Не только текст | WebReference</title><meta charset="utf-8" /><link rel="next" href="layout.html" /><link rel="prev" href="pseudo-elements.html" /><meta name="description" content="Хотя мы рассмотрели, что псевдоэлементы ::after и ::before выводят текст, они могут делать не только это, а выводить ещё кавычки, изображения, нумерацию и значения атрибутов. Все эти возможности заложены в свойство content, которое работает в связке с псевдоэлементами." /><link rel="stylesheet" href="../../assets/css/css_-FSXTEApofvZ1FwxICRGF2JtLJ1PW5ZzPome35sOLp0.css" media="screen" /></head><body><header><div class="grid-container"><div class="grid-x align-middle"><div class="cell logo small-12 medium-12 large-6"><a href="../../index.html"><span class="t1">Web</span><span class="t2">Reference</span></a></div><div class="cell small-12 medium-12 large-6"><form action="https://webref.ru/search/" id="cse-search-box"><div class="input-group"><div class="input-group-field"><input type="search" placeholder="Поиск по сайту" name="s" autocomplete="off" id="cse-search-input"><input type="hidden" name="cx" value="partner-pub-0708135098984815:9970767379"><input type="hidden" name="cof" value="FORID:10"><input type="hidden" name="ie" value="UTF-8"></div><div class="input-group-button"><button class="button"><i class="icon-search"></i></button></div></div></form></div></div></div><nav id="navMenu" class="navbar"><div class="grid-container"><ul class="menu"><li><a href="../../index.html">Главная</a></li><li class="dropdown"><span>Справочники</span><ul><li><a href="../../html.html">HTML</a></li><li><a href="../../css.html">CSS</a></li></ul></li><li class="dropdown"><span>Руководства</span><ul><li><a href="../../layout.html">Вёрстка</a></li><li><a href="../../dev.html">Веб-технологии</a></li><li><a href="../../mobile.html">Мобильные приложения</a></li></ul></li><li><a href="../../recipe.html">Рецепты</a></li><li><a href="../../course.html">Курсы</a></li><li><a href="../../practice.html">Практика</a></li><li><a href="../../individual.html">Самостоятельная</a></li><li><a href="../../quiz.html">Тесты</a></li></ul></div></nav></header><main><div class="grid-container breadcrumb"><section class="region region-crumbs"><div id="easy_breadcrumb-easy_breadcrumb" class="block"><div class="block_content"><div itemscope class="easy-breadcrumb" itemtype="http://data-vocabulary.org/Breadcrumb"> <span itemprop="title"><a href="../../index.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Главная</a></span> <span class="easy-breadcrumb_segment-separator"></span> <span itemprop="title"><a href="../../layout.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-1">Вёрстка</a></span> <span class="easy-breadcrumb_segment-separator"></span> <span itemprop="title"><a href="../after-before.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-2">::after и ::before</a></span> <span class="easy-breadcrumb_segment-separator"></span> <span class="easy-breadcrumb_segment easy-breadcrumb_segment-title" itemprop="title">Не только текст</span></div></div></div></section></div><div class="grid-container"><div class="grid-x grid-margin-x"><div class="cell medium-12 large-9 content-section"><div class="title"><h1>Не только текст</h1></div><div id="example-form"></div><section class="region region-content"><div id="system-main" class="block"><div class="block_content"><p>Хотя мы рассмотрели, что псевдоэлементы <span class="attribute">::after</span> и <span class="attribute">::before</span> выводят текст, они могут делать не только это, а выводить ещё кавычки, изображения, нумерацию и значения атрибутов. Все эти возможности заложены в свойство <span class="attribute">content</span>, которое работает в связке с псевдоэлементами.</p><h2>Кавычки</h2><p>Кавычки можно непосредственно выводить как текст, но у свойства <span class="attribute">content</span> для этой цели есть специальные значения: <span class="value">open-quote</span>&nbsp;— для открывающей кавычки и <span class="value">close-quote</span>&nbsp;— для закрывающей. Вид кавычек задаётся в свойстве <a href="../../css/quotes.html">quotes</a>, причём можно сразу определить сами кавычки и вложенные кавычки. В русском языке традиционно используются «ёлочки», а внутренние кавычки обозначаются «лапками», итого получается четыре вида кавычек (рис.&nbsp;1).</p><p class="fig"><img src="../../assets/images/after-before/quotes.png" alt="Вложенные кавычки"></p><p class="figsign">Рис. 1. Вложенные кавычки</p><div id="block-17" class="block"><div class="block_content"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-0708135098984815" data-ad-slot="1723360345"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div></div><p>«Ёлочки» мы выводим через свойство <span class="attribute">content</span>, добавляя его к псевдоэлементам, а «лапки» применяются браузером автоматически для элемента <span class="tag">&lt;q&gt;</span>, как показано в примере 1.</p><p class="exampleTitle">Пример 1. Кавычки в цитате</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Кавычки&lt;/title&gt;
+  &lt;style&gt;
+   blockquote { 
+    quotes: &quot;«&quot; &quot;»&quot; &quot;„&quot; &quot;“&quot;; /* Определяем вид кавычек */ 
+   }
+   blockquote::before {
+    content: open-quote; /* Открывающая кавычка */
+    color: #c1172c; /* Цвет кавычки */
+   }
+   blockquote::after {
+    content: close-quote; /* Закрывающая кавычка */
+    color: #c1172c; /* Цвет кавычки */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;blockquote&gt;Станислав Лец утверждал: 
+  &lt;q&gt;Чаще всего выход там, где был вход&lt;/q&gt;.&lt;/blockquote&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h2>Изображения</h2><p>Для вывода изображений у свойства <span class="attribute">content</span> следует указать ключевое слово <span class="value">url</span>, а в круглых скобках написать адрес картинки. Аналогично работает свойство <span class="attribute">background-image</span>, так что синтаксис должен быть знаком.</p><p>В примере 2 мы создаём форму для поиска, где вместо кнопки применяется картинка лупы (рис.&nbsp;2). Поскольку картинку мы выводим непосредственно на кнопке, сохраняется весь функционал поиска&nbsp;— в поле можно вводить текст, по кнопке можно щёлкать.</p><p class="fig"><img src="../../assets/images/after-before/img.png" alt="Иконка лупы на кнопке"></p><p class="figsign">Рис. 2. Иконка лупы на кнопке</p><p class="exampleTitle">Пример 2. Вывод иконки</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Псевдоэлементы&lt;/title&gt;
+  &lt;style&gt;
+   .search {
+    padding: 5px 15px; /* Поля вокруг */
+    display: inline-block; /* Ширина соответствует содержимому */
+    border: 1px solid #945323; /* Параметры рамки */
+    border-radius: 20px; /* Скругляем рамку */
+   }
+   [type=&quot;search&quot;] {
+    border: none; outline: none; /* Убираем рамку */
+   }
+   .zoom {
+    border: none; /* Убираем рамку */
+    background: transparent; /* Убираем фон */
+    width: 20px; height: 20px; /* Размеры картинки */
+    vertical-align: middle; /* Выравниваем по центру */
+    padding: 0; /* Убираем поля для IE */
+   }
+   .zoom::before {
+    content: url(image/search.png); /* Выводим картинку */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;form&gt;
+   &lt;div class=&quot;search&quot;&gt;
+    &lt;input type=&quot;search&quot; name=&quot;s&quot; placeholder=&quot;Поиск по сайту&quot;&gt;
+    &lt;button class=&quot;zoom&quot;&gt;&lt;/button&gt;
+   &lt;/div&gt;
+  &lt;/form&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>На деле свойство <span class="attribute">content</span> для вывода изображений проигрывает традиционному <span class="attribute">background</span>, у которого намного больше возможностей, вроде позиционирования и масштабирования картинки. Так что <span class="attribute">content</span> для отображения изображений применяется редко.</p><h2>Нумерация списков</h2><p>При создании нумерованных списков напрямую нельзя изменить стиль чисел, отображаемых перед пунктами. Поэтому идут на хитрость&nbsp;— прячут исходную нумерацию и создают новую с помощью <span class="attribute">::before</span>. При этом мы легко можем задать своё произвольное оформление нумерации (рис.&nbsp;3).</p><p class="fig"><img src="../../assets/images/after-before/list.png" alt="Стиль чисел в списке"></p><p class="figsign">Рис. 3. Стиль чисел в списке</p><p>Для начала убираем нумерацию через <a href="../../css/list-style.html">list-style</a> со значением <span class="value">none</span>, добавляя это свойство к селектору <span class="tag">ul</span>. Затем воспользуемся свойством <a href="../../css/counter-increment.html">counter-increment</a> для создания новой нумерации. Вывод чисел возложим на <span class="attribute">::before</span> через свойство <span class="attribute">content</span> и значение <span class="value">counter</span>, а остальные свойства нужны для оформления этих чисел.</p><p>В примере 3 числа в списке выводятся в синем прямоугольнике белым цветом.</p><p class="exampleTitle">Пример 3. Нумерация списка</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Список&lt;/title&gt;
+  &lt;style&gt;
+   ul {
+    list-style: none; /* Убираем исходную нумерацию */
+   }
+   li {
+    counter-increment: list; /* Создаём новую нумерацию */
+    margin-bottom: 0.2em; /* Расстояние между пунктами */
+   }
+   /* Стиль нумерации */
+   li::before {
+    content: counter(list); /* Выводим числа */
+    display: inline-block; /* Строчно-блочный элемент */
+    width: 1.5em; /* Ширина */
+    height: 1.5em; /* Высота */
+    line-height: 1.5em; /* Выравниваем по вертикали */
+    background-color: #478eb0; /* Цвет фона */
+    color: #fff; /* Белый цвет текста */
+    text-align: center; /* Выравниваем по центру */
+    margin-right: 0.5em; /* Расстояние от числа до текста */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;ul&gt;
+   &lt;li&gt;Чебурашка&lt;/li&gt;
+   &lt;li&gt;Крокодил Гена&lt;/li&gt;
+   &lt;li&gt;Шапокляк&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h2>Атрибуты</h2><p>Свойство <span class="attribute">content</span> позволяет выводить содержимое любых атрибутов у элементов через ключевое слово <span class="value">attr</span>. В частности, так можно вывести адрес ссылки, как показано в примере&nbsp;4. Обратите внимание, что кроме самого значения атрибута допустимо показывать и произвольный текст, так что адрес для красоты отображается внутри квадратных скобок.</p><p class="exampleTitle">Пример 4. Вывод адреса ссылки</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Ссылка&lt;/title&gt;
+  &lt;style&gt;
+   a::after {
+    content: &quot; [&quot; attr(href) &quot;]&quot;; /* Выводим значение href */
+    color: #666; /* Цвет текста */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;Перейти на сайт &lt;a href=&quot;https://google.ru&quot;&gt;Гугла&lt;/a&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан на рис. 4. Поскольку <span class="attribute">::after</span> выводит содержимое внутри элемента, а не после него, то отображаемый адрес является частью ссылки и на него можно щёлкать для перехода по ссылке.</p><p class="fig"><img src="../../assets/images/after-before/attr.png" alt="Вывод адреса ссылки"></p><p class="figsign">Рис. 4. Вывод адреса ссылки</p><h2>Иконки</h2><p>Иконки могут быть не только графическими, но и в виде текстовых символов. Это даёт несколько преимуществ:</p><ul><li>текст можно масштабировать без потери качества;</li><li>текст легко окрасить в желаемый цвет;</li><li>к тексту можно применить разные эффекты, вроде тени.</li></ul><p>Множество готовых символов, подходящих в качестве иконки, можно найти на сайте <a href="https://www.utf8icons.com">utf8icons.com</a>. Достаточно скопировать символ и вставить его как значение свойства <span class="attribute">content</span>. В примере&nbsp;5 перед каждым абзацем добавляется серого цвета иконка.</p><p class="exampleTitle">Пример 5. Символ в качестве иконки</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Иконка&lt;/title&gt;
+  &lt;style&gt;
+   p::before {
+    content: '❡';
+    font-size: 1.2em;
+    color: #ccc;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;Астероид, и это следует подчеркнуть, неустойчив.&lt;/p&gt;
+  &lt;p&gt;Космический мусор гасит сарос, но кольца видны только при 40–50.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан на рис. 5.</p><p class="fig"><img src="../../assets/images/after-before/icon.png" alt="Вид абзаца с иконкой"></p><p class="figsign">Рис. 5. Вид абзаца с иконкой</p><p>Хотя UTF поддерживает разнообразные символы, их явно недостаточно для большинства задач и требуется что-то ещё. На сайте <a href="http://fontello.com">fontello.com</a> можно найти несколько сотен текстовых иконок. Выбираете желаемые иконки и скачиваете их в виде архива, содержащего требуемые шрифты и стилевые файлы.</p><p>Сам набор шрифтов для разных браузеров подключается через <a href="../../css/font-face.html">@font-face</a>, а сама иконка добавляется через <span class="attribute">::before</span> и код символа, как показано в примере&nbsp;6.</p><p class="exampleTitle">Пример 6. Иконка Fontello</p>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Иконка&lt;/title&gt;
+  &lt;style&gt;
+   /* Подключение шрифта*/
+   @font-face {
+    font-family: 'fontello';
+    src: url('font/fontello.eot');
+    src: url('font/fontello.eot') format('embedded-opentype'),
+    url('font/fontello.woff2') format('woff2'),
+    url('font/fontello.woff') format('woff'),
+    url('font/fontello.ttf') format('truetype'),
+    url('font/fontello.svg#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+   }
+   .tag {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: #e6571f; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 3px 7px; /* Поля вокруг текста */
+    border-radius: 3px; /* Радиус скругления */
+   }
+   .tag::before {
+    font-family: fontello; /* Шрифт */
+    content: '\e801'; /* Код иконки */
+    padding-right: 10px; /* Расстояние справа */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;span class=&quot;tag&quot;&gt;Природа&lt;/span&gt; 
+   &lt;span class=&quot;tag&quot;&gt;Девушки&lt;/span&gt;
+   &lt;span class=&quot;tag&quot;&gt;Фото&lt;/span&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан на рис. 6.</p><p class="fig"><img src="../../assets/images/after-before/fontello.png" alt="Вывод своей иконки"></p><p class="figsign">Рис. 6. Вывод своей иконки</p><div class="field field-name-field-book-tag field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://webref.ru/metki/ikonki">иконки</a></div></div></div><div id="views-similar-block" class="block"><h2 class="block_title">См. также</h2><div class="block_content"><div class="view view-similar view-id-similar view-display-id-block view-dom-id-c918247531ad44c1c936b0e09825cc54"><div class="view-content"><div class="similar"><ul><li class=""> <a href="../../html/q.html">&lt;q&gt;</a></li><li class=""> <a href="../../css/content.html">content</a></li><li class=""> <a href="../../css/quotes.html">quotes</a></li><li class=""> <a href="../../course/position/relative-absolute.html">relative и absolute</a></li><li class=""> <a href="../pseudo-class-checked/accordion.html">Аккордеон меню</a></li><li class=""> <a href="layout/shadow.html">Добавление тени</a></li><li class=""> <a href="layout.html">Использование в вёрстке</a></li><li class=""> <a href="../../course/float/clearfix.html">Очистка float</a></li><li class=""> <a href="../advanced-html-css/detailed-css-positioning.html">Подробнее о позиционировании</a></li><li class=""> <a href="../../css/after.html">Псевдоэлемент ::after</a></li><li class=""> <a href="../../css/before.html">Псевдоэлемент ::before</a></li><li class=""> <a href="../../course/css-tutorial/pseudo-element.html">Псевдоэлементы</a></li><li class=""> <a href="pseudo-elements.html">Псевдоэлементы ::after и ::before</a></li><li class=""> <a href="../learn-html-css/working-with-typography.html">Работа с типографикой</a></li><li class=""> <a href="../../course/html-content/inline-semantics.html">Семантика строчных элементов</a></li><li class=""> <a href="../../course/css-basics/syntax.html">Синтаксис CSS</a></li><li class=""> <a href="../pseudo-class-checked/spoiler.html">Спойлер</a></li></ul></div></div></div></div></div><section class="grid-container credit"><div class="grid-x grid-margin-x"><h2 class="element-invisible">Автор и редакторы</h2><div class="cell small-6 credit-author"><i class="icon-user"></i> Автор: Влад Мержевич</div><div class="cell small-6 credit-changed"><i class="icon-calendar"></i> Последнее изменение: 19.02.2018</div><div class="cell small-12 credit-editor"><i class="icon-users"></i> Редакторы: Влад Мержевич</div></div></section><script src="../../sites/all/themes/ori/js/mousetrap.min.js"></script><script>Mousetrap.bind('mod+left',function(){document.location='/layout/after-before/pseudo-elements';});Mousetrap.bind('mod+right',function(){document.location='/layout/after-before/layout';});</script><div class="grid-container book-navigation" id="book-navigation-bottom"><div class="grid-x grid-margin-x"><div class="cell small-6 page-previous"><a href="pseudo-elements.html" title="На предыдущую страницу">Псевдоэлементы ::after и ::before</a><br><span class="navigation-tooltip"><kbd>Ctrl</kbd>+<kbd>←</kbd></span></div><div class="cell small-6 page-next"><a href="layout.html" title="На следующую страницу">Использование в вёрстке</a><br><span class="navigation-tooltip"><kbd>Ctrl</kbd>+<kbd>→</kbd></span></div></div></div><div id="block-20" class="block"><div class="block_content"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0708135098984815" data-ad-slot="1599783371" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div></div><div id="block-10" class="block"><div class="block_content"><div id="disqus_thread"></div><script>var disqus_shortname="webref";(function(){var dsq=document.createElement("script");dsq.type="text/javascript";dsq.async=true;dsq.src="//"+disqus_shortname+".disqus.com/embed.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(dsq);})();</script></div></div></div></div></section></div><aside class="cell medium-12 large-3 sidebar-section"><section class="region region-sidebar-toc"><div id="book-navigation" class="block"><h2 class="block_title">Содержание</h2><div class="block_content"><ul class="menu"><li class="first leaf"><a href="pseudo-elements.html">Псевдоэлементы ::after и ::before</a></li><li class="leaf active-trail"><a href="nottext.html" class="active-trail active">Не только текст</a></li><li class="collapsed"><a href="layout.html">Использование в вёрстке</a></li><li class="last leaf"><a href="pseudo-class.html">Сочетание с псевдоклассами</a></li></ul></div></div><div id="block-12" class="block"><div class="block_content"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:240px;height:400px" data-ad-client="ca-pub-0708135098984815" data-ad-slot="6456026170"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div></div></section></aside></div></div></main><footer><div class="footer-top"><div class="grid-container"><div class="grid-x grid-margin-x"><div class="cell small-12 large-3"><p class="logo"><span>Web</span><span class="t2">Reference</span></p><p>Гл. редактор: Влад Мержевич</p><address>vlad@webref.ru</address></div><section class="cell small-12 large-8"><h3>О сайте</h3><p>На сайте находятся справочники и учебные курсы по различным веб-технологиям, а также руководства по вёрстке веб-страниц и разработке мобильных приложений.</p></section><div class="cell hide-for-small large-1 counter"><script src="../../sites/all/themes/v3/js/li.js"></script></div></div></div></div><div class="footer-bottom"><div class="grid-container"><div class="grid-x grid-margin-x"><section class="cell small-6 large-3"><h3>Связи</h3><ul id="community"><li><i class="icon-rss"></i> <a href="https://feeds.feedburner.com/webref" rel="nofollow">RSS</a></li><li><i class="icon-jsfiddle"></i> <a href="https://jsfiddle.net/user/webref/fiddles/" rel="nofollow">JSFiddle</a></li><li><i class="icon-github"></i> <a href="https://github.com/webref" rel="nofollow">GitHub</a></li><li><i class="icon-vk"></i> <a href="https://vk.com/webref" rel="nofollow">ВКонтакте</a></li><li><i class="icon-doc-text"></i> <a href="https://drive.google.com/folderview?id=0B4u62HGG7TOnTVJ4aFlFa1Jpb2M" rel="nofollow">Google Диск</a></li><li><i class="icon-users"></i> <a href="https://htmlforum.io/" rel="nofollow">Форум</a></li></ul></section><section class="cell small-6 large-3"><h3>Разделы сайта</h3><ul id="footer-menu" class="links"><li><i class="icon-book"></i> <a href="../../ref.html">Справочники</a></li><li><i class="icon-layout"></i> <a href="../../layout.html">Вёрстка</a></li><li><i class="icon-gear"></i> <a href="../../dev.html">Веб-технологии</a></li><li><i class="icon-mobile"></i> <a href="../../mobile.html">Мобильные приложения</a></li><li><i class="icon-help"></i> <a href="../../recipe.html">Рецепты</a></li><li><i class="icon-bookmark"></i> <a href="../../course.html">Учебные курсы</a></li><li><i class="icon-pencil"></i> <a href="../../practice.html">Практика</a></li><li><i class="icon-css3"></i> <a href="../../individual.html">Самостоятельная</a></li><li><i class="icon-help"></i> <a href="../../quiz.html">Тесты</a></li></ul></section><section class="cell small-6 large-3"><h3>Популярное</h3><section class="region region-popular"><div id="views-popular-popular" class="block"><div class="block_content"><div class="view view-popular view-id-popular view-display-id-popular view-dom-id-6a8bfc72ac2f5193a536e46f7be23467"><div class="view-content"><ul><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../learn-html-css.html">Уроки по HTML и CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../howtocodeinhtml.html">Как верстать на HTML5 и CSS3</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/html5.svg.png" src="../../assets/images/thumb/html5.svg" width="16" height="16" alt="" /> <a href="../html5-css3.html">HTML5 и CSS3 на примерах</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/css3.svg.png" src="../../assets/images/thumb/css3.svg" width="16" height="16" alt="" /> <a href="../magic-of-css.html">Магия CSS</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/jquery.svg.png" src="../../assets/images/thumb/jquery.svg" width="16" height="16" alt="" /> <a href="../../dev/jqfundamentals.html">Основы jQuery</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/js.svg.png" src="../../assets/images/thumb/js.svg" width="16" height="16" alt="" /> <a href="../../dev/learn-javascript.html">Знакомство с JavaScript</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/bootstrap.svg.png" src="../../assets/images/thumb/bootstrap.svg" width="16" height="16" alt="" /> <a href="../bootstrap.html">Bootstrap</a></li><li class="leaf"> <img class="svg-img size-icon" data-src="/assets/svgimg/icon/img-styles/images/thumb/gulp.svg.png" src="../../assets/images/thumb/gulp.svg" width="16" height="16" alt="" /> <a href="../../dev/automate-with-gulp.html">Автоматизация работы с Gulp</a></li></ul></div></div></div></div></section></section><section class="cell small-6 large-3"><h3>Помощь по сайту</h3><ul><li><a href="../../author.html">Авторы</a></li><li><a href="../../help/legend.html">Обозначения</a></li><li><a href="../../help/term.html">Терминология</a></li><li><a href="../../help/slang.html" title="">Жаргон</a></li><li><a href="../../help/app.html" title="">Наши приложения</a></li><li><a href="../../help/download.html" title="">Скачать</a></li></ul></section></div></div></div><div class="copyright"><div class="grid-container"><div class="grid-x align-middle"><div class="cell small-12 medium-2 large-1"><a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow"><img alt="Лицензия Creative Commons" src="../../sites/all/themes/v3/img/cc.png" width="88" height="31"></a></div><div class="cell small-12 medium-10 large-11">Все материалы сайта доступны по <a href="http://creativecommons.org/licenses/by-nc/4.0/deed.ru" rel="nofollow">лицензии Creative Commons «Attribution-NonCommercial» («Атрибуция — Некоммерческое использование») 4.0 Всемирная</a>, если не указано иное.</div></div></div></div></footer><script src="../../sites/all/themes/v3/js/ads.js"></script><script>window.google_analytics_uacct="UA-88593016-2";</script><script src="../../assets/js/js_II2ib-sdAYUJkLc_BSmoT9CvFgkQHjbX6ZwWkuMJpi0.js"></script><script src="../../assets/js/js_H7q2xORKmR9AN8Qx5spKEIBp7R_wG2apAswJoCUZY7I.js"></script><script src="../../assets/js/js_ugJmGmW_zO124nItiV-hF5EGZnqY8ON-Eh9qKRmh3VQ.js"></script><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create","UA-88593016-2",{"cookieDomain":"auto"});ga("set","anonymizeIp",true);ga("send","pageview");</script><script src="../../assets/js/js_b8aWPOnPHDVS7UxsbF3r192VwrZUv_iQK2bBEwdOjzM.js"></script><script>jQuery.extend(Drupal.settings,{"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"v3","theme_token":"Ybog6TunLHv_l6bRwOyFD7xpAQUO2tf7r02yjBk0eYY","js":{"modules\/statistics\/statistics.js":1,"0":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/3.1\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"public:\/\/languages\/ru_eQ6_MlK9JXj_doTDHktg3qRCVZqnXcvZ7gDAljGIQ34.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"1":1,"sites\/all\/themes\/v3\/js\/foundation.min.js":1,"sites\/all\/themes\/v3\/js\/vendor\/rainbow.min.js":1,"sites\/all\/themes\/v3\/js\/vendor\/scrollTo.min.js":1,"sites\/all\/themes\/v3\/js\/vendor\/autocomplete.min.js":1,"sites\/all\/themes\/v3\/js\/vendor\/sticky.min.js":1,"sites\/all\/themes\/v3\/js\/vendor\/slick\/slick.min.js":1,"sites\/all\/themes\/v3\/js\/app.min.js":1,"sites\/all\/themes\/v3\/js\/adblock.js":1},"css":{"sites\/all\/themes\/v3\/css\/foundation.min.css":1,"sites\/all\/themes\/v3\/css\/style.min.css":1,"sites\/all\/themes\/v3\/js\/vendor\/slick\/slick.min.css":1}},"googleanalytics":{"trackOutbound":1},"statistics":{"data":{"nid":"2075"},"url":"\/modules\/statistics\/statistics.php"}});</script></body></html>
